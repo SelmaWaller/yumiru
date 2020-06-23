@@ -1,0 +1,45 @@
+const ThemePalette = {
+  //sun
+  sunBackground: "#f5f5f5",
+  sunShadowInner: "#fff",
+  sunShadowOuter: "#dbe3ec",
+  sunText: "#53587e",
+  sunLinkBlue: "#0080ef",
+  sunLinkBlueLight: "#46a9ff",
+  sunLinkNeon: "#20ff9e",
+  sunLinkNeonLight: "#53ffb4",
+  sunLinkGradient: "linear-gradient(to top right, #0080ef, #20ff9e)",
+  //moon
+  moonBackground: "#232C40",
+  moonShadowInner: "#2C354A",
+  moonShadowOuter: "#1C263D",
+  moonText: "#9faed2",
+  moonLinkBlue: "#005bb5",
+  moonLinkBlueLight: "#0067ce",
+  moonLinkNeon: "#00cf75",
+  moonLinkNeonLight: "#24e993",
+  moonLinkGradient: "linear-gradient(to top right, #005bb5, #00cf75)",
+  //icons
+  iconSunOrange: "#ff5313",
+  iconSunYellow: "#ffac30",
+  iconSunShadow: "#feb06b",
+  iconMoonBlue: "#5b66ff",
+  iconMoonAqua: "#9ef2ff",
+  iconMoonShadowLight: "#a1d9ff",
+  iconMoonShadowDark: "#39496b",
+  iconMoonClouds: "#afcaff",
+  //design elements
+  deBarbiePink: "#ff5bce",
+  deBarbiePinkLight: "#ff7bd7",
+  deMandarin: "#ff7920",
+  deMandarinLight: "#ff934c",
+  deAubergineDark: "#540d77",
+  deAubergineMediumDark: "#6d0bad",
+  deAubergineMediumLight: "#8c15cf",
+  deAubergineLight: "#a01ce5",
+  deGrapeDark: "#5f0081",
+  deGrapeMedium: "#982baa",
+  deGrapeLight: "#be47c5",
+};
+
+export default ThemePalette;
