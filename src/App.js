@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 
 import variables from "./components/styles/variables";
-import sun_default_evening from "./svgs/icons/sun/sun_default_evening.svg";
-import moon_hover_daytime from "./svgs/icons/moon/moon_daytime.gif";
+import sun_evening from "./svgs/icons/sun/sun_evening.png";
+import moon_daytime from "./svgs/icons/moon/moon_daytime.gif";
 import logo_daytime from "./svgs/icons/logo/logo_daytime.svg";
 import logo_evening from "./svgs/icons/logo/logo_evening.svg";
 import controller from "./svgs/controller/controller.svg";
@@ -37,7 +37,8 @@ const day = {
   lightTextShadowHover: `3px 3px 2px ${variables.sunShadowInner}, -2px -2px 2px #bac5d2, -2px -2px 5px #bac5d288, -2px -2px 2px #bac5d2, -2px -2px 5px #bac5d288`,
   //topButtons
   homeButtonImage: `url(${logo_daytime})`,
-  modeButtonImage: `url(${moon_hover_daytime})`,
+  homeButtonImageWidth: "83px",
+  modeButtonImage: `url(${moon_daytime})`,
   topButtonShadow: `inset 3px -3px 3px ${variables.sunShadowInner}, inset -5px 5px 5px ${variables.sunShadowOuter}`,
   //game stuff
   gameController: `url(${controller})`,
@@ -62,7 +63,8 @@ const evening = {
   lightTextShadowHover: `3px 3px 2px ${variables.moonShadowInner}, -2px -2px 2px 0f1625, -2px -2px 5px 0f1625, -2px -2px 2px 0f1625, -2px -2px 5px 0f1625`,
   //topButtons
   homeButtonImage: `url(${logo_evening})`,
-  modeButtonImage: `url(${sun_default_evening})`,
+  homeButtonImageWidth: "80px",
+  modeButtonImage: `url(${sun_evening})`,
   topButtonShadow: `inset -5px 5px 5px ${variables.moonShadowOuter}, inset 3px -3px 3px ${variables.moonShadowInner}`,
   //game stuff
   gameController: `url(${controller})`,
@@ -77,15 +79,15 @@ function App({ children }) {
     timeNow > 5 && timeNow < 21 ? true : false
   );
   const [themeIcon, setThemeIcon] = useState(
-    daytime ? moon_hover_daytime : sun_default_evening
+    daytime ? moon_daytime : sun_evening
   );
   const [theme, setTheme] = useState(daytime ? day : evening);
 
   const toggleTheme = () => {
     setDaytime(!daytime);
-    themeIcon === moon_hover_daytime
-      ? setThemeIcon(sun_default_evening)
-      : setThemeIcon(moon_hover_daytime);
+    themeIcon === moon_daytime
+      ? setThemeIcon(sun_evening)
+      : setThemeIcon(moon_daytime);
     theme === day ? setTheme(evening) : setTheme(day);
   };
 

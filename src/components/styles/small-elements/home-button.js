@@ -6,7 +6,7 @@ const HomeButton = styled.button`
   background-image: ${(props) => props.theme.homeButtonImage};
   background-position: 9px 3px;
   background-repeat: no-repeat;
-  background-size: 80px;
+  background-size: ${(props) => props.theme.homeButtonImageWidth};
   border: none;
   border-radius: 100px;
   top: 25px;
