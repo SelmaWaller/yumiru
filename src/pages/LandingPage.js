@@ -1,22 +1,41 @@
 import React from "react";
-import { BrowserRouter, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-import Games from "../components/landing-page/games";
-import Other from "../components/landing-page/other";
+import LandingPageWrapper from "../components/styles/wrappers/landing-page";
+import Games from "../components/styles/wrappers/games";
+import Other from "../components/styles/wrappers/other";
 import Button from "../components/styles/small-elements/default-button";
 
-export default function Home(toggleTheme) {
+export default function LandingPage() {
+  let randomGame;
+  let randomAnime;
   return (
     <>
-      <Games />
-      <BrowserRouter>
-        <Button>
-          <Link to="/Dashboard">
-            <span>ダッシュボード</span>
-          </Link>
-        </Button>
-      </BrowserRouter>
-      <Other />
+      <LandingPageWrapper>
+        <Link to={randomGame}>
+          <Games
+            onClick={() => {
+              console.log("create popups for games");
+            }}
+          >
+            <span></span>
+          </Games>
+        </Link>
+        <Link to="/Dashboard">
+          <Button>
+            <span></span>
+          </Button>
+        </Link>
+        <Link to={randomAnime}>
+          <Other
+            onClick={() => {
+              console.log("create popup for other things");
+            }}
+          >
+            <span></span>
+          </Other>
+        </Link>
+      </LandingPageWrapper>
     </>
   );
 }
