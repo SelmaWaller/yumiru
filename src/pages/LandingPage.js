@@ -7,27 +7,21 @@ import Other from "../components/styles/wrappers/other";
 import Button from "../components/styles/small-elements/default-button";
 
 export default function LandingPage() {
-  let randomGame;
-  let randomAnime;
   return (
     <>
       <FlexWrapper>
-        <Link to={randomGame}>
-          <Games>
-            <span></span>
-          </Games>
-        </Link>
+        <Games>
+          <span></span>
+        </Games>
         <Link to="/overview">
           <Button>
             <span></span>
             <div></div>
           </Button>
         </Link>
-        <Link to={randomAnime}>
-          <Other>
-            <span></span>
-          </Other>
-        </Link>
+        <Other>
+          <span></span>
+        </Other>
       </FlexWrapper>
     </>
   );

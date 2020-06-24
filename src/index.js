@@ -6,7 +6,6 @@ import "./scss/main.scss";
 import App from "./App";
 import LandingPage from "./pages/LandingPage";
 import Overview from "./pages/Overview";
-import Calendar from "./pages/Calendar";
 
 ReactDOM.render(
   <Router>
