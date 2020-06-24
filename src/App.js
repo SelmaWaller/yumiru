@@ -7,12 +7,10 @@ import sun_evening from "./svgs/icons/sun/sun_evening.png";
 import moon_daytime from "./svgs/icons/moon/moon_daytime.gif";
 import logo_daytime from "./svgs/icons/logo/logo_daytime.svg";
 import logo_evening from "./svgs/icons/logo/logo_evening.svg";
-import controller from "./svgs/controller/controller.svg";
-import controller_daytime from "./svgs/controller/controller_daytime.gif";
-import controller_evening from "./svgs/controller/controller_evening.gif";
-import popcorn from "./svgs/popcorn/popcorn.svg";
-import popcorn_daytime from "./svgs/popcorn/popcorn_daytime.gif";
-import popcorn_evening from "./svgs/popcorn/popcorn_evening.gif";
+import games_daytime from "./svgs/icons/tags/games_daytime.png";
+import games_evening from "./svgs/icons/tags/games_evening.png";
+import other_daytime from "./svgs/icons/tags/other_daytime.png";
+import other_evening from "./svgs/icons/tags/other_evening.png";
 
 import Global from "./components/styles/global";
 import ModeButton from "./components/styles/small-elements/mode-button";
@@ -29,7 +27,9 @@ const day = {
   mainButtonShadow: `0 13px 30px -15px ${variables.sunLinkBlue}b0, 0 13px 30px -15px ${variables.sunLinkNeon}b0`,
   mainButtonShadowHover: `0 18px 30px -15px ${variables.sunLinkBlue}c2, 0 18px 30px -15px ${variables.sunLinkNeon}c2`,
   globalBackground: variables.sunBackground,
+  globalBackgroundLight: variables.sunBackgroundLight,
   globalText: variables.sunText,
+  contentShadow: `3px -3px 10px ${variables.sunShadowInner}, inset -3px 3px 15px ${variables.sunShadowOuter}85, -3px 2px 10px ${variables.sunShadowOuter}, inset 3px -3px 15px ${variables.sunShadowInner}85`,
   //date and time
   lightText: variables.sunTextLight,
   lightTextHover: variables.sunShadowOuter,
@@ -40,38 +40,35 @@ const day = {
   homeButtonImageWidth: "83px",
   modeButtonImage: `url(${moon_daytime})`,
   topButtonShadow: `inset 3px -3px 3px ${variables.sunShadowInner}, inset -5px 5px 5px ${variables.sunShadowOuter}`,
-  //game stuff
-  gameController: `url(${controller})`,
-  gameControllerHover: `url(${controller_daytime})`,
-  //'other things'
-  popcornImage: `url(${popcorn})`,
-  popcornImageHover: `url(${popcorn_daytime})`,
+  //games and other stuff
+  gameTag: `url(${games_daytime})`,
+  otherTag:  `url(${other_daytime})`,
 };
 
 const evening = {
   //global
   logoText: variables.moonLogo,
-  mainButtonDefault: variables.moonLinkGradient,
+  mainButtonDefault: variables.sunLinkGradient,
   mainButtonShadow: `0 17px 30px -15px ${variables.moonLinkBlue}30, 0 17px 30px -15px ${variables.moonLinkNeon}30`,
   mainButtonShadowHover: `0 18px 30px -15px ${variables.moonLinkBlue}40, 0 18px 30px -15px ${variables.moonLinkNeon}40`,
   globalBackground: variables.moonBackground,
+  globalBackgroundLight: variables.moonBackgroundDark,
   globalText: variables.moonText,
+  contentBackgroundHover: variables.moonBackgroundLight,
+  contentShadow: `3px -3px 10px ${variables.moonShadowInner}, inset -3px 3px 15px ${variables.moonShadowDark}85, -3px 2px 10px ${variables.moonShadowDark}, inset 3px -3px 15px ${variables.moonShadowInner}85`,
   //date and time
   lightText: variables.moonTextLight,
   lightTextHover: variables.moonTextDark,
-  lightTextShadow: `3px 3px 2px ${variables.moonShadowInner}, 3px 3px 10px ${variables.moonShadowInner}, -3px -2px 10px ${variables.moonShadowText}, -2px -2px 2px ${variables.moonShadowText}, -3px -2px 10px ${variables.moonShadowText}, -2px -2px 2px ${variables.moonShadowText}, -3px -2px 10px ${variables.moonShadowText}, -2px -2px 2px ${variables.moonShadowText}`,
+  lightTextShadow: `3px 3px 2px ${variables.moonShadowInner}, 3px 3px 10px ${variables.moonShadowInner}, -3px -2px 10px ${variables.moonShadowDark}, -2px -2px 2px ${variables.moonShadowDark}, -3px -2px 10px ${variables.moonShadowDark}, -2px -2px 2px ${variables.moonShadowDark}, -3px -2px 10px ${variables.moonShadowDark}, -2px -2px 2px ${variables.moonShadowDark}`,
   lightTextShadowHover: `3px 3px 2px ${variables.moonShadowInner}, -2px -2px 2px 0f1625, -2px -2px 5px 0f1625, -2px -2px 2px 0f1625, -2px -2px 5px 0f1625`,
   //topButtons
   homeButtonImage: `url(${logo_evening})`,
   homeButtonImageWidth: "80px",
   modeButtonImage: `url(${sun_evening})`,
   topButtonShadow: `inset -5px 5px 5px ${variables.moonShadowOuter}, inset 3px -3px 3px ${variables.moonShadowInner}`,
-  //game stuff
-  gameController: `url(${controller})`,
-  gameControllerHover: `url(${controller_evening})`,
-  //'other things'
-  popcornImage: `url(${popcorn})`,
-  popcornImageHover: `url(${popcorn_evening})`,
+  //games and other stuff
+  gameTag: `url(${games_evening})`,
+  otherTag:  `url(${other_evening})`,
 };
 
 function App({ children }) {

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import overview from '../../../svgs/icons/overview/overview.gif';
 
 const DefaultButton = styled.button`
   background: ${(props) => props.theme.mainButtonDefault};
@@ -9,31 +10,69 @@ const DefaultButton = styled.button`
   min-width: 235px;
   box-shadow: ${(props) => props.theme.mainButtonShadow};
   cursor: pointer;
-  transition: 200ms;
+  transition: 300ms;
   color: #ffffff;
   outline: 0px transparent;
+  position: relative;
+  text-align: left;
 
-  span {
-    transition: 100ms;
+  img {
+    position: absolute;
+    width: 25px;
+    margin-top:1px;
+    right: 70px;
+  }
+
+  span::after {
+    font-family: "Comfortaa", sans-serif;
+    transition: 300ms;
+    content: "OVERVIEW";
+    opacity: 0;
+    font-size: 18px;
+    position: absolute;
+    top: 23px;
+    left: 40px;
   }
   span::before {
-    content: "ダッシュボード";
+    content: "概要";
     font-family: "Sawarabi Mincho", serif;
     font-size: 22px;
+    position: absolute;
+    top: 15px;
+    left: 70px;
+    opacity: 1;
+    transition: 300ms;
   }
   &:hover {
     box-shadow: ${(props) => props.theme.mainButtonShadowHover};
-    transform: translateY(-2px);
-    transition: 200ms;
+    transition: 300ms;
     span::before {
-      content: "";
+      opacity: 0;
+    left: 120px;
+      transition: 300ms;
     }
     span::after {
-      transition: 100ms;
-      content: "DASHBOARD";
-      font-family: "Comfortaa", sans-serif;
-      font-size: 18px;
+      opacity: 1;
+      top: 23px;
+      left: 92px;
+      transition: 300ms;
     }
+    div {
+    right: 132px;
+    transition: 300ms;
+    }
+  }
+
+  div {
+    width: 50px;
+    height: 50px;
+    background: url(${overview});
+    background-repeat: no-repeat;
+    background-size: 23px;
+    top: 20px;
+    right: 50px;
+    position: absolute;
+    transition: 300ms;
   }
 `;
 

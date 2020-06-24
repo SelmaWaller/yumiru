@@ -5,7 +5,7 @@ import "./scss/main.scss";
 
 import App from "./App";
 import LandingPage from "./pages/LandingPage";
-import Dashboard from "./pages/Dashboard";
+import Overview from "./pages/Overview";
 import Calendar from "./pages/Calendar";
 
 ReactDOM.render(
@@ -13,8 +13,7 @@ ReactDOM.render(
     <App>
       <Switch>
         <Route path="/" exact component={LandingPage}></Route>
-        <Route path="/dashboard" component={Dashboard}></Route>
-        <Route path="/calendar" component={Calendar}></Route>
+        <Route path="/overview" component={Overview}></Route>
       </Switch>
     </App>
   </Router>,

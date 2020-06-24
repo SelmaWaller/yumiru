@@ -2,6 +2,7 @@ const ThemePalette = {
   //sun
   sunLogo: "#3F3F3F",
   sunBackground: "#f5f5f5",
+  sunBackgroundLight: "#f9f9f9",
   sunShadowInner: "#ffffff",
   sunShadowOuter: "#dbe3ec",
   sunShadowText: "#d3dbe4",
@@ -15,9 +16,10 @@ const ThemePalette = {
   //moon
   moonLogo: "#313131",
   moonBackground: "#232C40",
+  moonBackgroundDark: "#222a3e",
   moonShadowInner: "#2C354A",
   moonShadowOuter: "#1C263D",
-  moonShadowText: "#192338",
+  moonShadowDark: "#192338",
   moonShadowTextDark: "#1C263D",
   moonText: "#9FAED2",
   moonTextLight: "#212b40",

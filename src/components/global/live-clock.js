@@ -13,6 +13,7 @@ const RightClock = styled.span`
   text-align: center;
   user-select: none;
   transition: 250ms;
+  cursor: pointer;
 
   p {
     margin: 0;

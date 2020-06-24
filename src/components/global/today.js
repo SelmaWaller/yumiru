@@ -13,6 +13,7 @@ const LeftDate = styled.span`
   text-align: center;
   user-select: none;
   transition: 250ms;
+  cursor: pointer;
 
   p {
     margin: 0;
@@ -33,7 +34,7 @@ const LeftDate = styled.span`
 
 const Today = () => {
   const year = new Date().getFullYear().toString().substr(-2).padStart(2, "0");
-  const month = new Date().getMonth().toString().padStart(2, "0");
+  const month = String(new Date().getMonth() + 1).padStart(2, "0");
   const day = new Date().getDate().toString().padStart(2, "0");
 
   return (
