@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
 const Global = styled.div`
-  min-height: 100vh;
+  min-height: 84.7vh;
   min-width: 100%;
   padding-top: 145px;
-  transition: 250ms ease-out;
+  transition: 150ms;
   background: ${(props) => props.theme.globalBackground};
   box-shadow: ${(props) => props.theme.globalShadow};
 

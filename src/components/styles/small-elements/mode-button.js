@@ -4,9 +4,9 @@ const ModeButton = styled.button`
   background: ${(props) => props.theme.globalBackground};
   box-shadow: ${(props) => props.theme.topButtonShadow};
   background-image: ${(props) => props.theme.modeButtonImage};
-  background-position: center 10px;
+  background-position: -34px 8px;
   background-repeat: no-repeat;
-  background-size: 160px;
+  background-size: 170px;
   border: none;
   border-radius: 100px;
   top: 25px;
@@ -17,6 +17,10 @@ const ModeButton = styled.button`
   cursor: pointer;
   outline: 0px;
   transition: 50ms;
+
+  &:hover {
+    box-shadow: ${(props) => props.theme.topButtonShadow};
+  }
 `;
 
 export default ModeButton;

@@ -1,8 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-const LeftDate = styled.span`
+const TodayText = styled.span`
   position: absolute;
   color: ${(props) => props.theme.lightText};
   font-size: 50px;
@@ -12,8 +11,7 @@ const LeftDate = styled.span`
   text-shadow: ${(props) => props.theme.lightTextShadow};
   text-align: center;
   user-select: none;
-  transition: 250ms;
-  cursor: pointer;
+  transition: 150ms;
 
   p {
     margin: 0;
@@ -34,13 +32,11 @@ const Today = () => {
 
   return (
     <>
-      <Link to="calendar">
-        <LeftDate>
-          <p>
-            <span>{year}</span>年<span>{month}</span>月<span>{day}</span>日
-          </p>
-        </LeftDate>
-      </Link>
+      <TodayText>
+        <p>
+          <span>{year}</span>年<span>{month}</span>月<span>{day}</span>日
+        </p>
+      </TodayText>
     </>
   );
 };

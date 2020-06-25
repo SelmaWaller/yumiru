@@ -16,7 +16,11 @@ const HomeButton = styled.button`
   position: absolute;
   cursor: pointer;
   outline: 0px;
-  transition: 50ms;
+  transition: 150ms;
+
+  &:hover {
+    box-shadow: ${(props) => props.theme.topButtonShadowHover};
+  }
 `;
 
 export default HomeButton;

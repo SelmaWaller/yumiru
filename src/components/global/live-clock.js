@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-const RightClock = styled.span`
+const TimeText = styled.span`
   position: absolute;
   color: ${(props) => props.theme.lightText};
   font-size: 50px;
@@ -12,8 +11,7 @@ const RightClock = styled.span`
   text-shadow: ${(props) => props.theme.lightTextShadow};
   text-align: center;
   user-select: none;
-  transition: 250ms;
-  cursor: pointer;
+  transition: 150ms;
 
   p {
     margin: 0;
@@ -27,14 +25,14 @@ const RightClock = styled.span`
   }
 `;
 
-const Clock = () => {
-  const [timeNow, setTimeNow] = useState(new Date());
+const Time = () => {
+  const [getTime, setGetTime] = useState(new Date());
   const isAm = useState(
-    timeNow.getHours() >= 0 && timeNow.getHours() < 12 ? true : false
+    getTime.getHours() >= 0 && getTime.getHours() < 12 ? true : false
   );
 
   const [displayAmpm] = useState(isAm ? "午前" : "午後");
-  const Clock = (
+  const Time = (
     <p>
       {displayAmpm}
       <span>{new Date().getHours().toString().padStart(2, "0")}</span>時
@@ -44,24 +42,22 @@ const Clock = () => {
   );
 
   useEffect(() => {
-    let timer = setInterval(() => liveClock(), 1000);
+    let timer = setInterval(() => timeNow(), 1000);
 
     return () => {
       clearInterval(timer);
     };
   });
 
-  const liveClock = () => {
-    setTimeNow(new Date());
+  const timeNow = () => {
+    setGetTime(new Date());
   };
 
   return (
     <>
-      <Link to="calendar">
-        <RightClock>{Clock}</RightClock>
-      </Link>
+      <TimeText>{Time}</TimeText>
     </>
   );
 };
 
-export default Clock;
+export default Time;

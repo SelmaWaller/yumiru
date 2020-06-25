@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import overview from "../../../svgs/icons/overview/overview.gif";
+import overview from "../../../svgs/icons/overview/overview.svg";
 
 const DefaultButton = styled.button`
   background: ${(props) => props.theme.mainButtonDefault};
@@ -15,6 +15,7 @@ const DefaultButton = styled.button`
   outline: 0px transparent;
   position: relative;
   text-align: left;
+  transition: 150ms;
 
   img {
     position: absolute;
