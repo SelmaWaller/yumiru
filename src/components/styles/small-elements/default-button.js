@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import overview from '../../../svgs/icons/overview/overview.gif';
+import overview from "../../../svgs/icons/overview/overview.gif";
 
 const DefaultButton = styled.button`
   background: ${(props) => props.theme.mainButtonDefault};
@@ -19,7 +19,7 @@ const DefaultButton = styled.button`
   img {
     position: absolute;
     width: 25px;
-    margin-top:1px;
+    margin-top: 1px;
     right: 70px;
   }
 
@@ -31,7 +31,7 @@ const DefaultButton = styled.button`
     font-size: 18px;
     position: absolute;
     top: 23px;
-    left: 40px;
+    left: 70px;
   }
   span::before {
     content: "概要";
@@ -44,11 +44,10 @@ const DefaultButton = styled.button`
     transition: 300ms;
   }
   &:hover {
-    box-shadow: ${(props) => props.theme.mainButtonShadowHover};
     transition: 300ms;
     span::before {
       opacity: 0;
-    left: 120px;
+      left: 120px;
       transition: 300ms;
     }
     span::after {
@@ -58,8 +57,8 @@ const DefaultButton = styled.button`
       transition: 300ms;
     }
     div {
-    right: 132px;
-    transition: 300ms;
+      right: 132px;
+      transition: 300ms;
     }
   }
 

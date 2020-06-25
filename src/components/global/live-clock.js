@@ -25,11 +25,6 @@ const RightClock = styled.span`
     writing-mode: vertical-lr;
     transform: rotate(-90deg);
   }
-
-  &:hover {
-    color: ${(props) => props.theme.lightTextHover};
-    text-shadow: ${(props) => props.theme.lightTextShadowHover};
-  }
 `;
 
 const Clock = () => {

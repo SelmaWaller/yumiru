@@ -4,9 +4,9 @@ const HomeButton = styled.button`
   background: ${(props) => props.theme.globalBackground};
   box-shadow: ${(props) => props.theme.topButtonShadow};
   background-image: ${(props) => props.theme.homeButtonImage};
-  background-position: 9px 3px;
+  background-position: center 24px;
   background-repeat: no-repeat;
-  background-size: ${(props) => props.theme.homeButtonImageWidth};
+  background-size: 100px;
   border: none;
   border-radius: 100px;
   top: 25px;
