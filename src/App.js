@@ -27,22 +27,22 @@ import Today from "./components/global/today.js";
 const day = {
   //global
   logo: `url(${logo_small_daytime})`,
-  logoShadow: `3px -3px 2px ${variables.sunShadowInner}, 3px -3px 10px ${variables.sunShadowInner}, -3px 2px 10px ${variables.sunShadowText}, -2px 2px 2px ${variables.sunShadowText} , -3px 2px 10px ${variables.sunShadowText}, -2px 2px 2px ${variables.sunShadowText}, -3px 2px 10px ${variables.sunShadowText}, -2px 2px 2px ${variables.sunShadowText}`,
-  mainButtonDefault: variables.sunLinkGradient,
+  logoShadow: `3px -3px 2px ${variables.sunShadowLight}, 3px -3px 10px ${variables.sunShadowLight}, -3px 2px 10px ${variables.sunShadowText}, -2px 2px 2px ${variables.sunShadowText} , -3px 2px 10px ${variables.sunShadowText}, -2px 2px 2px ${variables.sunShadowText}, -3px 2px 10px ${variables.sunShadowText}, -2px 2px 2px ${variables.sunShadowText}`,
+  mainButtonDefault: variables.sunButtonDefault,
   mainButtonShadow: `0 18px 30px -15px ${variables.sunLinkOrange}c2, 0 18px 30px -15px ${variables.sunLinkPink}c2`,
   globalBackground: variables.sunBackground,
   globalBackgroundLight: variables.sunBackgroundLight,
   globalText: variables.sunText,
-  contentShadow: `5px -5px 15px ${variables.sunShadowOuter}25, inset -5px 5px 20px ${variables.sunShadowInner}, -5px 5px 15px ${variables.sunShadowOuter}90, inset 5px -5px 5px ${variables.sunShadowOuter}, inset 1px -1px 25px ${variables.sunShadowOuter}, inset 8px -8px 15px ${variables.sunShadowInner}00, inset -5px 5px 10px ${variables.sunShadowOuter}00`,
-  contentShadowHover: `5px -5px 15px ${variables.sunShadowOuter}00, inset -5px 5px 20px ${variables.sunShadowInner}00, -5px 5px 15px ${variables.sunShadowOuter}00, inset 5px -5px 5px ${variables.sunShadowOuter}00, inset 1px -1px 25px ${variables.sunShadowOuter}00, inset 8px -8px 15px ${variables.sunShadowInner}, inset -4px 4px 10px ${variables.sunShadowOuter}`,
+  contentShadow: `3px -3px 10px ${variables.sunShadowDark}15, inset -3px 3px 8px ${variables.sunShadowLight}, -3px 3px 10px ${variables.sunShadowDark}80, inset 2px -2px 2px ${variables.sunShadowDark}, inset 3px -3px 10px ${variables.sunShadowDark}f5, inset 3px -3px 3px ${variables.sunShadowLight}00, inset -5px 5px 5px ${variables.sunShadowDark}00`,
+  contentShadowHover: `5px -5px 8px ${variables.sunShadowDark}00, inset -5px 5px 10px ${variables.sunShadowLight}00, -5px 5px 15px ${variables.sunShadowDark}00, inset 5px -5px 5px ${variables.sunShadowDark}00, inset 1px -1px 25px ${variables.sunShadowDark}00, inset 8px -8px 15px ${variables.sunShadowLight}, inset -4px 4px 10px ${variables.sunShadowDark}`,
   //date and time
   lightText: variables.sunTextLight,
-  lightTextShadow: `3px 3px 2px ${variables.sunShadowInner}, 3px 3px 10px ${variables.sunShadowInner}, -3px -2px 10px ${variables.sunShadowText}, -2px -2px 2px ${variables.sunShadowText} , -3px -2px 10px ${variables.sunShadowText}, -2px -2px 2px ${variables.sunShadowText}, -3px -2px 10px ${variables.sunShadowText}, -2px -2px 2px ${variables.sunShadowText}`,
+  lightTextShadow: `3px 3px 2px ${variables.sunShadowLight}, 3px 3px 10px ${variables.sunShadowLight}, -3px -2px 10px ${variables.sunShadowText}, -2px -2px 2px ${variables.sunShadowText} , -3px -2px 10px ${variables.sunShadowText}, -2px -2px 2px ${variables.sunShadowText}, -3px -2px 10px ${variables.sunShadowText}, -2px -2px 2px ${variables.sunShadowText}`,
   //topButtons
   homeButtonImage: `url(${logo_icon_daytime})`,
   modeButtonImage: `url(${moon_daytime})`,
-  topButtonShadow: `3px -3px 10px ${variables.sunShadowOuter}15, inset -3px 3px 4px ${variables.sunShadowInner}, -3px 3px 10px ${variables.sunShadowOuter}80, inset 2px -2px 2px ${variables.sunShadowOuter}, inset 3px -3px 10px ${variables.sunShadowOuter}, inset 3px -3px 3px ${variables.sunShadowInner}00, inset -5px 5px 5px ${variables.sunShadowOuter}00`,
-  topButtonShadowHover: `3px -3px 10px ${variables.sunShadowOuter}00, inset -3px 3px 4px ${variables.sunShadowInner}00, -3px 3px 10px ${variables.sunShadowOuter}00, inset 2px -2px 2px ${variables.sunShadowOuter}00, inset 3px -3px 10px ${variables.sunShadowOuter}00, inset 3px -3px 3px ${variables.sunShadowInner}, inset -5px 5px 5px ${variables.sunShadowOuter}`,
+  topButtonShadow: `3px -3px 10px ${variables.sunShadowDark}15, inset -3px 3px 4px ${variables.sunShadowLight}, -3px 3px 10px ${variables.sunShadowDark}80, inset 2px -2px 2px ${variables.sunShadowDark}, inset 3px -3px 10px ${variables.sunShadowDark}, inset 3px -3px 3px ${variables.sunShadowLight}00, inset -5px 5px 5px ${variables.sunShadowDark}00`,
+  topButtonShadowHover: `3px -3px 10px ${variables.sunShadowDark}00, inset -3px 3px 4px ${variables.sunShadowLight}00, -3px 3px 10px ${variables.sunShadowDark}00, inset 2px -2px 2px ${variables.sunShadowDark}00, inset 3px -3px 10px ${variables.sunShadowDark}00, inset 3px -3px 3px ${variables.sunShadowLight}, inset -5px 5px 5px ${variables.sunShadowDark}`,
   //games and other stuff
   gameTag: `url(${games_daytime})`,
   otherTag: `url(${other_daytime})`,
@@ -51,23 +51,23 @@ const day = {
 const evening = {
   //global
   logo: `url(${logo_small_evening})`,
-  logoShadow: `3px -3px 2px ${variables.moonShadowInner}, 3px -3px 10px ${variables.moonShadowInner}, -3px 2px 10px ${variables.moonShadowOuter}, -2px 2px 2px ${variables.moonShadowOuter} , -3px 2px 10px ${variables.moonShadowOuter}, -2px 2px 2px ${variables.moonShadowOuter}, -3px 2px 10px ${variables.moonShadowOuter}, -2px 2px 2px ${variables.moonShadowOuter}`,
-  mainButtonDefault: variables.moonLinkGradient,
+  logoShadow: `3px -3px 2px ${variables.moonShadowLight}, 3px -3px 10px ${variables.moonShadowLight}, -3px 2px 10px ${variables.moonShadowOuter}, -2px 2px 2px ${variables.moonShadowOuter} , -3px 2px 10px ${variables.moonShadowOuter}, -2px 2px 2px ${variables.moonShadowOuter}, -3px 2px 10px ${variables.moonShadowOuter}, -2px 2px 2px ${variables.moonShadowOuter}`,
+  mainButtonDefault: variables.moonButtonDefault,
   mainButtonShadow: `0 18px 30px -15px ${variables.moonLinkOrange}40, 0 18px 30px -15px ${variables.moonLinkPink}40`,
   globalBackground: variables.moonBackground,
   globalBackgroundLight: variables.moonBackgroundDark,
   globalText: variables.moonText,
   contentBackgroundHover: variables.moonBackgroundLight,
-  contentShadow: `5px -5px 15px ${variables.moonShadowOuter}25, inset -5px 5px 20px ${variables.moonShadowInner}, -5px 5px 15px ${variables.moonShadowOuter}90, inset 5px -5px 5px ${variables.moonShadowOuter}, inset 1px -1px 25px ${variables.moonShadowOuter}, inset 8px -8px 15px ${variables.moonShadowInner}00, inset -5px 5px 10px ${variables.moonShadowOuter}00`,
-  contentShadowHover: `5px -5px 15px ${variables.moonShadowOuter}00, inset -5px 5px 20px ${variables.moonShadowInner}00, -5px 5px 15px ${variables.moonShadowOuter}00, inset 5px -5px 5px ${variables.moonShadowOuter}00, inset 1px -1px 25px ${variables.moonShadowOuter}00, inset 8px -8px 15px ${variables.moonShadowInner}, inset -4px 4px 10px ${variables.moonShadowOuter}`,
+  contentShadow: `3px -3px 10px ${variables.moonShadowDark}15, inset -3px 3px 8px ${variables.moonShadowLight}, -3px 3px 10px ${variables.moonShadowDark}80, inset 2px -2px 2px ${variables.moonShadowDark}, inset 3px -3px 10px ${variables.moonShadowDark}f5, inset 3px -3px 3px ${variables.moonShadowLight}00, inset -5px 5px 5px ${variables.moonShadowDark}00`,
+  contentShadowHover: `5px -5px 8px ${variables.moonShadowDark}00, inset -5px 5px 10px ${variables.moonShadowLight}00, -5px 5px 15px ${variables.moonShadowDark}00, inset 5px -5px 5px ${variables.moonShadowDark}00, inset 1px -1px 25px ${variables.moonShadowDark}00, inset 8px -8px 15px ${variables.moonShadowLight}, inset -4px 4px 10px ${variables.moonShadowDark}`,
   //date and time
   lightText: variables.moonTextLight,
-  lightTextShadow: `3px 3px 2px ${variables.moonShadowInner}, 3px 3px 10px ${variables.moonShadowInner}, -3px -2px 10px ${variables.moonShadowOuter}, -2px -2px 2px ${variables.moonShadowOuter}, -3px -2px 10px ${variables.moonShadowOuter}, -2px -2px 2px ${variables.moonShadowOuter}, -3px -2px 10px ${variables.moonShadowOuter}, -2px -2px 2px ${variables.moonShadowOuter}`,
+  lightTextShadow: `3px 3px 2px ${variables.moonShadowLight}, 3px 3px 10px ${variables.moonShadowLight}, -3px -2px 10px ${variables.moonShadowDark}, -2px -2px 2px ${variables.moonShadowDark}, -3px -2px 10px ${variables.moonShadowDark}, -2px -2px 2px ${variables.moonShadowDark}, -3px -2px 10px ${variables.moonShadowDark}, -2px -2px 2px ${variables.moonShadowDark}`,
   //topButtons
   homeButtonImage: `url(${logo_icon_evening})`,
   modeButtonImage: `url(${sun_evening})`,
-  topButtonShadow: `3px -3px 10px ${variables.moonShadowOuter}15, inset -3px 3px 4px ${variables.moonShadowInner}, -3px 3px 10px ${variables.moonShadowOuter}80, inset 2px -2px 2px ${variables.moonShadowOuter}, inset 3px -3px 10px ${variables.moonShadowOuter}`,
-  topButtonShadowHover: `3px -3px 10px ${variables.moonShadowOuter}00, inset -3px 3px 4px ${variables.moonShadowInner}00, -3px 3px 10px ${variables.moonShadowOuter}00, inset 2px -2px 2px ${variables.moonShadowOuter}00, inset 3px -3px 10px ${variables.moonShadowOuter}00, inset 3px -3px 3px ${variables.moonShadowInner}, inset -5px 5px 5px ${variables.moonShadowOuter}`,
+  topButtonShadow: `3px -3px 10px ${variables.moonShadowDark}15, inset -3px 3px 4px ${variables.moonShadowLight}, -3px 3px 10px ${variables.moonShadowDark}80, inset 2px -2px 2px ${variables.moonShadowDark}, inset 3px -3px 10px ${variables.moonShadowDark}`,
+  topButtonShadowHover: `3px -3px 10px ${variables.moonShadowDark}00, inset -3px 3px 4px ${variables.moonShadowLight}00, -3px 3px 10px ${variables.moonShadowDark}00, inset 2px -2px 2px ${variables.moonShadowDark}00, inset 3px -3px 10px ${variables.moonShadowDark}00, inset 3px -3px 3px ${variables.moonShadowLight}, inset -5px 5px 5px ${variables.moonShadowDark}`,
   //games and other stuff
   gameTag: `url(${games_evening})`,
   otherTag: `url(${other_evening})`,
