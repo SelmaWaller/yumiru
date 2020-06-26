@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const ModeButton = styled.button`
   background: ${(props) => props.theme.globalBackground};
-  box-shadow: ${(props) => props.theme.topButtonShadow};
+  box-shadow: ${(props) => props.theme.topButtonShadowHover};
   background-image: ${(props) => props.theme.modeButtonImage};
   background-position: -34px 8px;
   background-repeat: no-repeat;
@@ -17,10 +17,6 @@ const ModeButton = styled.button`
   cursor: pointer;
   outline: 0px;
   transition: 50ms;
-
-  &:hover {
-    box-shadow: ${(props) => props.theme.topButtonShadow};
-  }
 `;
 
 export default ModeButton;

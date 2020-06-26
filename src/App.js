@@ -5,10 +5,14 @@ import { ThemeProvider } from "styled-components";
 import variables from "./components/styles/variables";
 import moon_daytime from "./svgs/icons/moon/moon_daytime.gif";
 import sun_evening from "./svgs/icons/sun/sun_evening.gif";
-import logo_daytime from "./svgs/logo/logo_daytime.png";
-import logo_evening from "./svgs/logo/logo_evening.png";
-import logo_icon_daytime from "./svgs/logo/logo_no-text_daytime.png";
-import logo_icon_evening from "./svgs/logo/logo_no-text_evening.png";
+
+//import logo_icon_daytime from "./svgs/logo/logo_new_daytime.png";
+//import logo_big_evening from "./svgs/logo/logo_new_evening.png";
+import logo_small_daytime from "./svgs/logo/logo_daytime.png";
+import logo_small_evening from "./svgs/logo/logo_evening.png";
+
+import logo_icon_daytime from "./svgs/logo/logo_new_daytime.png";
+import logo_icon_evening from "./svgs/logo/logo_new_evening.png";
 import games_daytime from "./svgs/icons/tags/games_daytime.png";
 import games_evening from "./svgs/icons/tags/games_evening.png";
 import other_daytime from "./svgs/icons/tags/other_daytime.png";
@@ -22,7 +26,7 @@ import Today from "./components/global/today.js";
 
 const day = {
   //global
-  logo: `url(${logo_daytime})`,
+  logo: `url(${logo_small_daytime})`,
   logoShadow: `3px -3px 2px ${variables.sunShadowInner}, 3px -3px 10px ${variables.sunShadowInner}, -3px 2px 10px ${variables.sunShadowText}, -2px 2px 2px ${variables.sunShadowText} , -3px 2px 10px ${variables.sunShadowText}, -2px 2px 2px ${variables.sunShadowText}, -3px 2px 10px ${variables.sunShadowText}, -2px 2px 2px ${variables.sunShadowText}`,
   mainButtonDefault: variables.sunLinkGradient,
   mainButtonShadow: `0 18px 30px -15px ${variables.sunLinkOrange}c2, 0 18px 30px -15px ${variables.sunLinkPink}c2`,
@@ -46,7 +50,7 @@ const day = {
 
 const evening = {
   //global
-  logo: `url(${logo_evening})`,
+  logo: `url(${logo_small_evening})`,
   logoShadow: `3px -3px 2px ${variables.moonShadowInner}, 3px -3px 10px ${variables.moonShadowInner}, -3px 2px 10px ${variables.moonShadowOuter}, -2px 2px 2px ${variables.moonShadowOuter} , -3px 2px 10px ${variables.moonShadowOuter}, -2px 2px 2px ${variables.moonShadowOuter}, -3px 2px 10px ${variables.moonShadowOuter}, -2px 2px 2px ${variables.moonShadowOuter}`,
   mainButtonDefault: variables.moonLinkGradient,
   mainButtonShadow: `0 18px 30px -15px ${variables.moonLinkOrange}40, 0 18px 30px -15px ${variables.moonLinkPink}40`,
@@ -63,7 +67,7 @@ const evening = {
   homeButtonImage: `url(${logo_icon_evening})`,
   modeButtonImage: `url(${sun_evening})`,
   topButtonShadow: `3px -3px 10px ${variables.moonShadowOuter}15, inset -3px 3px 4px ${variables.moonShadowInner}, -3px 3px 10px ${variables.moonShadowOuter}80, inset 2px -2px 2px ${variables.moonShadowOuter}, inset 3px -3px 10px ${variables.moonShadowOuter}`,
-  topButtonShadowHover: `inset 3px -3px 3px ${variables.moonShadowInner}, inset -5px 5px 5px ${variables.moonShadowOuter}`,
+  topButtonShadowHover: `3px -3px 10px ${variables.moonShadowOuter}00, inset -3px 3px 4px ${variables.moonShadowInner}00, -3px 3px 10px ${variables.moonShadowOuter}00, inset 2px -2px 2px ${variables.moonShadowOuter}00, inset 3px -3px 10px ${variables.moonShadowOuter}00, inset 3px -3px 3px ${variables.moonShadowInner}, inset -5px 5px 5px ${variables.moonShadowOuter}`,
   //games and other stuff
   gameTag: `url(${games_evening})`,
   otherTag: `url(${other_evening})`,
