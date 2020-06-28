@@ -16,17 +16,19 @@ import other_daytime from './svgs/icons/tags/other_daytime.png';
 import other_evening from './svgs/icons/tags/other_evening.png';
 
 import Global from './components/styles/global';
-import ModeButton from './components/styles/small-elements/mode-button';
-import LiveClock from './components/global/live-clock';
-import HomeButton from './components/styles/small-elements/home-button';
+import TopButton from './components/styles/transparent-button';
+import Time from './components/global/time';
 import Today from './components/global/today.js';
 
 const day = {
   //global
   logo: `url(${logo_small_daytime})`,
-  logoShadow: `3px -3px 2px ${variables.sunShadowLight}, 3px -3px 10px ${variables.sunShadowLight}, -3px 2px 10px ${variables.sunShadowText}, -2px 2px 2px ${variables.sunShadowText} , -3px 2px 10px ${variables.sunShadowText}, -2px 2px 2px ${variables.sunShadowText}, -3px 2px 10px ${variables.sunShadowText}, -2px 2px 2px ${variables.sunShadowText}`,
-  mainButtonDefault: variables.sunButtonDefault,
-  mainButtonShadow: `0 18px 30px -15px ${variables.sunLinkOrange}c2, 0 18px 30px -15px ${variables.sunLinkPink}c2`,
+  logoMobile: `url(${logo_big_daytime})`,
+  title: 'unset',
+  titleShadow: `3px -3px 2px ${variables.sunShadowLight}, 3px -3px 10px ${variables.sunShadowLight}, -3px 2px 10px ${variables.sunShadowText}, -2px 2px 2px ${variables.sunShadowText} , -3px 2px 10px ${variables.sunShadowText}, -2px 2px 2px ${variables.sunShadowText}, -3px 2px 10px ${variables.sunShadowText}, -2px 2px 2px ${variables.sunShadowText}`,
+  titleShadowMobile: `1px -1px 2px ${variables.sunShadowLight}, 2px -2px 4px ${variables.sunShadowLight}, -3px 2px 10px ${variables.sunShadowText}, -2px 2px 2px ${variables.sunShadowText} , -3px 2px 10px ${variables.sunShadowText}, -2px 2px 2px ${variables.sunShadowText}, -3px 2px 10px ${variables.sunShadowText}, -2px 2px 2px ${variables.sunShadowText}`,
+  buttonDefault: variables.sunButtonDefault,
+  buttonShadow: `0 18px 30px -15px ${variables.sunLinkOrange}c2, 0 18px 30px -15px ${variables.sunLinkPink}c2`,
   globalBackground: variables.sunBackground,
   globalBackgroundLight: variables.sunBackgroundLight,
   globalText: variables.sunText,
@@ -35,6 +37,7 @@ const day = {
   //date and time
   lightText: variables.sunTextLight,
   lightTextShadow: `3px 3px 2px ${variables.sunShadowLight}, 3px 3px 10px ${variables.sunShadowLight}, -3px -2px 10px ${variables.sunShadowText}, -2px -2px 2px ${variables.sunShadowText} , -3px -2px 10px ${variables.sunShadowText}, -2px -2px 2px ${variables.sunShadowText}, -3px -2px 10px ${variables.sunShadowText}, -2px -2px 2px ${variables.sunShadowText}`,
+  lightTextShadowMobile: `1px 1px 1px ${variables.sunShadowLight}, 2px 2px 4px ${variables.sunShadowLight}, -3px -1px 10px ${variables.sunShadowText}, -2px -2px 2px ${variables.sunShadowText} , -3px -1px 10px ${variables.sunShadowText}, -2px -2px 2px ${variables.sunShadowText}, -3px -1px 10px ${variables.sunShadowText}, -2px -2px 2px ${variables.sunShadowText}`,
   //topButtons
   homeButtonImage: `url(${logo_big_daytime})`,
   modeButtonImage: `url(${moon_daytime})`,
@@ -48,9 +51,11 @@ const day = {
 const evening = {
   //global
   logo: `url(${logo_small_evening})`,
-  logoShadow: `3px -3px 2px ${variables.moonShadowLight}, 3px -3px 10px ${variables.moonShadowLight}, -3px 2px 10px ${variables.moonShadowDark}, -2px 2px 2px ${variables.moonShadowDark} , -3px 2px 10px ${variables.moonShadowDark}, -2px 2px 2px ${variables.moonShadowDark}, -3px 2px 10px ${variables.moonShadowDark}, -2px 2px 2px ${variables.moonShadowDark}`,
-  mainButtonDefault: variables.moonButtonDefault,
-  mainButtonShadow: `0 18px 30px -15px ${variables.moonLinkOrange}40, 0 18px 30px -15px ${variables.moonLinkPink}40`,
+  logoMobile: `url(${logo_big_evening})`,
+  titleShadow: `3px -3px 2px ${variables.moonShadowLight}, 3px -3px 10px ${variables.moonShadowLight}, -3px 2px 10px ${variables.moonShadowDark}, -2px 2px 2px ${variables.moonShadowDark} , -3px 2px 10px ${variables.moonShadowDark}, -2px 2px 2px ${variables.moonShadowDark}, -3px 2px 10px ${variables.moonShadowDark}, -2px 2px 2px ${variables.moonShadowDark}`,
+  titleShadowMobile: `1px -1px 2px ${variables.moonShadowLight}, 2px -2px 4px ${variables.moonShadowLight}, -3px 2px 10px ${variables.moonShadowDark}, -2px 2px 2px ${variables.moonShadowDark} , -3px 2px 10px ${variables.moonShadowDark}, -2px 2px 2px ${variables.moonShadowDark}, -3px 2px 10px ${variables.moonShadowDark}, -2px 2px 2px ${variables.moonShadowDark}`,
+  buttonDefault: variables.moonButtonDefault,
+  buttonShadow: `0 18px 30px -15px ${variables.moonLinkOrange}40, 0 18px 30px -15px ${variables.moonLinkPink}40`,
   globalBackground: variables.moonBackground,
   globalBackgroundLight: variables.moonBackgroundDark,
   globalText: variables.moonText,
@@ -60,6 +65,7 @@ const evening = {
   //date and time
   lightText: variables.moonTextLight,
   lightTextShadow: `3px 3px 2px ${variables.moonShadowLight}, 3px 3px 10px ${variables.moonShadowLight}, -3px -2px 10px ${variables.moonShadowDark}, -2px -2px 2px ${variables.moonShadowDark}, -3px -2px 10px ${variables.moonShadowDark}, -2px -2px 2px ${variables.moonShadowDark}, -3px -2px 10px ${variables.moonShadowDark}, -2px -2px 2px ${variables.moonShadowDark}`,
+  lightTextShadowMobile: `1px 1px 1px ${variables.moonShadowLight}, 2px 2px 4px ${variables.moonShadowLight}, -3px -1px 10px ${variables.moonShadowDark}, -2px -2px 2px ${variables.moonShadowDark} , -3px -1px 10px ${variables.moonShadowDark}, -2px -2px 2px ${variables.moonShadowDark}, -3px -1px 10px ${variables.moonShadowDark}, -2px -2px 2px ${variables.moonShadowDark}`,
   //topButtons
   homeButtonImage: `url(${logo_big_evening})`,
   modeButtonImage: `url(${sun_evening})`,
@@ -93,15 +99,15 @@ function App({children}) {
     <ThemeProvider theme={theme}>
       <Global>
         <Link to="/">
-          <HomeButton />
+          <TopButton home />
         </Link>
-        <LiveClock />
+        <Time />
         <Today />
-        <ModeButton
+        <TopButton
           onClick={() => {
             toggleTheme();
           }}
-        ></ModeButton>
+        ></TopButton>
         {children}
       </Global>
     </ThemeProvider>

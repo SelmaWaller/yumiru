@@ -7,7 +7,9 @@ const Global = styled.div`
   transition: 150ms;
   background: ${(props) => props.theme.globalBackground};
   box-shadow: ${(props) => props.theme.globalShadow};
-
+  @media (max-width: 660px) {
+    padding-top: 95px;
+  }
   a {
     cursor: default;
   }

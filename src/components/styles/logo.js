@@ -11,6 +11,16 @@ const Logo = styled.div`
   background-repeat: no-repeat;
   background-size: 100%;
   transition: 150ms;
+  @media (max-width: 660px) {
+    background: ${(props) => props.theme.logoMobile};
+    bottom: 0;
+    max-height: 100vh;
+    width: 650px;
+    max-width: 90%;
+    background-size: 80%;
+    background-position: center 80px;
+    background-repeat: no-repeat;
+  }
 `;
 
 export default Logo;
