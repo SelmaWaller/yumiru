@@ -1,11 +1,11 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const OverviewWrapper = styled.div`
   display: grid;
   margin: 0 auto;
   max-width: 1600px;
   padding: 0 130px;
-  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(410px, 1fr));
 `;
 
 export default OverviewWrapper;

@@ -48,7 +48,7 @@ const day = {
 const evening = {
   //global
   logo: `url(${logo_small_evening})`,
-  logoShadow: `3px -3px 2px ${variables.moonShadowLight}, 3px -3px 10px ${variables.moonShadowLight}, -3px 2px 10px ${variables.moonShadowOuter}, -2px 2px 2px ${variables.moonShadowOuter} , -3px 2px 10px ${variables.moonShadowOuter}, -2px 2px 2px ${variables.moonShadowOuter}, -3px 2px 10px ${variables.moonShadowOuter}, -2px 2px 2px ${variables.moonShadowOuter}`,
+  logoShadow: `3px -3px 2px ${variables.moonShadowLight}, 3px -3px 10px ${variables.moonShadowLight}, -3px 2px 10px ${variables.moonShadowDark}, -2px 2px 2px ${variables.moonShadowDark} , -3px 2px 10px ${variables.moonShadowDark}, -2px 2px 2px ${variables.moonShadowDark}, -3px 2px 10px ${variables.moonShadowDark}, -2px 2px 2px ${variables.moonShadowDark}`,
   mainButtonDefault: variables.moonButtonDefault,
   mainButtonShadow: `0 18px 30px -15px ${variables.moonLinkOrange}40, 0 18px 30px -15px ${variables.moonLinkPink}40`,
   globalBackground: variables.moonBackground,
