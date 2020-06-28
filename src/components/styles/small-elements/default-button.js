@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import overview from "../../../svgs/icons/overview/overview.svg";
+import styled from 'styled-components';
+import overview from '../../../svgs/icons/overview/overview.svg';
 
 const DefaultButton = styled.button`
   background: ${(props) => props.theme.mainButtonDefault};
@@ -16,6 +16,7 @@ const DefaultButton = styled.button`
   position: relative;
   text-align: left;
   transition: 150ms;
+  margin-top: -20px;
 
   img {
     position: absolute;
@@ -25,9 +26,9 @@ const DefaultButton = styled.button`
   }
 
   span::after {
-    font-family: "Comfortaa", sans-serif;
+    font-family: 'Comfortaa', sans-serif;
     transition: 300ms;
-    content: "OVERVIEW";
+    content: 'OVERVIEW';
     opacity: 0;
     font-size: 18px;
     position: absolute;
@@ -35,8 +36,8 @@ const DefaultButton = styled.button`
     left: 70px;
   }
   span::before {
-    content: "概要";
-    font-family: "Sawarabi Mincho", serif;
+    content: '概要';
+    font-family: 'Sawarabi Mincho', serif;
     font-size: 22px;
     position: absolute;
     top: 15px;

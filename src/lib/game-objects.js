@@ -1,18 +1,21 @@
 const gameObjects = [
   {
-    furigana1: "は 梯 — しご 子",
-    japName: "梯子ゲーム",
-    engName: "Ladder Game",
+    furigana: 'は 梯 — しご 子',
+    japName: '梯子ゲーム',
+    engName: 'Ladder Game',
+    url: '/ladder',
   },
   {
-    furigana1: "き 記 — おく 憶",
-    japName: "記憶ゲーム",
-    engName: "Memory Game",
+    furigana: 'き 記 — おく 憶',
+    japName: '記憶ゲーム',
+    engName: 'Memory Game',
+    url: '/memory',
   },
   {
-    furigana1: "お 合",
-    japName: "カードを合わせる",
-    engName: "Match the Cards",
+    furigana: 'お 合',
+    japName: 'カードを合わせる',
+    engName: 'Match the Cards',
+    url: '/match',
   },
 ];
 

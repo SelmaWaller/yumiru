@@ -1,28 +1,25 @@
-import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import { ThemeProvider } from "styled-components";
+import React, {useEffect, useState} from 'react';
+import {Link} from 'react-router-dom';
+import {ThemeProvider} from 'styled-components';
 
-import variables from "./components/styles/variables";
-import moon_daytime from "./svgs/icons/moon/moon_daytime.gif";
-import sun_evening from "./svgs/icons/sun/sun_evening.gif";
+import variables from './components/styles/variables';
+import moon_daytime from './svgs/icons/moon/moon_daytime.gif';
+import sun_evening from './svgs/icons/sun/sun_evening.gif';
 
-//import logo_icon_daytime from "./svgs/logo/logo_new_daytime.png";
-//import logo_big_evening from "./svgs/logo/logo_new_evening.png";
-import logo_small_daytime from "./svgs/logo/logo_daytime.png";
-import logo_small_evening from "./svgs/logo/logo_evening.png";
+import logo_small_daytime from './svgs/logo/logo_daytime.png';
+import logo_small_evening from './svgs/logo/logo_evening.png';
+import logo_big_daytime from './svgs/logo/logo_big_daytime.png';
+import logo_big_evening from './svgs/logo/logo_big_evening.png';
+import games_daytime from './svgs/icons/tags/games_daytime.png';
+import games_evening from './svgs/icons/tags/games_evening.png';
+import other_daytime from './svgs/icons/tags/other_daytime.png';
+import other_evening from './svgs/icons/tags/other_evening.png';
 
-import logo_icon_daytime from "./svgs/logo/logo_new_daytime.png";
-import logo_icon_evening from "./svgs/logo/logo_new_evening.png";
-import games_daytime from "./svgs/icons/tags/games_daytime.png";
-import games_evening from "./svgs/icons/tags/games_evening.png";
-import other_daytime from "./svgs/icons/tags/other_daytime.png";
-import other_evening from "./svgs/icons/tags/other_evening.png";
-
-import Global from "./components/styles/global";
-import ModeButton from "./components/styles/small-elements/mode-button";
-import LiveClock from "./components/global/live-clock";
-import HomeButton from "./components/styles/small-elements/home-button";
-import Today from "./components/global/today.js";
+import Global from './components/styles/global';
+import ModeButton from './components/styles/small-elements/mode-button';
+import LiveClock from './components/global/live-clock';
+import HomeButton from './components/styles/small-elements/home-button';
+import Today from './components/global/today.js';
 
 const day = {
   //global
@@ -39,7 +36,7 @@ const day = {
   lightText: variables.sunTextLight,
   lightTextShadow: `3px 3px 2px ${variables.sunShadowLight}, 3px 3px 10px ${variables.sunShadowLight}, -3px -2px 10px ${variables.sunShadowText}, -2px -2px 2px ${variables.sunShadowText} , -3px -2px 10px ${variables.sunShadowText}, -2px -2px 2px ${variables.sunShadowText}, -3px -2px 10px ${variables.sunShadowText}, -2px -2px 2px ${variables.sunShadowText}`,
   //topButtons
-  homeButtonImage: `url(${logo_icon_daytime})`,
+  homeButtonImage: `url(${logo_big_daytime})`,
   modeButtonImage: `url(${moon_daytime})`,
   topButtonShadow: `3px -3px 10px ${variables.sunShadowDark}15, inset -3px 3px 4px ${variables.sunShadowLight}, -3px 3px 10px ${variables.sunShadowDark}80, inset 2px -2px 2px ${variables.sunShadowDark}, inset 3px -3px 10px ${variables.sunShadowDark}, inset 3px -3px 3px ${variables.sunShadowLight}00, inset -5px 5px 5px ${variables.sunShadowDark}00`,
   topButtonShadowHover: `3px -3px 10px ${variables.sunShadowDark}00, inset -3px 3px 4px ${variables.sunShadowLight}00, -3px 3px 10px ${variables.sunShadowDark}00, inset 2px -2px 2px ${variables.sunShadowDark}00, inset 3px -3px 10px ${variables.sunShadowDark}00, inset 3px -3px 3px ${variables.sunShadowLight}, inset -5px 5px 5px ${variables.sunShadowDark}`,
@@ -64,7 +61,7 @@ const evening = {
   lightText: variables.moonTextLight,
   lightTextShadow: `3px 3px 2px ${variables.moonShadowLight}, 3px 3px 10px ${variables.moonShadowLight}, -3px -2px 10px ${variables.moonShadowDark}, -2px -2px 2px ${variables.moonShadowDark}, -3px -2px 10px ${variables.moonShadowDark}, -2px -2px 2px ${variables.moonShadowDark}, -3px -2px 10px ${variables.moonShadowDark}, -2px -2px 2px ${variables.moonShadowDark}`,
   //topButtons
-  homeButtonImage: `url(${logo_icon_evening})`,
+  homeButtonImage: `url(${logo_big_evening})`,
   modeButtonImage: `url(${sun_evening})`,
   topButtonShadow: `3px -3px 10px ${variables.moonShadowDark}15, inset -3px 3px 4px ${variables.moonShadowLight}, -3px 3px 10px ${variables.moonShadowDark}80, inset 2px -2px 2px ${variables.moonShadowDark}, inset 3px -3px 10px ${variables.moonShadowDark}`,
   topButtonShadowHover: `3px -3px 10px ${variables.moonShadowDark}00, inset -3px 3px 4px ${variables.moonShadowLight}00, -3px 3px 10px ${variables.moonShadowDark}00, inset 2px -2px 2px ${variables.moonShadowDark}00, inset 3px -3px 10px ${variables.moonShadowDark}00, inset 3px -3px 3px ${variables.moonShadowLight}, inset -5px 5px 5px ${variables.moonShadowDark}`,
@@ -73,7 +70,7 @@ const evening = {
   otherTag: `url(${other_evening})`,
 };
 
-function App({ children }) {
+function App({children}) {
   const [daytime, setDaytime] = useState(true);
   const [themeIcon, setThemeIcon] = useState(
     daytime ? moon_daytime : sun_evening
@@ -89,7 +86,7 @@ function App({ children }) {
   };
 
   useEffect(() => {
-    document.title = "Yumiru";
+    document.title = 'Yumiru';
   }, []);
 
   return (

@@ -1,10 +1,10 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const Logo = styled.div`
   width: 100%;
-  max-width: 700px;
-  margin: 100px auto 0;
-  max-height: 550px;
+  max-width: 650px;
+  margin: 80px auto 0;
+  max-height: 530px;
   position: absolute;
   height: 100%;
   background: ${(props) => props.theme.logo};

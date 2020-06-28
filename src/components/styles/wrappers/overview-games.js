@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 const OverviewGames = styled.div`
   background: ${(props) => props.theme.globalBackground};
   background-image: ${(props) => props.theme.gameTag};
@@ -7,7 +7,7 @@ const OverviewGames = styled.div`
   background-size: 180px;
   box-shadow: ${(props) => props.theme.contentShadow};
   border-radius: 25px;
-  margin: 20px;
+  margin: 15px;
   min-height: 250px;
   max-width: 100%;
   transition: 200ms;
@@ -22,7 +22,7 @@ const OverviewGames = styled.div`
     text-decoration: none;
     text-transform: uppercase;
     font-weight: normal;
-    font-family: "Sawarabi Mincho", serif;
+    font-family: 'Sawarabi Mincho', serif;
     color: ${(props) => props.theme.globalText};
     font-size: 28px;
     margin: 0;
@@ -34,7 +34,7 @@ const OverviewGames = styled.div`
     top: 10px;
     left: -5px;
     font-size: 18px;
-    font-family: "Comfortaa", sans-serif;
+    font-family: 'Comfortaa', sans-serif;
     opacity: 0.6;
     writing-mode: vertical-rl;
     position: absolute;
@@ -43,7 +43,7 @@ const OverviewGames = styled.div`
   }
 
   h3 {
-    font-family: "Comfortaa", sans-serif;
+    font-family: 'Comfortaa', sans-serif;
     bottom: 15px;
     left: 0;
     font-size: 15px;

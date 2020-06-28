@@ -1,7 +1,7 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const Global = styled.div`
-  min-height: 84.7vh;
+  min-height: 100vh;
   min-width: 100%;
   padding-top: 145px;
   transition: 150ms;

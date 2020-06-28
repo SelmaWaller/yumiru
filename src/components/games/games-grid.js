@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 import {Link} from 'react-router-dom';
-import gameObjects from "../../lib/game-objects";
-import OverviewGames from "../styles/wrappers/overview-games";
+import gameObjects from '../../lib/game-objects';
+import OverviewGames from '../styles/wrappers/overview-games';
 
 const GamesGrid = () => {
   return (
@@ -9,13 +9,13 @@ const GamesGrid = () => {
       {gameObjects.map((game, index) => {
         return (
           <OverviewGames key={index}>
-         <Link to="/">
+            <Link to="/">
               <div key={index}>
-             <h1>{game.japName}</h1> 
-            <h2>{game.furigana1}</h2>
-            <h3>{game.engName}</h3>
-            </div>
-          </Link>
+                <h1>{game.japName}</h1>
+                <h2>{game.furigana}</h2>
+                <h3>{game.engName}</h3>
+              </div>
+            </Link>
           </OverviewGames>
         );
       })}
