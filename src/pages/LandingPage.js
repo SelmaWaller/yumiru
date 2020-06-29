@@ -1,20 +1,20 @@
-import React from 'react';
-import {Link} from 'react-router-dom';
-import styled from 'styled-components';
+import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
+import styled from "styled-components";
 
-import overview from '../svgs/icons/overview/overview.svg';
+import overview_icon from "../svgs/icons/buttons/overview.svg";
 
-import FlexWrapper from '../components/styles/wrappers/flex-wrapper';
-import Logo from '../components/styles/logo';
-import Button from '../components/styles/colored-button';
+import FlexWrapper from "../components/styles/flex-wrapper";
+import Logo from "../components/styles/logo";
+import Button from "../components/styles/colored-button";
 
 const OverviewButton = styled(Button)`
   span::before {
-    content: '概要';
+    content: "概要";
     left: 70px;
   }
   span::after {
-    content: 'OVERVIEW';
+    content: "OVERVIEW";
     left: 70px;
   }
   &:hover {
@@ -34,6 +34,9 @@ const OverviewButton = styled(Button)`
 `;
 
 export default function LandingPage() {
+  useEffect(() => {
+    document.title = "Yumiru";
+  }, []);
   return (
     <>
       <FlexWrapper>
@@ -41,7 +44,7 @@ export default function LandingPage() {
         <Link to="/overview">
           <OverviewButton>
             <span></span>
-            <img src={overview} alt="icon" />
+            <img src={overview_icon} alt="icon" />
           </OverviewButton>
         </Link>
       </FlexWrapper>

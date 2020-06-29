@@ -1,13 +1,17 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const Button = styled.button`
-  background: ${(props) => props.theme.buttonDefault};
+  background: ${(props) =>
+    props.secondary ? props.theme.buttonSecondary : props.theme.buttonDefault};
   border: none;
   border-radius: 100px;
   padding: 15px 40px;
   min-height: 63px;
   min-width: 235px;
-  box-shadow: ${(props) => props.theme.buttonShadow};
+  box-shadow: ${(props) =>
+    props.secondary
+      ? props.theme.buttonShadowSecondary
+      : props.theme.buttonShadow};
   cursor: pointer;
   transition: 300ms;
   color: #ffffff;
@@ -15,13 +19,10 @@ const Button = styled.button`
   position: relative;
   text-align: left;
   transition: 150ms;
-  @media (max-width: 660px) {
-    transform: scale(0.6);
-    top: -70px;
-  }
+  top: -10px;
 
   span::after {
-    font-family: 'Comfortaa', sans-serif;
+    font-family: "Comfortaa", sans-serif;
     transition: 300ms;
     opacity: 0;
     font-size: 18px;
@@ -29,10 +30,10 @@ const Button = styled.button`
     top: 23px;
   }
   span::before {
-    font-family: 'Sawarabi Mincho', serif;
+    font-family: "Sawarabi Mincho", serif;
     font-size: 22px;
     position: absolute;
-    top: 15px;
+    top: 19px;
     opacity: 1;
     transition: 300ms;
   }

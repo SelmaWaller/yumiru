@@ -8,7 +8,10 @@ const ThemePalette = {
   sunTextLight: "#f3f3f3",
   sunLinkOrange: "#ffa151",
   sunLinkPink: "#ff73e7",
+  sunLinkBlue: "#4970ff",
+  sunLinkCyan: "#29ffba",
   sunButtonDefault: "linear-gradient(to top right, #ffa151, #ff73e7)",
+  sunButtonSecondary: "linear-gradient(to top right, #4970ff, #29ffba)",
   //moon
   moonBackground: "#232C40",
   moonShadowLight: "#2C354A",
@@ -18,7 +21,10 @@ const ThemePalette = {
   moonTextLight: "#212b40",
   moonLinkOrange: "#ff9841",
   moonLinkPink: "#f76bdf",
+  moonLinkBlue: "#2044cc",
+  moonLinkCyan: "#04d894",
   moonButtonDefault: "linear-gradient(to top right, #ff9841, #f76bdf)",
+  moonButtonSecondary: "linear-gradient(to top right, #2044cc, #04d894)",
 };
 
 export default ThemePalette;

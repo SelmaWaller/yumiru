@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 
-import FlexWrapper from '../styles/wrappers/flex-wrapper';
-import TransparentText from '../styles/transparent-text';
+import FlexWrapper from "../styles/flex-wrapper";
+import TransparentText from "../styles/transparent-text";
 
 const Title = () => {
   return (

@@ -1,34 +1,37 @@
-import React, {useEffect, useState} from 'react';
-import {Link} from 'react-router-dom';
-import {ThemeProvider} from 'styled-components';
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import { ThemeProvider } from "styled-components";
 
-import variables from './components/styles/variables';
-import moon_daytime from './svgs/icons/moon/moon_daytime.gif';
-import sun_evening from './svgs/icons/sun/sun_evening.gif';
+import variables from "./components/styles/variables";
+import moon_daytime from "./svgs/icons/moon/moon_daytime.gif";
+import sun_evening from "./svgs/icons/sun/sun_evening.gif";
 
-import logo_small_daytime from './svgs/logo/logo_daytime.png';
-import logo_small_evening from './svgs/logo/logo_evening.png';
-import logo_big_daytime from './svgs/logo/logo_big_daytime.png';
-import logo_big_evening from './svgs/logo/logo_big_evening.png';
-import games_daytime from './svgs/icons/tags/games_daytime.png';
-import games_evening from './svgs/icons/tags/games_evening.png';
-import other_daytime from './svgs/icons/tags/other_daytime.png';
-import other_evening from './svgs/icons/tags/other_evening.png';
+import logo_small_daytime from "./svgs/logo/logo_daytime.png";
+import logo_small_evening from "./svgs/logo/logo_evening.png";
+import logo_big_daytime from "./svgs/logo/logo_big_daytime.png";
+import logo_big_evening from "./svgs/logo/logo_big_evening.png";
+import games_daytime from "./svgs/icons/tags/games_daytime.png";
+import games_evening from "./svgs/icons/tags/games_evening.png";
+import other_daytime from "./svgs/icons/tags/other_daytime.png";
+import other_evening from "./svgs/icons/tags/other_evening.png";
 
-import Global from './components/styles/global';
-import TopButton from './components/styles/transparent-button';
-import Time from './components/global/time';
-import Today from './components/global/today.js';
+import Global from "./components/styles/global";
+import Whitespace from "./components/styles/top-whitespace";
+import TransparentButton from "./components/styles/transparent-button";
+import Time from "./components/global/time";
+import Today from "./components/global/today.js";
 
 const day = {
   //global
   logo: `url(${logo_small_daytime})`,
   logoMobile: `url(${logo_big_daytime})`,
-  title: 'unset',
+  title: "unset",
   titleShadow: `3px -3px 2px ${variables.sunShadowLight}, 3px -3px 10px ${variables.sunShadowLight}, -3px 2px 10px ${variables.sunShadowText}, -2px 2px 2px ${variables.sunShadowText} , -3px 2px 10px ${variables.sunShadowText}, -2px 2px 2px ${variables.sunShadowText}, -3px 2px 10px ${variables.sunShadowText}, -2px 2px 2px ${variables.sunShadowText}`,
   titleShadowMobile: `1px -1px 2px ${variables.sunShadowLight}, 2px -2px 4px ${variables.sunShadowLight}, -3px 2px 10px ${variables.sunShadowText}, -2px 2px 2px ${variables.sunShadowText} , -3px 2px 10px ${variables.sunShadowText}, -2px 2px 2px ${variables.sunShadowText}, -3px 2px 10px ${variables.sunShadowText}, -2px 2px 2px ${variables.sunShadowText}`,
   buttonDefault: variables.sunButtonDefault,
+  buttonSecondary: variables.sunButtonSecondary,
   buttonShadow: `0 18px 30px -15px ${variables.sunLinkOrange}c2, 0 18px 30px -15px ${variables.sunLinkPink}c2`,
+  buttonShadowSecondary: `0 18px 30px -15px ${variables.sunLinkBlue}c2, 0 18px 30px -15px ${variables.sunLinkCyan}c2`,
   globalBackground: variables.sunBackground,
   globalBackgroundLight: variables.sunBackgroundLight,
   globalText: variables.sunText,
@@ -38,11 +41,11 @@ const day = {
   lightText: variables.sunTextLight,
   lightTextShadow: `3px 3px 2px ${variables.sunShadowLight}, 3px 3px 10px ${variables.sunShadowLight}, -3px -2px 10px ${variables.sunShadowText}, -2px -2px 2px ${variables.sunShadowText} , -3px -2px 10px ${variables.sunShadowText}, -2px -2px 2px ${variables.sunShadowText}, -3px -2px 10px ${variables.sunShadowText}, -2px -2px 2px ${variables.sunShadowText}`,
   lightTextShadowMobile: `1px 1px 1px ${variables.sunShadowLight}, 2px 2px 4px ${variables.sunShadowLight}, -3px -1px 10px ${variables.sunShadowText}, -2px -2px 2px ${variables.sunShadowText} , -3px -1px 10px ${variables.sunShadowText}, -2px -2px 2px ${variables.sunShadowText}, -3px -1px 10px ${variables.sunShadowText}, -2px -2px 2px ${variables.sunShadowText}`,
-  //topButtons
+  //transparentButtons
   homeButtonImage: `url(${logo_big_daytime})`,
   modeButtonImage: `url(${moon_daytime})`,
-  topButtonShadow: `3px -3px 10px ${variables.sunShadowDark}15, inset -3px 3px 4px ${variables.sunShadowLight}, -3px 3px 10px ${variables.sunShadowDark}80, inset 2px -2px 2px ${variables.sunShadowDark}, inset 3px -3px 10px ${variables.sunShadowDark}, inset 3px -3px 3px ${variables.sunShadowLight}00, inset -5px 5px 5px ${variables.sunShadowDark}00`,
-  topButtonShadowHover: `3px -3px 10px ${variables.sunShadowDark}00, inset -3px 3px 4px ${variables.sunShadowLight}00, -3px 3px 10px ${variables.sunShadowDark}00, inset 2px -2px 2px ${variables.sunShadowDark}00, inset 3px -3px 10px ${variables.sunShadowDark}00, inset 3px -3px 3px ${variables.sunShadowLight}, inset -5px 5px 5px ${variables.sunShadowDark}`,
+  transparentButtonShadow: `3px -3px 10px ${variables.sunShadowDark}15, inset -3px 3px 4px ${variables.sunShadowLight}, -3px 3px 10px ${variables.sunShadowDark}80, inset 2px -2px 2px ${variables.sunShadowDark}, inset 3px -3px 10px ${variables.sunShadowDark}, inset 3px -3px 3px ${variables.sunShadowLight}00, inset -5px 5px 5px ${variables.sunShadowDark}00`,
+  transparentButtonShadowHover: `3px -3px 10px ${variables.sunShadowDark}00, inset -3px 3px 4px ${variables.sunShadowLight}00, -3px 3px 10px ${variables.sunShadowDark}00, inset 2px -2px 2px ${variables.sunShadowDark}00, inset 3px -3px 10px ${variables.sunShadowDark}00, inset 3px -3px 3px ${variables.sunShadowLight}, inset -5px 5px 5px ${variables.sunShadowDark}`,
   //games and other stuff
   gameTag: `url(${games_daytime})`,
   otherTag: `url(${other_daytime})`,
@@ -55,6 +58,7 @@ const evening = {
   titleShadow: `3px -3px 2px ${variables.moonShadowLight}, 3px -3px 10px ${variables.moonShadowLight}, -3px 2px 10px ${variables.moonShadowDark}, -2px 2px 2px ${variables.moonShadowDark} , -3px 2px 10px ${variables.moonShadowDark}, -2px 2px 2px ${variables.moonShadowDark}, -3px 2px 10px ${variables.moonShadowDark}, -2px 2px 2px ${variables.moonShadowDark}`,
   titleShadowMobile: `1px -1px 2px ${variables.moonShadowLight}, 2px -2px 4px ${variables.moonShadowLight}, -3px 2px 10px ${variables.moonShadowDark}, -2px 2px 2px ${variables.moonShadowDark} , -3px 2px 10px ${variables.moonShadowDark}, -2px 2px 2px ${variables.moonShadowDark}, -3px 2px 10px ${variables.moonShadowDark}, -2px 2px 2px ${variables.moonShadowDark}`,
   buttonDefault: variables.moonButtonDefault,
+  buttonSecondary: variables.moonButtonSecondary,
   buttonShadow: `0 18px 30px -15px ${variables.moonLinkOrange}40, 0 18px 30px -15px ${variables.moonLinkPink}40`,
   globalBackground: variables.moonBackground,
   globalBackgroundLight: variables.moonBackgroundDark,
@@ -66,17 +70,17 @@ const evening = {
   lightText: variables.moonTextLight,
   lightTextShadow: `3px 3px 2px ${variables.moonShadowLight}, 3px 3px 10px ${variables.moonShadowLight}, -3px -2px 10px ${variables.moonShadowDark}, -2px -2px 2px ${variables.moonShadowDark}, -3px -2px 10px ${variables.moonShadowDark}, -2px -2px 2px ${variables.moonShadowDark}, -3px -2px 10px ${variables.moonShadowDark}, -2px -2px 2px ${variables.moonShadowDark}`,
   lightTextShadowMobile: `1px 1px 1px ${variables.moonShadowLight}, 2px 2px 4px ${variables.moonShadowLight}, -3px -1px 10px ${variables.moonShadowDark}, -2px -2px 2px ${variables.moonShadowDark} , -3px -1px 10px ${variables.moonShadowDark}, -2px -2px 2px ${variables.moonShadowDark}, -3px -1px 10px ${variables.moonShadowDark}, -2px -2px 2px ${variables.moonShadowDark}`,
-  //topButtons
+  //transparentButtons
   homeButtonImage: `url(${logo_big_evening})`,
   modeButtonImage: `url(${sun_evening})`,
-  topButtonShadow: `3px -3px 10px ${variables.moonShadowDark}15, inset -3px 3px 4px ${variables.moonShadowLight}, -3px 3px 10px ${variables.moonShadowDark}80, inset 2px -2px 2px ${variables.moonShadowDark}, inset 3px -3px 10px ${variables.moonShadowDark}`,
-  topButtonShadowHover: `3px -3px 10px ${variables.moonShadowDark}00, inset -3px 3px 4px ${variables.moonShadowLight}00, -3px 3px 10px ${variables.moonShadowDark}00, inset 2px -2px 2px ${variables.moonShadowDark}00, inset 3px -3px 10px ${variables.moonShadowDark}00, inset 3px -3px 3px ${variables.moonShadowLight}, inset -5px 5px 5px ${variables.moonShadowDark}`,
+  transparentButtonShadow: `3px -3px 10px ${variables.moonShadowDark}15, inset -3px 3px 4px ${variables.moonShadowLight}, -3px 3px 10px ${variables.moonShadowDark}80, inset 2px -2px 2px ${variables.moonShadowDark}, inset 3px -3px 10px ${variables.moonShadowDark}`,
+  transparentButtonShadowHover: `3px -3px 10px ${variables.moonShadowDark}00, inset -3px 3px 4px ${variables.moonShadowLight}00, -3px 3px 10px ${variables.moonShadowDark}00, inset 2px -2px 2px ${variables.moonShadowDark}00, inset 3px -3px 10px ${variables.moonShadowDark}00, inset 3px -3px 3px ${variables.moonShadowLight}, inset -5px 5px 5px ${variables.moonShadowDark}`,
   //games and other stuff
   gameTag: `url(${games_evening})`,
   otherTag: `url(${other_evening})`,
 };
 
-function App({children}) {
+function App({ children }) {
   const [daytime, setDaytime] = useState(true);
   const [themeIcon, setThemeIcon] = useState(
     daytime ? moon_daytime : sun_evening
@@ -92,23 +96,23 @@ function App({children}) {
   };
 
   useEffect(() => {
-    document.title = 'Yumiru';
+    document.title = "Yumiru";
   }, []);
 
   return (
     <ThemeProvider theme={theme}>
       <Global>
         <Link to="/">
-          <TopButton home />
+          <TransparentButton home />
         </Link>
         <Time />
         <Today />
-        <TopButton
+        <TransparentButton
           onClick={() => {
             toggleTheme();
           }}
-        ></TopButton>
-        {children}
+        ></TransparentButton>
+        <Whitespace>{children}</Whitespace>
       </Global>
     </ThemeProvider>
   );
