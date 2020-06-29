@@ -228,9 +228,36 @@ export default function Alphabets() {
           : katakana.map((letter, index) => {
               return (
                 <Card key={index}>
-                  <h1>{letter.consonant}</h1>
-                  <h1>{letter.vowel}</h1>
-                  <h3>{letter.letter}</h3>
+                  <tbody>
+                    <tr>
+                      <th>{letter.consonant}</th>
+                    </tr>
+                    <tr>
+                      <td>
+                        {letter.hirlettera ? letter.hirlettera : letter.vowela}
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        {letter.hirletteri ? letter.hirletteri : letter.voweli}
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        {letter.hirletteru ? letter.hirletteru : letter.vowelu}
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        {letter.hirlettere ? letter.hirlettere : letter.vowele}
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        {letter.hirlettero ? letter.hirlettero : letter.vowelo}
+                      </td>
+                    </tr>
+                  </tbody>
                 </Card>
               );
             })}
