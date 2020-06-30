@@ -1,20 +1,20 @@
-import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
-import styled from "styled-components";
+import React, {useEffect} from 'react';
+import {Link} from 'react-router-dom';
+import styled from 'styled-components';
 
-import overview_icon from "../svgs/icons/buttons/overview.svg";
+import overview_icon from '../svgs/icons/buttons/overview.svg';
 
-import FlexWrapper from "../components/styles/flex-wrapper";
-import Logo from "../components/styles/logo";
-import Button from "../components/styles/colored-button";
+import Justify from '../components/styles/justify-content';
+import Logo from '../components/styles/logo';
+import Button from '../components/styles/colored-button';
 
 const OverviewButton = styled(Button)`
   span::before {
-    content: "概要";
+    content: '概要';
     left: 70px;
   }
   span::after {
-    content: "OVERVIEW";
+    content: 'OVERVIEW';
     left: 70px;
   }
   &:hover {
@@ -35,11 +35,11 @@ const OverviewButton = styled(Button)`
 
 export default function LandingPage() {
   useEffect(() => {
-    document.title = "Yumiru";
+    document.title = 'Yumiru';
   }, []);
   return (
     <>
-      <FlexWrapper>
+      <Justify>
         <Logo />
         <Link to="/overview">
           <OverviewButton>
@@ -47,7 +47,7 @@ export default function LandingPage() {
             <img src={overview_icon} alt="icon" />
           </OverviewButton>
         </Link>
-      </FlexWrapper>
+      </Justify>
     </>
   );
 }

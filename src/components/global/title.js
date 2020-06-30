@@ -1,13 +1,13 @@
-import React from "react";
+import React from 'react';
 
-import FlexWrapper from "../styles/flex-wrapper";
-import TransparentText from "../styles/transparent-text";
+import Justify from '../styles/justify-content';
+import TransparentText from '../styles/transparent-text';
 
 const Title = () => {
   return (
-    <FlexWrapper>
-      <TransparentText title="true">YUMIRU</TransparentText>
-    </FlexWrapper>
+    <Justify>
+      <TransparentText titleText>YUMIRU</TransparentText>
+    </Justify>
   );
 };
 

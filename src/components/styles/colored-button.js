@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const Button = styled.button`
   background: ${(props) =>
@@ -21,8 +21,15 @@ const Button = styled.button`
   transition: 150ms;
   top: -10px;
 
+  img {
+    width: 23px;
+    top: 20px;
+    position: absolute;
+    transition: 300ms;
+  }
+
   span::after {
-    font-family: "Comfortaa", sans-serif;
+    font-family: 'Comfortaa', sans-serif;
     transition: 300ms;
     opacity: 0;
     font-size: 18px;
@@ -30,7 +37,7 @@ const Button = styled.button`
     top: 23px;
   }
   span::before {
-    font-family: "Sawarabi Mincho", serif;
+    font-family: 'Sawarabi Mincho', serif;
     font-size: 22px;
     position: absolute;
     top: 19px;
@@ -53,11 +60,25 @@ const Button = styled.button`
     }
   }
 
-  img {
-    width: 23px;
-    top: 20px;
-    position: absolute;
-    transition: 300ms;
+  &:active {
+    span::before {
+      opacity: 0;
+    }
+    span::after {
+      left: 88px;
+      opacity: 1;
+    }
+    &:active {
+      transform: translateY(5px);
+      box-shadow: ${(props) =>
+        props.secondary
+          ? props.theme.buttonSecondaryShadowActive
+          : props.theme.buttonShadowActive};
+      span::after,
+      img {
+        transform: translateY(5px);
+      }
+    }
   }
 `;
 
