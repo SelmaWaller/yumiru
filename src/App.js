@@ -53,8 +53,7 @@ const day = {
   otherTag: `url(${other_daytime})`,
   //alphabet
   alphabetShadow: `inset 8px -8px 15px ${variables.sunShadowLight}85, inset -4px 4px 10px ${variables.sunShadowDark}`,
-  alphabetLine: `1px solid ${variables.sunShadowDark}`,
-  alphabetFade: `linear-gradient(to bottom, ${variables.sunText}a9 55%, ${variables.sunBackground})`,
+  alphabetLine: `2px solid ${variables.sunShadowDark}`,
 };
 
 const evening = {
@@ -90,7 +89,6 @@ const evening = {
   //alphabet
   alphabetShadow: `inset 8px -8px 15px ${variables.moonShadowLight}85, inset -4px 4px 10px ${variables.moonShadowDark}`,
   alphabetLine: `1px solid ${variables.moonShadowDark}`,
-  alphabetFade: `linear-gradient(to bottom, ${variables.moonText}a9 55%, ${variables.moonBackground})`,
 };
 
 function App({children}) {
@@ -115,7 +113,7 @@ function App({children}) {
   return (
     <ThemeProvider theme={theme}>
       <Global>
-        <Link to="/">
+        <Link to="/overview">
           <TransparentButton home />
         </Link>
         <Time />

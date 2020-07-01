@@ -35,8 +35,9 @@ const OverviewObjects = [
     game: false,
   },
   {
-    japName: 'アルファベット',
-    engName: 'Alphabets',
+    furigana: 'すう 数 — じ 字',
+    japName: 'アルファベットと数字',
+    engName: 'Alphabets and numbers',
     url: '/alphabets',
     game: false,
   },

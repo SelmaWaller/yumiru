@@ -26,7 +26,7 @@ const OverviewCard = styled.div`
     text-decoration: none;
     text-transform: uppercase;
     font-weight: normal;
-    font-family: 'Sawarabi Mincho', serif;
+    font-family: 'Noto Sans JP', sans-serif;
     color: ${(props) => props.theme.globalText};
     font-size: 28px;
     margin: 0;
@@ -39,7 +39,7 @@ const OverviewCard = styled.div`
     top: 10px;
     left: -5px;
     font-size: 18px;
-    font-family: 'Comfortaa', sans-serif;
+    font-family: 'Noto Sans JP', sans-serif;
     opacity: 0.6;
     writing-mode: vertical-rl;
     position: absolute;

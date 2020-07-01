@@ -11,18 +11,21 @@ const GridSmall = styled.div`
   @media (max-width: 950px) {
     padding: 0;
     transform: scale(0.8);
-    margin-top: -20px;
+    margin: -25px 60px 0;
   }
 
-  table:nth-last-child(1) {
-    border-right: none;
-    background: ${(props) => props.theme.alphabetFade};
-    background-size: 100% 800px;
-    background-position: center top;
-    color: none;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  @media (max-width: 740px) {
+    padding: 0;
+    grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
+  }
+
+  table {
+    &:nth-child(1) {
+      border-left: none;
+    }
+    &:nth-last-child(1) {
+      color: ${(props) => props.theme.globalText}a9;
+    }
   }
 `;
 

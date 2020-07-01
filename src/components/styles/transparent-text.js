@@ -17,17 +17,6 @@ const TransparentText = styled.span`
   transition: 150ms;
   font-weight: 200;
   font-family: 'Cardo', sans-serif;
-  @media (max-width: 660px) {
-    font-size: ${(props) => (props.titleText ? '35px' : '20px')};
-    top: ${(props) => (props.titleText ? '32px' : '100px')};
-    right: ${(props) => (props.time ? '25px' : 'unset')};
-    left: ${(props) =>
-      props.titleText ? props.theme.titleText : props.time ? 'unset' : '25px'};
-    text-shadow: ${(props) =>
-      props.title
-        ? props.theme.titleShadowMobile
-        : props.theme.lightTextShadowMobile};
-  }
   p {
     margin: 0;
   }

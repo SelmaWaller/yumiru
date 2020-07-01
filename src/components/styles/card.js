@@ -6,18 +6,17 @@ const Card = styled.table`
   text-align: center;
   justify-content: center;
   text-align: center;
-  font-family: 'Monsterrat', sans-serif;
+  font-family: 'Noto Sans JP', sans-serif;
   color: ${(props) => props.theme.globalText};
   background: ${(props) => props.theme.globalBackground};
-  box-shadow: ${(props) => props.theme.alphabetShadow};
-  border-right: ${(props) => props.theme.alphabetLine};
+  border-left: ${(props) => props.theme.alphabetLine};
   transition: 150ms;
   th,
   td {
     margin: 0;
     padding: 0;
     height: 80px;
-    font-size: 22px;
+    font-size: 20px;
     font-weight: normal;
     transition: 250ms;
   }

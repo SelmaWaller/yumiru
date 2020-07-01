@@ -25,15 +25,7 @@ const TransparentButton = styled.button`
   cursor: pointer;
   outline: 0px;
   transition: 150ms;
-  @media (max-width: 660px) {
-    width: 60px;
-    height: 60px;
-    background-size: ${(props) => (props.home ? '50px' : '112px')};
-    background-position: ${(props) =>
-      props.home ? 'center 7px' : '-26px 2px'};
-    left: ${(props) => (props.home ? '10px' : 'unset')};
-    right: ${(props) => (props.home ? 'unset' : '10px')};
-  }
+  font-family: 'Noto Sans JP', sans-serif;
 
   &:hover {
     box-shadow: ${(props) => props.theme.transparentButtonShadowHover};

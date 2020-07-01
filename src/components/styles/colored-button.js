@@ -37,10 +37,10 @@ const Button = styled.button`
     top: 23px;
   }
   span::before {
-    font-family: 'Sawarabi Mincho', serif;
-    font-size: 22px;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 21px;
     position: absolute;
-    top: 19px;
+    top: 16px;
     opacity: 1;
     transition: 300ms;
   }
