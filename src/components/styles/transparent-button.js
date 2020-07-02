@@ -6,7 +6,7 @@ const TransparentButton = styled.button`
   box-shadow: ${(props) =>
     props.home
       ? props.theme.transparentButtonShadow
-      : props.theme.transparentButtonShadowHover};
+      : props.theme.transparentButtonShadowActive};
   background-image: ${(props) =>
     props.home ? props.theme.homeButtonImage : props.theme.modeButtonImage};
   background-position: ${(props) => (props.home ? 'center 3px' : '-34px 8px')};
@@ -28,7 +28,7 @@ const TransparentButton = styled.button`
   font-family: 'Noto Sans JP', sans-serif;
 
   &:hover {
-    box-shadow: ${(props) => props.theme.transparentButtonShadowHover};
+    box-shadow: ${(props) => props.theme.transparentButtonShadowActive};
   }
 `;
 

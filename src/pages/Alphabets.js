@@ -9,7 +9,6 @@ import countingMethods from '../components/counting-methods';
 import Title from '../components/global/title';
 import FlexWrapper from '../components/styles/flex-wrapper';
 import Button from '../components/styles/colored-button';
-import TransparentButton from '../components/styles/transparent-button';
 import GridSmall from '../components/styles/grid-small';
 import Card from '../components/styles/card';
 
@@ -190,330 +189,34 @@ const Kanji = styled(AlphabetButton)`
   }
 `;
 
-const SyllablesButton = styled(TransparentButton)`
-  right: unset;
-  left: unset;
-  transform: scale(0.8);
+const TabButton = styled.button`
+  min-width: 70px;
+  max-width: 70px;
+  min-height: 70px;
+  max-height: 70px;
+  margin: 0 5px;
   position: relative;
-  top: 0;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  outline: 0px;
+  transition: 250ms;
+  font-family: 'Noto Sans JP', sans-serif;
   box-shadow: ${(props) => props.theme.transparentButtonShadow};
-  background: none;
-  background: none;
+  color: ${(props) => props.theme.globalText};
+  background: ${(props) => props.theme.globalBackground};
   text-transform: uppercase;
+  font-size: 14px;
 
-  span::after {
-    font-family: 'Comfortaa', sans-serif;
-  }
   &:hover {
     box-shadow: ${(props) => props.theme.transparentButtonShadowHover};
   }
 `;
 
-const Gojuon = styled(SyllablesButton)`
-  span::before {
-    content: '五十音';
-    font-size: 22px;
-    position: absolute;
-    top: 20px;
-    right: 0;
-    left: 0;
-    transition: 250ms;
-  }
-
-  span::after {
-    content: 'Gojūon';
-    font-size: 14px;
-    position: absolute;
-    bottom: 30px;
-    right: 0;
-    left: 0;
-    transition: 250ms;
-  }
-
+const TabButtonActive = styled(TabButton)`
+  box-shadow: ${(props) => props.theme.transparentButtonShadowActive};
   &:hover {
-    transition: 250ms;
-    span::before {
-      opacity: 0;
-      top: 30px;
-    }
-    span::after {
-      content: 'Gojūon';
-      bottom: 39px;
-    }
-  }
-`;
-
-const GojuonActive = styled(Gojuon)`
-  box-shadow: ${(props) => props.theme.transparentButtonShadowHover};
-  span::before {
-    content: '';
-    opacity: 0;
-  }
-  span::after {
-    content: 'Gojūon';
-    bottom: 39px;
-  }
-  
-  &:hover {
-    span::before {
-      content: 'Gojūon',
-      opacity: 1;
-    }
-    span::after {
-      content: 'Gojūon',
-      opacity: 1;
-    }
-  }
-
-  &:active {
-    span::after {
-      bottom: 33px;
-      transition: 250ms;
-    }
-  }
-`;
-
-const Dakuon = styled(Gojuon)`
-  span::before {
-    content: '濁音';
-  }
-
-  span::after {
-    content: 'Dakuon';
-  }
-
-  &:hover {
-    span::after {
-      content: 'Dakuon';
-    }
-  }
-`;
-
-const DakuonActive = styled(GojuonActive)`
-  span::before {
-    content: 'Dakuon';
-  }
-  span::after {
-    content: 'Dakuon';
-  }
-  &:hover {
-    span::before {
-      content: 'Dakuon';
-    }
-    span::after {
-      content: 'Dakuon';
-    }
-  }
-`;
-
-const Handakuon = styled(Gojuon)`
-  span::before {
-    content: '半濁音';
-    top: 15px;
-  }
-
-  span::after {
-    content: 'Han-dakuon';
-    font-size: 14px;
-    bottom: 25px;
-  }
-
-  &:hover {
-    span::after {
-      content: 'Han-dakuon';
-      bottom: 31px;
-    }
-  }
-`;
-const HandakuonActive = styled(GojuonActive)`
-  span::before {
-    content: 'Han-dakuon';
-    bottom: 31px;
-  }
-  span::after {
-    content: 'Han-dakuon';
-    bottom: 31px;
-  }
-  &:hover {
-    span::before {
-      content: 'Han-dakuon';
-      bottom: 31px;
-    }
-    span::after {
-      content: 'Han-dakuon';
-      bottom: 31px;
-    }
-  }
-
-  &:active {
-    span::after {
-      bottom: 25px;
-    }
-  }
-`;
-
-const Yoon = styled(Gojuon)`
-  span::before {
-    content: '拗音';
-  }
-
-  span::after {
-    content: 'Yōon';
-  }
-
-  &:hover {
-    span::after {
-      content: 'Yōon';
-    }
-  }
-`;
-
-const YoonActive = styled(GojuonActive)`
-  span::before {
-    content: 'Yōon';
-  }
-  span::after {
-    content: 'Yōon';
-  }
-  &:hover {
-    span::before {
-      content: 'Yōon';
-    }
-    span::after {
-      content: 'Yōon';
-    }
-  }
-`;
-
-const Ten = styled(Gojuon)`
-  span::before {
-    content: '十';
-  }
-
-  span::after {
-    content: 'Jū';
-  }
-
-  &:hover {
-    span::after {
-      content: 'Jū';
-    }
-  }
-`;
-
-const TenActive = styled(GojuonActive)`
-  span::before {
-    content: 'Jū';
-  }
-  span::after {
-    content: 'Jū';
-  }
-  &:hover {
-    span::before {
-      content: 'Jū';
-    }
-    span::after {
-      content: 'Jū';
-    }
-  }
-`;
-
-const Hundred = styled(Gojuon)`
-  span::before {
-    content: '百';
-  }
-
-  span::after {
-    content: 'Hyaku';
-  }
-
-  &:hover {
-    span::after {
-      content: 'Hyaku';
-    }
-  }
-`;
-
-const HundredActive = styled(GojuonActive)`
-  span::before {
-    content: 'Hyaku';
-  }
-  span::after {
-    content: 'Hyaku';
-  }
-  &:hover {
-    span::before {
-      content: 'Hyaku';
-    }
-    span::after {
-      content: 'Hyaku';
-    }
-  }
-`;
-
-const Thousand = styled(Gojuon)`
-  span::before {
-    content: '千';
-  }
-
-  span::after {
-    content: 'Sen';
-  }
-
-  &:hover {
-    span::after {
-      content: 'Sen';
-    }
-  }
-`;
-
-const ThousandActive = styled(GojuonActive)`
-  span::before {
-    content: 'Sen';
-  }
-  span::after {
-    content: 'Sen';
-  }
-  &:hover {
-    span::before {
-      content: 'Sen';
-    }
-    span::after {
-      content: 'Sen';
-    }
-  }
-`;
-
-const Tenthousand = styled(Gojuon)`
-  span::before {
-    content: '万+';
-  }
-
-  span::after {
-    content: 'Man+';
-  }
-
-  &:hover {
-    span::after {
-      content: 'Man+';
-    }
-  }
-`;
-
-const TenthousandActive = styled(GojuonActive)`
-  span::before {
-    content: 'Man+';
-  }
-  span::after {
-    content: 'Man+';
-  }
-  &:hover {
-    span::before {
-      content: 'Man+';
-    }
-    span::after {
-      content: 'Man+';
-    }
+    box-shadow: ${(props) => props.theme.transparentButtonShadowActive};
   }
 `;
 
@@ -847,38 +550,38 @@ export default function Alphabets() {
               </AlphabetButton>
             </div>
             <div>
-              <SyllablesButton
-                as={gojuonActive ? GojuonActive : Gojuon}
+              <TabButton
+                as={gojuonActive ? TabButtonActive : TabButton}
                 onClick={() => {
                   toGojuon();
                 }}
               >
-                <span></span>
-              </SyllablesButton>
-              <SyllablesButton
-                as={dakuonActive ? DakuonActive : Dakuon}
+                <span>五十音</span>
+              </TabButton>
+              <TabButton
+                as={dakuonActive ? TabButtonActive : TabButton}
                 onClick={() => {
                   toDakuon();
                 }}
               >
-                <span></span>
-              </SyllablesButton>
-              <SyllablesButton
-                as={handakuonActive ? HandakuonActive : Handakuon}
+                <span>濁音</span>
+              </TabButton>
+              <TabButton
+                as={handakuonActive ? TabButtonActive : TabButton}
                 onClick={() => {
                   toHandakuon();
                 }}
               >
-                <span></span>
-              </SyllablesButton>
-              <SyllablesButton
-                as={yoonActive ? YoonActive : Yoon}
+                <span>半濁音</span>
+              </TabButton>
+              <TabButton
+                as={yoonActive ? TabButtonActive : TabButton}
                 onClick={() => {
                   toYoon();
                 }}
               >
-                <span></span>
-              </SyllablesButton>
+                <span>拗音</span>
+              </TabButton>
             </div>
             <div>
               <AlphabetButton
@@ -907,38 +610,38 @@ export default function Alphabets() {
               </AlphabetButton>
             </div>
             <div>
-              <SyllablesButton
-                as={tenActive ? TenActive : Ten}
+              <TabButton
+                as={tenActive ? TabButtonActive : TabButton}
                 onClick={() => {
                   toTen();
                 }}
               >
-                <span></span>
-              </SyllablesButton>
-              <SyllablesButton
-                as={hundredActive ? HundredActive : Hundred}
+                <span>十</span>
+              </TabButton>
+              <TabButton
+                as={hundredActive ? TabButtonActive : TabButton}
                 onClick={() => {
                   toHundred();
                 }}
               >
-                <span></span>
-              </SyllablesButton>
-              <SyllablesButton
-                as={thousandActive ? ThousandActive : Thousand}
+                <span>百</span>
+              </TabButton>
+              <TabButton
+                as={thousandActive ? TabButtonActive : TabButton}
                 onClick={() => {
                   toThousand();
                 }}
               >
-                <span></span>
-              </SyllablesButton>
-              <SyllablesButton
-                as={tenthousandActive ? TenthousandActive : Tenthousand}
+                <span>千</span>
+              </TabButton>
+              <TabButton
+                as={tenthousandActive ? TabButtonActive : TabButton}
                 onClick={() => {
                   toTenthousand();
                 }}
               >
-                <span></span>
-              </SyllablesButton>
+                <span>万+</span>
+              </TabButton>
             </div>
             <div>
               <AlphabetButton
@@ -1247,6 +950,9 @@ export default function Alphabets() {
                             {kanjiTenthousand ? number.tenthousand_1 : ' '}
 
                             <span>
+                              {kanjiTen ? number.ten_romaji_1 : ' '}
+                              {kanjiHundred ? number.hundred_romaji_1 : ' '}
+                              {kanjiThousand ? number.thousand_romaji_1 : ' '}
                               {kanjiTenthousand
                                 ? number.tenthousand_romaji_1
                                 : ' '}
@@ -1487,6 +1193,20 @@ export default function Alphabets() {
           </>
         )}
       </GridSmall>
+      {!alphabets ? (
+        <GridSmall>
+          <ul>
+            <li>*rei/zero/maru</li>
+            <li>*yon/shi</li>
+            <li>*nana/shichi</li>
+            <li>*kyū/ku</li>
+            <li>*ichi/iti</li>
+            <li>*sen/issen</li>
+          </ul>
+        </GridSmall>
+      ) : (
+        <></>
+      )}
     </>
   );
 }

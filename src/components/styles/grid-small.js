@@ -27,6 +27,20 @@ const GridSmall = styled.div`
       color: ${(props) => props.theme.globalText}a9;
     }
   }
+
+  ul {
+    font-family: 'Comfortaa', sans-serif;
+    color: ${(props) => props.theme.globalText}a9;
+    margin-top: -40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+
+    li {
+      padding: 0 10px;
+    }
+  }
 `;
 
 export default GridSmall;
