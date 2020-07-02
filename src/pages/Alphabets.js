@@ -1194,16 +1194,47 @@ export default function Alphabets() {
         )}
       </GridSmall>
       {!alphabets ? (
-        <GridSmall>
-          <ul>
-            <li>*rei/zero/maru</li>
-            <li>*yon/shi</li>
-            <li>*nana/shichi</li>
-            <li>*kyū/ku</li>
-            <li>*ichi/iti</li>
-            <li>*sen/issen</li>
-          </ul>
-        </GridSmall>
+        <>
+          <GridSmall>
+            <ul>
+              <li>*0 - rei/zero/maru</li>
+              <li>*1 - ichi/iti</li>
+              <li>*4 - yon/shi</li>
+              <li>*7 - nana/shichi</li>
+              <li>*9 - kyū/ku</li>
+              <li>*1k - sen/issen</li>
+            </ul>
+          </GridSmall>
+          <GridSmall>
+            <ul>
+              <li>Higher numbers not included: </li>
+              <li>
+                <span>正</span> - sei - 10<sup>40</sup>
+              </li>
+              <li>
+                <span>載</span> - sai - 10<sup>44</sup>
+              </li>
+              <li>
+                <span>極</span> - goku - 10<sup>48</sup>
+              </li>
+              <li>
+                <span>恒河沙</span> - kōgasha - 10<sup>52</sup>
+              </li>
+              <li>
+                <span>阿僧祇</span> - asōgi - 10<sup>56</sup>
+              </li>
+              <li>
+                <span>那由他</span> - nayuta - 10<sup>60</sup>
+              </li>
+              <li>
+                <span>不可思議</span> - fukashigi - 10<sup>64</sup>
+              </li>
+              <li>
+                <span>無量大数</span> - muryōtaisū - 10<sup>68</sup>
+              </li>
+            </ul>
+          </GridSmall>
+        </>
       ) : (
         <></>
       )}

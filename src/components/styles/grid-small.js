@@ -29,12 +29,8 @@ const GridSmall = styled.div`
   }
 
   ul {
-    font-family: 'Comfortaa', sans-serif;
+    font-family: 'Noto Sans JP', sans-serif;
     color: ${(props) => props.theme.globalText}a9;
-    margin-top: -40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     list-style: none;
 
     li {
