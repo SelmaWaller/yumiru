@@ -4,20 +4,10 @@ const GridSmall = styled.div`
   display: grid;
   background: ${(props) => props.theme.globalBackground};
   margin: 0 auto;
-  padding: 25px 130px 70px;
+  padding: 25px 130px 0;
   max-width: 1140px;
   grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
   transition: 150ms;
-  @media (max-width: 950px) {
-    padding: 0;
-    transform: scale(0.8);
-    margin: -25px 60px 0;
-  }
-
-  @media (max-width: 740px) {
-    padding: 0;
-    grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
-  }
 
   table {
     &:nth-child(1) {
@@ -32,9 +22,11 @@ const GridSmall = styled.div`
     font-family: 'Noto Sans JP', sans-serif;
     color: ${(props) => props.theme.globalText}a9;
     list-style: none;
-
     li {
-      padding: 0 10px;
+      max-width: 250px;
+      span {
+        font-weight: bold;
+      }
     }
   }
 `;

@@ -10,7 +10,33 @@ import Title from '../components/global/title';
 import FlexWrapper from '../components/styles/flex-wrapper';
 import Button from '../components/styles/colored-button';
 import GridSmall from '../components/styles/grid-small';
+import GridMedium from '../components/styles/grid-medium';
 import Card from '../components/styles/card';
+
+const InfoTitle = styled(FlexWrapper)`
+  span {
+    padding: 40px 20px 0;
+    font-family: 'Noto Sans JP', sans-serif;
+    color: ${(props) => props.theme.globalText}a9;
+    font-weight: bold;
+  }
+`;
+
+const InfoBlock = styled(GridMedium)`
+  max-width: 1000px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  ul {
+    padding: 0;
+    font-family: 'Noto Sans JP', sans-serif;
+    color: ${(props) => props.theme.globalText}a9;
+    li {
+      max-width: 250px;
+      span {
+        font-weight: bold;
+      }
+    }
+  }
+`;
 
 const PaginationButton = styled.button`
   margin-bottom: 25px;
@@ -38,7 +64,7 @@ const PaginationButton = styled.button`
     font-size: 18px;
     top: -3px;
     bottom: 0;
-    right: 60px;
+    right: 86px;
   }
   &:hover {
     transition: 250ms;
@@ -61,12 +87,17 @@ const PaginationButton = styled.button`
       }
     }
   }
+  @media (max-width: 1200px) {
+    span::after {
+      right: 60px;
+    }
+  }
 `;
 
 const Number = styled(PaginationButton)`
   span::after {
     right: unset;
-    left: 60px;
+    left: 86px;
   }
   &:disabled {
     span::after {
@@ -82,6 +113,11 @@ const Number = styled(PaginationButton)`
     span::after {
       right: unset;
       transform: rotate(90deg);
+    }
+  }
+  @media (max-width: 1200px) {
+    span::after {
+      left: 60px;
     }
   }
 `;
@@ -515,26 +551,28 @@ export default function Alphabets() {
     <>
       <Title />
       <FlexWrapper>
-        <PaginationButton
-          disabled={alphabets}
-          onClick={() => {
-            toggleNumbers();
-          }}
-        >
-          <span>PREV</span>
-        </PaginationButton>
-        <CurrentPage>
-          <span>{alphabets ? `ALPHABETS` : `NUMBERS`}</span>
-        </CurrentPage>
-        <PaginationButton
-          as={Number}
-          disabled={!alphabets}
-          onClick={() => {
-            toggleNumbers();
-          }}
-        >
-          <span>NEXT</span>
-        </PaginationButton>
+        <GridSmall>
+          <PaginationButton
+            disabled={alphabets}
+            onClick={() => {
+              toggleNumbers();
+            }}
+          >
+            <span>PREV</span>
+          </PaginationButton>
+          <CurrentPage>
+            <span>{alphabets ? `ALPHABETS` : `NUMBERS`}</span>
+          </CurrentPage>
+          <PaginationButton
+            as={Number}
+            disabled={!alphabets}
+            onClick={() => {
+              toggleNumbers();
+            }}
+          >
+            <span>NEXT</span>
+          </PaginationButton>
+        </GridSmall>
       </FlexWrapper>
       <FlexWrapper>
         {alphabets ? (
@@ -933,6 +971,14 @@ export default function Alphabets() {
                             {kanjiThousand ? number.thousand_romaji : ' '}
                             {kanjiTenthousand ? number.tenthousand_romaji : ' '}
                             <span>
+                              <sup>
+                                {!kanjiTenthousand
+                                  ? number.ten_alternative
+                                  : ''}
+                                {kanjiTenthousand
+                                  ? number.tenthousand_alternative
+                                  : ''}
+                              </sup>
                               {kanjiTen ? number.ten_romaji_top : ' '}
                               {kanjiHundred ? number.hundred_romaji_top : ' '}
                               {kanjiThousand ? number.thousand_romaji_top : ' '}
@@ -948,7 +994,12 @@ export default function Alphabets() {
                             {kanjiHundred ? number.hundred_1 : ' '}
                             {kanjiThousand ? number.thousand_1 : ' '}
                             {kanjiTenthousand ? number.tenthousand_1 : ' '}
-
+                            {kanjiTenthousand ? number.tenthousand : ' '}
+                            <sup>
+                              {kanjiTenthousand
+                                ? number.tenthousand_elevated_1
+                                : ' '}
+                            </sup>
                             <span>
                               {kanjiTen ? number.ten_romaji_1 : ' '}
                               {kanjiHundred ? number.hundred_romaji_1 : ' '}
@@ -965,6 +1016,12 @@ export default function Alphabets() {
                             {kanjiHundred ? number.hundred_2 : ' '}
                             {kanjiThousand ? number.thousand_2 : ' '}
                             {kanjiTenthousand ? number.tenthousand_2 : ' '}
+                            {kanjiTenthousand ? number.tenthousand : ' '}
+                            <sup>
+                              {kanjiTenthousand
+                                ? number.tenthousand_elevated_2
+                                : ' '}
+                            </sup>
                             <span>
                               {kanjiTen ? number.ten_romaji_2 : ' '}
                               {kanjiHundred ? number.hundred_romaji_2 : ' '}
@@ -981,6 +1038,12 @@ export default function Alphabets() {
                             {kanjiHundred ? number.hundred_3 : ' '}
                             {kanjiThousand ? number.thousand_3 : ' '}
                             {kanjiTenthousand ? number.tenthousand_3 : ' '}
+                            {kanjiTenthousand ? number.tenthousand : ' '}
+                            <sup>
+                              {kanjiTenthousand
+                                ? number.tenthousand_elevated_3
+                                : ' '}
+                            </sup>
                             <span>
                               {kanjiTen ? number.ten_romaji_3 : ' '}
                               {kanjiHundred ? number.hundred_romaji_3 : ' '}
@@ -997,6 +1060,12 @@ export default function Alphabets() {
                             {kanjiHundred ? number.hundred_4 : ' '}
                             {kanjiThousand ? number.thousand_4 : ' '}{' '}
                             {kanjiTenthousand ? number.tenthousand_4 : ' '}
+                            {kanjiTenthousand ? number.tenthousand : ' '}
+                            <sup>
+                              {kanjiTenthousand
+                                ? number.tenthousand_elevated_4
+                                : ' '}
+                            </sup>
                             <span>
                               {kanjiTen ? number.ten_romaji_4 : ' '}
                               {kanjiHundred ? number.hundred_romaji_4 : ' '}
@@ -1013,7 +1082,12 @@ export default function Alphabets() {
                             {kanjiHundred ? number.hundred_5 : ' '}
                             {kanjiThousand ? number.thousand_5 : ' '}
                             {kanjiTenthousand ? number.tenthousand_5 : ' '}
-
+                            {kanjiTenthousand ? number.tenthousand : ' '}
+                            <sup>
+                              {kanjiTenthousand
+                                ? number.tenthousand_elevated_5
+                                : ' '}
+                            </sup>
                             <span>
                               {kanjiTen ? number.ten_romaji_5 : ' '}
                               {kanjiHundred ? number.hundred_romaji_5 : ' '}
@@ -1030,7 +1104,12 @@ export default function Alphabets() {
                             {kanjiHundred ? number.hundred_6 : ' '}
                             {kanjiThousand ? number.thousand_6 : ' '}
                             {kanjiTenthousand ? number.tenthousand_6 : ' '}
-
+                            {kanjiTenthousand ? number.tenthousand : ' '}
+                            <sup>
+                              {kanjiTenthousand
+                                ? number.tenthousand_elevated_6
+                                : ' '}
+                            </sup>
                             <span>
                               {kanjiTen ? number.ten_romaji_6 : ' '}
                               {kanjiHundred ? number.hundred_romaji_6 : ' '}
@@ -1047,7 +1126,12 @@ export default function Alphabets() {
                             {kanjiHundred ? number.hundred_7 : ' '}
                             {kanjiThousand ? number.thousand_7 : ' '}
                             {kanjiTenthousand ? number.tenthousand_7 : ' '}
-
+                            {kanjiTenthousand ? number.tenthousand : ' '}
+                            <sup>
+                              {kanjiTenthousand
+                                ? number.tenthousand_elevated_7
+                                : ' '}
+                            </sup>
                             <span>
                               {kanjiTen ? number.ten_romaji_7 : ' '}
                               {kanjiHundred ? number.hundred_romaji_7 : ' '}
@@ -1064,7 +1148,12 @@ export default function Alphabets() {
                             {kanjiHundred ? number.hundred_8 : ' '}
                             {kanjiThousand ? number.thousand_8 : ' '}
                             {kanjiTenthousand ? number.tenthousand_8 : ' '}
-
+                            {kanjiTenthousand ? number.tenthousand : ' '}
+                            <sup>
+                              {kanjiTenthousand
+                                ? number.tenthousand_elevated_8
+                                : ' '}
+                            </sup>
                             <span>
                               {kanjiTen ? number.ten_romaji_8 : ' '}
                               {kanjiHundred ? number.hundred_romaji_8 : ' '}
@@ -1081,6 +1170,12 @@ export default function Alphabets() {
                             {kanjiHundred ? number.hundred_9 : ' '}
                             {kanjiThousand ? number.thousand_9 : ' '}
                             {kanjiTenthousand ? number.tenthousand_9 : ' '}
+                            {kanjiTenthousand ? number.tenthousand : ' '}
+                            <sup>
+                              {kanjiTenthousand
+                                ? number.tenthousand_elevated_9
+                                : ' '}
+                            </sup>
 
                             <span>
                               {kanjiTen ? number.ten_romaji_9 : ' '}
@@ -1193,50 +1288,167 @@ export default function Alphabets() {
           </>
         )}
       </GridSmall>
-      {!alphabets ? (
+      {alphabets ? (
         <>
-          <GridSmall>
+          <FlexWrapper>
+            <InfoTitle>
+              <span>Newer katakana methods</span>
+            </InfoTitle>
+          </FlexWrapper>
+          <InfoBlock>
             <ul>
-              <li>*0 - rei/zero/maru</li>
-              <li>*1 - ichi/iti</li>
-              <li>*4 - yon/shi</li>
-              <li>*7 - nana/shichi</li>
-              <li>*9 - kyū/ku</li>
-              <li>*1k - sen/issen</li>
+              <li>ファ &rarr; fa</li>
+              <li>フィ &rarr; fi</li>
+              <li>フュ &rarr; fyu</li>
+              <li>フェ &rarr; fe</li>
+              <li>フォ &rarr; fo</li>
             </ul>
-          </GridSmall>
-          <GridSmall>
             <ul>
-              <li>Higher numbers not included: </li>
+              <li>ウィ &rarr; wi</li>
+              <li>ウェ &rarr; we</li>
+              <li>ウォ &rarr; wo</li>
+              <li>ヴァ &rarr; va</li>
+              <li>ヴィ &rarr; vi</li>
+              <li>ヴェ &rarr; ve</li>
+              <li>ヴォ &rarr; vo</li>
+            </ul>
+            <ul>
+              <li>ツァ &rarr; tsa</li>
+              <li>ツィ &rarr; tsi</li>
+              <li>ツェ &rarr; tse</li>
+              <li>ツォ &rarr; tso</li>
+            </ul>
+            <ul>
+              <li>チェ &rarr; che</li>
+              <li>シェ &rarr; she</li>
+              <li>ジェ &rarr; je</li>
+            </ul>
+            <ul>
+              <li>ティ &rarr; ti</li>
+              <li>ディ &rarr; di</li>
+              <li>デュ &rarr; du</li>
+              <li>トゥ &rarr; tu</li>
+            </ul>
+          </InfoBlock>
+          <InfoTitle>
+            <span>Pronunciations</span>
+          </InfoTitle>
+          <InfoBlock>
+            <ul>
               <li>
-                <span>正</span> - sei - 10<sup>40</sup>
+                <span>Double consonants and vowels</span>
+              </li>
+              <li>っ/ッ &rarr; small tsu: prolongs the next consonant</li>
+              <li>ん/ン &rarr; exception for double n</li>
+              <li>ー &rarr; katakana only: prolongs syllables</li>
+              <li>あ &rarr; normal a: prolongs a/ya (aa/ā)</li>
+              <li>い &rarr; normal i: prolongs e/-e or i/-i (ee/ei/ē, ii/ī)</li>
+              <li>う &rarr; normal u: prolongs u/yu, o/yo (uu/ū, ou/ō)</li>
+              <li>お &rarr; normal o: prolongs o/yo (oo/ō)</li>
+            </ul>
+            <ul>
+              <li>
+                <span>Examples</span>
+              </li>
+              <li>コップ &rarr; koppu</li>
+              <li>コンピューター &rarr; konpyūtā (konpyuutaa): computer</li>
+              <li>がっこう &rarr; gakkō (gakkou): school</li>
+              <li>おんな &rarr; onna: woman</li>
+              <li>せんせい &rarr; sensē (sensei): teacher/doctor/master</li>
+              <li>おおきい &rarr; ōkī (ookii): big</li>
+              <li>まって &rarr; matte: wait</li>
+            </ul>
+            <ul>
+              <li>
+                <span>Sound representations</span>
               </li>
               <li>
-                <span>載</span> - sai - 10<sup>44</sup>
+                あ/ア &rarr; "<span>a</span>fter"
               </li>
               <li>
-                <span>極</span> - goku - 10<sup>48</sup>
+                い/イ &rarr; "<span>i</span>n"
               </li>
               <li>
-                <span>恒河沙</span> - kōgasha - 10<sup>52</sup>
+                う/ウ &rarr; "n<span>oo</span>n"
               </li>
               <li>
-                <span>阿僧祇</span> - asōgi - 10<sup>56</sup>
+                え/エ &rarr; "j<span>e</span>t"
               </li>
               <li>
-                <span>那由他</span> - nayuta - 10<sup>60</sup>
-              </li>
-              <li>
-                <span>不可思議</span> - fukashigi - 10<sup>64</sup>
-              </li>
-              <li>
-                <span>無量大数</span> - muryōtaisū - 10<sup>68</sup>
+                お/オ &rarr; "<span>o</span>n"
               </li>
             </ul>
-          </GridSmall>
+          </InfoBlock>
         </>
       ) : (
-        <></>
+        <InfoBlock>
+          <ul>
+            <li>
+              <span>Alternative readings</span>
+            </li>
+            <li>
+              <sup>[1]</sup> &rarr; rei/zero/maru
+            </li>
+            <li>
+              <sup>[2]</sup> &rarr; yon/shi
+            </li>
+            <li>
+              <sup>[3]</sup> &rarr; nana/shichi
+            </li>
+            <li>
+              <sup>[4]</sup> &rarr; kyū/ku
+            </li>
+            <li>
+              <sup>[5]</sup> &rarr; ichi-/iti-
+            </li>
+            <li>
+              <sup>[6]</sup> &rarr; sen/issen
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <span>Examples</span>
+            </li>
+            <li>380 1709:</li>
+            <li>三百八十万 千七百九</li>
+            <li>(sanbyaku hachi-jū man, sen nana-hyaku kyū)</li>
+            <li>&nbsp;</li>
+            <li>1 3625 2800:</li>
+            <li>一億 三千六百二十五万 二千八百</li>
+            <li>
+              (ichi-oku, san-zen rop-pyaku ni-jū go-man, ni-sen hap-pyaku)
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <span>Higher numbers</span>
+            </li>
+            <li>
+              正/10<sup>40</sup> &rarr; sei
+            </li>
+            <li>
+              載/10<sup>44</sup> &rarr; sai
+            </li>
+            <li>
+              極/10<sup>48</sup> &rarr; goku
+            </li>
+            <li>
+              恒河沙/10<sup>52</sup> &rarr; gōgasha
+            </li>
+            <li>
+              阿僧祇/10<sup>56</sup> &rarr; asōgi
+            </li>
+            <li>
+              那由他/10<sup>60</sup> &rarr; nayuta
+            </li>
+            <li>
+              不可思議/10<sup>64</sup> &rarr; fukashigi
+            </li>
+            <li>
+              無量大数/10<sup>68</sup> &rarr; muryōtaisū
+            </li>
+          </ul>
+        </InfoBlock>
       )}
     </>
   );
