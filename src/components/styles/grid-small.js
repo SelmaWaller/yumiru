@@ -5,10 +5,9 @@ const GridSmall = styled.div`
   background: ${(props) => props.theme.globalBackground};
   margin: 0 auto;
   padding: 25px 130px 0;
-  max-width: 1140px;
-  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+  max-width: 500px;
+  grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
   transition: 150ms;
-
   table {
     &:nth-child(1) {
       border-left: none;
@@ -17,7 +16,6 @@ const GridSmall = styled.div`
       color: ${(props) => props.theme.globalText}a9;
     }
   }
-
   ul {
     font-family: "Noto Sans JP", sans-serif;
     color: ${(props) => props.theme.globalText}a9;

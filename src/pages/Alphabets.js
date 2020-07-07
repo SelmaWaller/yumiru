@@ -13,6 +13,53 @@ import GridSmall from "../components/styles/grid-small";
 import GridMedium from "../components/styles/grid-medium";
 import Card from "../components/styles/card";
 
+const PaddingContainer = styled.div`
+  padding: 0 130px;
+  margin: 20px auto 0;
+  max-width: 1300px;
+  transition: 150ms;
+`;
+
+const ScrollContainer = styled.div`
+  max-width: 1300px;
+  min-width: 300px;
+  max-height: 510px;
+  overflow: scroll;
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    -webkit-transition: 150ms;
+    transition: 150ms;
+    border-radius: 100px;
+    background: ${(props) => props.theme.globalScroll};
+    &:hover {
+      -webkit-transition: 150ms;
+      transition: 150ms;
+      background: ${(props) => props.theme.globalScrollHover};
+    }
+  }
+
+  ::-webkit-scrollbar-corner,
+  ::-webkit-resizer {
+    background: transparent;
+    border: none;
+  }
+`;
+
+const TableGrid = styled(GridSmall)`
+  padding: 0;
+  min-width: 1280px;
+  transition: 150ms;
+`;
+
 const InfoTitle = styled(FlexWrapper)`
   span {
     font-size: 18px;
@@ -26,12 +73,19 @@ const InfoTitle = styled(FlexWrapper)`
 const InfoBlock = styled(GridMedium)`
   max-width: 1200px;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  border-bottom: ${(props) => props.theme.alphabetLine};
+  &:nth-last-child(1) {
+    border: none;
+  }
   ul {
     font-family: "Noto Sans JP", sans-serif;
     color: ${(props) => props.theme.globalText}a9;
+    padding-bottom: 20px;
     li {
-      max-width: 240px;
+      line-height: 26px;
+      max-width: 250px;
       margin: 0 10px;
+      padding: 5px 0;
       span {
         font-weight: bold;
       }
@@ -248,8 +302,8 @@ const TabButton = styled.button`
   max-width: 70px;
   min-height: 70px;
   max-height: 70px;
-  margin: 0 5px;
   position: relative;
+  margin: 0 5px;
   border: none;
   border-radius: 100px;
   cursor: pointer;
@@ -275,6 +329,38 @@ const TabButton = styled.button`
     box-shadow: ${(props) => props.theme.transparentButtonShadowActive};
     &:hover {
       box-shadow: ${(props) => props.theme.transparentButtonShadowActive};
+    }
+  }
+  div {
+    transition: 250ms ease-out;
+    z-index: 99;
+    position: relative;
+    top: -30px;
+    left: 0;
+    span {
+      z-index: 99;
+      transform: scale(0.3);
+      top: 0;
+      left: -10px;
+      opacity: 0;
+      pointer-events: none;
+      font-family: "Comfortaa", sans-serif;
+      position: absolute;
+      border-radius: 3px;
+      box-shadow: ${(props) => props.theme.floatShadow};
+      padding: 10px 12px 8px;
+      background: ${(props) => props.theme.globalBackgroundLight};
+    }
+  }
+  &:hover {
+    div {
+      span {
+        transition-delay: 150ms;
+        opacity: 1;
+        transform: scale(1);
+        top: -55px;
+        left: -10px;
+      }
     }
   }
 `;
@@ -613,43 +699,51 @@ export default function Alphabets() {
             <div>
               <TabButton
                 disabled={gojuonActive}
-                title="gojūon"
                 as={TabButton}
                 onClick={() => {
                   toGojuon();
                 }}
               >
                 <span>五十音</span>
+                <div>
+                  <span>gojūon</span>
+                </div>
               </TabButton>
               <TabButton
                 disabled={dakuonActive}
-                title="dakuon"
                 as={TabButton}
                 onClick={() => {
                   toDakuon();
                 }}
               >
                 <span>濁音</span>
+                <div>
+                  <span>dakuon</span>
+                </div>
               </TabButton>
               <TabButton
                 disabled={handakuonActive}
-                title="handakuon"
                 as={TabButton}
                 onClick={() => {
                   toHandakuon();
                 }}
               >
                 <span>半濁音</span>
+                <div>
+                  <span>handakuon</span>
+                </div>
               </TabButton>
               <TabButton
                 disabled={yoonActive}
-                title="yōon"
                 as={TabButton}
                 onClick={() => {
                   toYoon();
                 }}
               >
                 <span>拗音</span>
+                <div>
+                  <span>yōon</span>
+                </div>
               </TabButton>
             </div>
             <div>
@@ -681,43 +775,51 @@ export default function Alphabets() {
             <div>
               <TabButton
                 disabled={tenActive}
-                title="ten"
                 as={TabButton}
                 onClick={() => {
                   toTen();
                 }}
               >
                 <span>十</span>
+                <div>
+                  <span>ten</span>
+                </div>
               </TabButton>
               <TabButton
                 disabled={hundredActive}
-                title="hundred"
                 as={TabButton}
                 onClick={() => {
                   toHundred();
                 }}
               >
                 <span>百</span>
+                <div>
+                  <span>hundred</span>
+                </div>
               </TabButton>
               <TabButton
                 disabled={thousandActive}
-                title="thousand"
                 as={TabButton}
                 onClick={() => {
                   toThousand();
                 }}
               >
                 <span>千</span>
+                <div>
+                  <span>thousand</span>
+                </div>
               </TabButton>
               <TabButton
                 disabled={tenthousandActive}
-                title="tenthousand"
                 as={TabButton}
                 onClick={() => {
                   toTenthousand();
                 }}
               >
                 <span>万+</span>
+                <div>
+                  <span>tenthousand</span>
+                </div>
               </TabButton>
             </div>
             <div>
@@ -735,598 +837,619 @@ export default function Alphabets() {
           </>
         )}
       </FlexWrapper>
-      <GridSmall>
-        {alphabets ? (
-          <>
-            {isHiragana
-              ? hiraganaAlphabets.map((letter, index) => {
-                  return (
-                    <Card key={index}>
-                      <tbody>
-                        <tr>
-                          <th>
-                            {hiraganaGojuon ? letter.gojuon_romaji : " "}
-                            {hiraganaDakuon ? letter.dakuon_romaji : " "}
-                            {hiraganaHandakuon ? letter.handakuon_romaji : " "}
-                            {hiraganaYoon ? letter.yoon_romaji : " "}
-                          </th>
-                        </tr>
-                        <tr>
-                          <td>
-                            {hiraganaGojuon ? letter.gojuon_a : " "}
-                            {hiraganaDakuon ? letter.dakuon_a : " "}
-                            {hiraganaHandakuon ? letter.handakuon_a : " "}
-                            {hiraganaYoon ? letter.yoon_1 : " "}
+      <PaddingContainer>
+        <ScrollContainer>
+          <TableGrid>
+            {alphabets ? (
+              <>
+                {isHiragana
+                  ? hiraganaAlphabets.map((letter, index) => {
+                      return (
+                        <Card key={index}>
+                          <tbody>
+                            <tr>
+                              <th>
+                                {hiraganaGojuon ? letter.gojuon_romaji : " "}
+                                {hiraganaDakuon ? letter.dakuon_romaji : " "}
+                                {hiraganaHandakuon
+                                  ? letter.handakuon_romaji
+                                  : " "}
+                                {hiraganaYoon ? letter.yoon_romaji : " "}
+                              </th>
+                            </tr>
+                            <tr>
+                              <td>
+                                {hiraganaGojuon ? letter.gojuon_a : " "}
+                                {hiraganaDakuon ? letter.dakuon_a : " "}
+                                {hiraganaHandakuon ? letter.handakuon_a : " "}
+                                {hiraganaYoon ? letter.yoon_1 : " "}
 
-                            <span>
-                              {hiraganaGojuon ? letter.gojuon_romaji_a : " "}
-                              {hiraganaDakuon ? letter.dakuon_romaji_a : " "}
-                              {hiraganaHandakuon
-                                ? letter.handakuon_romaji_a
-                                : " "}
-                              {hiraganaYoon ? letter.yoon_romaji_1 : " "}
-                            </span>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            {hiraganaGojuon ? letter.gojuon_i : " "}
-                            {hiraganaDakuon ? letter.dakuon_i : " "}
-                            {hiraganaHandakuon ? letter.handakuon_i : " "}
-                            {hiraganaYoon ? letter.yoon_2 : " "}
-                            <span>
-                              {hiraganaGojuon ? letter.gojuon_romaji_i : " "}
-                              {hiraganaDakuon ? letter.dakuon_romaji_i : " "}
-                              {hiraganaHandakuon
-                                ? letter.handakuon_romaji_i
-                                : " "}
-                              {hiraganaYoon ? letter.yoon_romaji_2 : " "}
-                            </span>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            {hiraganaGojuon ? letter.gojuon_u : " "}
-                            {hiraganaDakuon ? letter.dakuon_u : " "}
-                            {hiraganaHandakuon ? letter.handakuon_u : " "}
-                            {hiraganaYoon ? letter.yoon_3 : " "}
-                            <span>
-                              {hiraganaGojuon ? letter.gojuon_romaji_u : " "}
-                              {hiraganaDakuon ? letter.dakuon_romaji_u : " "}
-                              {hiraganaHandakuon
-                                ? letter.handakuon_romaji_u
-                                : " "}
-                              {hiraganaYoon ? letter.yoon_romaji_3 : " "}
-                            </span>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            {hiraganaGojuon ? letter.gojuon_e : " "}
-                            {hiraganaDakuon ? letter.dakuon_e : " "}
-                            {hiraganaHandakuon ? letter.handakuon_e : " "}{" "}
-                            {hiraganaYoon ? letter.yoon_4 : " "}
-                            <span>
-                              {hiraganaGojuon ? letter.gojuon_romaji_e : " "}
-                              {hiraganaDakuon ? letter.dakuon_romaji_e : " "}
-                              {hiraganaHandakuon
-                                ? letter.handakuon_romaji_e
-                                : " "}
-                              {hiraganaYoon ? letter.yoon_romaji_4 : " "}
-                            </span>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            {hiraganaGojuon ? letter.gojuon_o : " "}
-                            {hiraganaDakuon ? letter.dakuon_o : " "}
-                            {hiraganaHandakuon ? letter.handakuon_o : " "}
-                            {hiraganaYoon ? letter.yoon_5 : " "}
+                                <span>
+                                  {hiraganaGojuon
+                                    ? letter.gojuon_romaji_a
+                                    : " "}
+                                  {hiraganaDakuon
+                                    ? letter.dakuon_romaji_a
+                                    : " "}
+                                  {hiraganaHandakuon
+                                    ? letter.handakuon_romaji_a
+                                    : " "}
+                                  {hiraganaYoon ? letter.yoon_romaji_1 : " "}
+                                </span>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                {hiraganaGojuon ? letter.gojuon_i : " "}
+                                {hiraganaDakuon ? letter.dakuon_i : " "}
+                                {hiraganaHandakuon ? letter.handakuon_i : " "}
+                                {hiraganaYoon ? letter.yoon_2 : " "}
+                                <span>
+                                  {hiraganaGojuon
+                                    ? letter.gojuon_romaji_i
+                                    : " "}
+                                  {hiraganaDakuon
+                                    ? letter.dakuon_romaji_i
+                                    : " "}
+                                  {hiraganaHandakuon
+                                    ? letter.handakuon_romaji_i
+                                    : " "}
+                                  {hiraganaYoon ? letter.yoon_romaji_2 : " "}
+                                </span>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                {hiraganaGojuon ? letter.gojuon_u : " "}
+                                {hiraganaDakuon ? letter.dakuon_u : " "}
+                                {hiraganaHandakuon ? letter.handakuon_u : " "}
+                                {hiraganaYoon ? letter.yoon_3 : " "}
+                                <span>
+                                  {hiraganaGojuon
+                                    ? letter.gojuon_romaji_u
+                                    : " "}
+                                  {hiraganaDakuon
+                                    ? letter.dakuon_romaji_u
+                                    : " "}
+                                  {hiraganaHandakuon
+                                    ? letter.handakuon_romaji_u
+                                    : " "}
+                                  {hiraganaYoon ? letter.yoon_romaji_3 : " "}
+                                </span>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                {hiraganaGojuon ? letter.gojuon_e : " "}
+                                {hiraganaDakuon ? letter.dakuon_e : " "}
+                                {hiraganaHandakuon
+                                  ? letter.handakuon_e
+                                  : " "}{" "}
+                                {hiraganaYoon ? letter.yoon_4 : " "}
+                                <span>
+                                  {hiraganaGojuon
+                                    ? letter.gojuon_romaji_e
+                                    : " "}
+                                  {hiraganaDakuon
+                                    ? letter.dakuon_romaji_e
+                                    : " "}
+                                  {hiraganaHandakuon
+                                    ? letter.handakuon_romaji_e
+                                    : " "}
+                                  {hiraganaYoon ? letter.yoon_romaji_4 : " "}
+                                </span>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                {hiraganaGojuon ? letter.gojuon_o : " "}
+                                {hiraganaDakuon ? letter.dakuon_o : " "}
+                                {hiraganaHandakuon ? letter.handakuon_o : " "}
+                                {hiraganaYoon ? letter.yoon_5 : " "}
 
-                            <span>
-                              {hiraganaGojuon ? letter.gojuon_romaji_o : " "}
-                              {hiraganaDakuon ? letter.dakuon_romaji_o : " "}
-                              {hiraganaHandakuon
-                                ? letter.handakuon_romaji_o
-                                : " "}
-                              {hiraganaYoon ? letter.yoon_romaji_5 : " "}
-                            </span>
-                          </td>
-                        </tr>
-                        {hiraganaYoon ? (
-                          <>
-                            <tr>
-                              <td>
-                                {letter.yoon_6}
-                                <span>{letter.yoon_romaji_6}</span>
+                                <span>
+                                  {hiraganaGojuon
+                                    ? letter.gojuon_romaji_o
+                                    : " "}
+                                  {hiraganaDakuon
+                                    ? letter.dakuon_romaji_o
+                                    : " "}
+                                  {hiraganaHandakuon
+                                    ? letter.handakuon_romaji_o
+                                    : " "}
+                                  {hiraganaYoon ? letter.yoon_romaji_5 : " "}
+                                </span>
                               </td>
+                            </tr>
+                            {hiraganaYoon ? (
+                              <>
+                                <tr>
+                                  <td>
+                                    {letter.yoon_6}
+                                    <span>{letter.yoon_romaji_6}</span>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    {letter.yoon_7}
+                                    <span>{letter.yoon_romaji_7}</span>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    {letter.yoon_8}
+                                    <span>{letter.yoon_romaji_8}</span>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    {letter.yoon_9}
+                                    <span>{letter.yoon_romaji_9}</span>
+                                  </td>
+                                </tr>
+                              </>
+                            ) : (
+                              <></>
+                            )}
+                          </tbody>
+                        </Card>
+                      );
+                    })
+                  : katakanaAlphabets.map((letter, index) => {
+                      return (
+                        <Card key={index}>
+                          <tbody>
+                            <tr>
+                              <th>
+                                {katakanaGojuon ? letter.gojuon_romaji : " "}
+                                {katakanaDakuon ? letter.dakuon_romaji : " "}
+                                {katakanaHandakuon
+                                  ? letter.handakuon_romaji
+                                  : " "}
+                                {katakanaYoon ? letter.yoon_romaji : " "}
+                              </th>
                             </tr>
                             <tr>
                               <td>
-                                {letter.yoon_7}
-                                <span>{letter.yoon_romaji_7}</span>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                {letter.yoon_8}
-                                <span>{letter.yoon_romaji_8}</span>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                {letter.yoon_9}
-                                <span>{letter.yoon_romaji_9}</span>
-                              </td>
-                            </tr>
-                          </>
-                        ) : (
-                          <></>
-                        )}
-                      </tbody>
-                    </Card>
-                  );
-                })
-              : katakanaAlphabets.map((letter, index) => {
-                  return (
-                    <Card key={index}>
-                      <tbody>
-                        <tr>
-                          <th>
-                            {katakanaGojuon ? letter.gojuon_romaji : " "}
-                            {katakanaDakuon ? letter.dakuon_romaji : " "}
-                            {katakanaHandakuon ? letter.handakuon_romaji : " "}
-                            {katakanaYoon ? letter.yoon_romaji : " "}
-                          </th>
-                        </tr>
-                        <tr>
-                          <td>
-                            {katakanaGojuon ? letter.gojuon_a : " "}
-                            {katakanaDakuon ? letter.dakuon_a : " "}
-                            {katakanaHandakuon ? letter.handakuon_a : " "}
-                            {katakanaYoon ? letter.yoon_1 : " "}
+                                {katakanaGojuon ? letter.gojuon_a : " "}
+                                {katakanaDakuon ? letter.dakuon_a : " "}
+                                {katakanaHandakuon ? letter.handakuon_a : " "}
+                                {katakanaYoon ? letter.yoon_1 : " "}
 
-                            <span>
-                              {katakanaGojuon ? letter.gojuon_romaji_a : " "}
-                              {katakanaDakuon ? letter.dakuon_romaji_a : " "}
-                              {katakanaHandakuon
-                                ? letter.handakuon_romaji_a
-                                : " "}
-                              {katakanaYoon ? letter.yoon_romaji_1 : " "}
-                            </span>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            {katakanaGojuon ? letter.gojuon_i : " "}
-                            {katakanaDakuon ? letter.dakuon_i : " "}
-                            {katakanaHandakuon ? letter.handakuon_i : " "}
-                            {katakanaYoon ? letter.yoon_2 : " "}
-                            <span>
-                              {katakanaGojuon ? letter.gojuon_romaji_i : " "}
-                              {katakanaDakuon ? letter.dakuon_romaji_i : " "}
-                              {katakanaHandakuon
-                                ? letter.handakuon_romaji_i
-                                : " "}
-                              {katakanaYoon ? letter.yoon_romaji_2 : " "}
-                            </span>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            {katakanaGojuon ? letter.gojuon_u : " "}
-                            {katakanaDakuon ? letter.dakuon_u : " "}
-                            {katakanaHandakuon ? letter.handakuon_u : " "}
-                            {katakanaYoon ? letter.yoon_3 : " "}
-                            <span>
-                              {katakanaGojuon ? letter.gojuon_romaji_u : " "}
-                              {katakanaDakuon ? letter.dakuon_romaji_u : " "}
-                              {katakanaHandakuon
-                                ? letter.handakuon_romaji_u
-                                : " "}
-                              {katakanaYoon ? letter.yoon_romaji_3 : " "}
-                            </span>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            {katakanaGojuon ? letter.gojuon_e : " "}
-                            {katakanaDakuon ? letter.dakuon_e : " "}
-                            {katakanaHandakuon ? letter.handakuon_e : " "}{" "}
-                            {katakanaYoon ? letter.yoon_4 : " "}
-                            <span>
-                              {katakanaGojuon ? letter.gojuon_romaji_e : " "}
-                              {katakanaDakuon ? letter.dakuon_romaji_e : " "}
-                              {katakanaHandakuon
-                                ? letter.handakuon_romaji_e
-                                : " "}
-                              {katakanaYoon ? letter.yoon_romaji_4 : " "}
-                            </span>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            {katakanaGojuon ? letter.gojuon_o : " "}
-                            {katakanaDakuon ? letter.dakuon_o : " "}
-                            {katakanaHandakuon ? letter.handakuon_o : " "}
-                            {katakanaYoon ? letter.yoon_5 : " "}
+                                <span>
+                                  {katakanaGojuon
+                                    ? letter.gojuon_romaji_a
+                                    : " "}
+                                  {katakanaDakuon
+                                    ? letter.dakuon_romaji_a
+                                    : " "}
+                                  {katakanaHandakuon
+                                    ? letter.handakuon_romaji_a
+                                    : " "}
+                                  {katakanaYoon ? letter.yoon_romaji_1 : " "}
+                                </span>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                {katakanaGojuon ? letter.gojuon_i : " "}
+                                {katakanaDakuon ? letter.dakuon_i : " "}
+                                {katakanaHandakuon ? letter.handakuon_i : " "}
+                                {katakanaYoon ? letter.yoon_2 : " "}
+                                <span>
+                                  {katakanaGojuon
+                                    ? letter.gojuon_romaji_i
+                                    : " "}
+                                  {katakanaDakuon
+                                    ? letter.dakuon_romaji_i
+                                    : " "}
+                                  {katakanaHandakuon
+                                    ? letter.handakuon_romaji_i
+                                    : " "}
+                                  {katakanaYoon ? letter.yoon_romaji_2 : " "}
+                                </span>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                {katakanaGojuon ? letter.gojuon_u : " "}
+                                {katakanaDakuon ? letter.dakuon_u : " "}
+                                {katakanaHandakuon ? letter.handakuon_u : " "}
+                                {katakanaYoon ? letter.yoon_3 : " "}
+                                <span>
+                                  {katakanaGojuon
+                                    ? letter.gojuon_romaji_u
+                                    : " "}
+                                  {katakanaDakuon
+                                    ? letter.dakuon_romaji_u
+                                    : " "}
+                                  {katakanaHandakuon
+                                    ? letter.handakuon_romaji_u
+                                    : " "}
+                                  {katakanaYoon ? letter.yoon_romaji_3 : " "}
+                                </span>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                {katakanaGojuon ? letter.gojuon_e : " "}
+                                {katakanaDakuon ? letter.dakuon_e : " "}
+                                {katakanaHandakuon
+                                  ? letter.handakuon_e
+                                  : " "}{" "}
+                                {katakanaYoon ? letter.yoon_4 : " "}
+                                <span>
+                                  {katakanaGojuon
+                                    ? letter.gojuon_romaji_e
+                                    : " "}
+                                  {katakanaDakuon
+                                    ? letter.dakuon_romaji_e
+                                    : " "}
+                                  {katakanaHandakuon
+                                    ? letter.handakuon_romaji_e
+                                    : " "}
+                                  {katakanaYoon ? letter.yoon_romaji_4 : " "}
+                                </span>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                {katakanaGojuon ? letter.gojuon_o : " "}
+                                {katakanaDakuon ? letter.dakuon_o : " "}
+                                {katakanaHandakuon ? letter.handakuon_o : " "}
+                                {katakanaYoon ? letter.yoon_5 : " "}
 
-                            <span>
-                              {katakanaGojuon ? letter.gojuon_romaji_o : " "}
-                              {katakanaDakuon ? letter.dakuon_romaji_o : " "}
-                              {katakanaHandakuon
-                                ? letter.handakuon_romaji_o
-                                : " "}
-                              {katakanaYoon ? letter.yoon_romaji_5 : " "}
-                            </span>
-                          </td>
-                        </tr>
-                        {katakanaYoon ? (
-                          <>
-                            <tr>
-                              <td>
-                                {letter.yoon_6}
-                                <span>{letter.yoon_romaji_6}</span>
+                                <span>
+                                  {katakanaGojuon
+                                    ? letter.gojuon_romaji_o
+                                    : " "}
+                                  {katakanaDakuon
+                                    ? letter.dakuon_romaji_o
+                                    : " "}
+                                  {katakanaHandakuon
+                                    ? letter.handakuon_romaji_o
+                                    : " "}
+                                  {katakanaYoon ? letter.yoon_romaji_5 : " "}
+                                </span>
                               </td>
                             </tr>
+                            {katakanaYoon ? (
+                              <>
+                                <tr>
+                                  <td>
+                                    {letter.yoon_6}
+                                    <span>{letter.yoon_romaji_6}</span>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    {letter.yoon_7}
+                                    <span>{letter.yoon_romaji_7}</span>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    {letter.yoon_8}
+                                    <span>{letter.yoon_romaji_8}</span>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    {letter.yoon_9}
+                                    <span>{letter.yoon_romaji_9}</span>
+                                  </td>
+                                </tr>
+                              </>
+                            ) : (
+                              <></>
+                            )}
+                          </tbody>
+                        </Card>
+                      );
+                    })}
+              </>
+            ) : (
+              <>
+                {isHiragana
+                  ? kanjiNumbers.map((number, index) => {
+                      return (
+                        <Card key={index}>
+                          <tbody>
                             <tr>
-                              <td>
-                                {letter.yoon_7}
-                                <span>{letter.yoon_romaji_7}</span>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                {letter.yoon_8}
-                                <span>{letter.yoon_romaji_8}</span>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                {letter.yoon_9}
-                                <span>{letter.yoon_romaji_9}</span>
-                              </td>
-                            </tr>
-                          </>
-                        ) : (
-                          <></>
-                        )}
-                      </tbody>
-                    </Card>
-                  );
-                })}
-          </>
-        ) : (
-          <>
-            {isHiragana
-              ? kanjiNumbers.map((number, index) => {
-                  return (
-                    <Card key={index}>
-                      <tbody>
-                        <tr>
-                          <th>
-                            {kanjiTen ? number.ten_romaji : " "}
-                            {kanjiHundred ? number.hundred_romaji : " "}
-                            {kanjiThousand ? number.thousand_romaji : " "}
-                            {kanjiTenthousand ? number.tenthousand_romaji : " "}
-                            <span>
-                              <sup>
-                                {!kanjiTenthousand
-                                  ? number.ten_alternative
-                                  : ""}
+                              <th>
+                                {kanjiTen ? number.ten_romaji : " "}
+                                {kanjiHundred ? number.hundred_romaji : " "}
+                                {kanjiThousand ? number.thousand_romaji : " "}
                                 {kanjiTenthousand
-                                  ? number.tenthousand_alternative
-                                  : ""}
-                              </sup>
-                              {kanjiTen ? number.ten_romaji_top : " "}
-                              {kanjiHundred ? number.hundred_romaji_top : " "}
-                              {kanjiThousand ? number.thousand_romaji_top : " "}
-                              {kanjiTenthousand
-                                ? number.tenthousand_romaji_top
-                                : " "}
-                            </span>
-                          </th>
-                        </tr>
-                        <tr>
-                          <td>
-                            {kanjiTen ? number.ten_1 : " "}
-                            {kanjiHundred ? number.hundred_1 : " "}
-                            {kanjiThousand ? number.thousand_1 : " "}
-                            {kanjiTenthousand ? number.tenthousand_1 : " "}
-                            {kanjiTenthousand ? number.tenthousand : " "}
-                            <sup>
-                              {kanjiTenthousand
-                                ? number.tenthousand_elevated_1
-                                : " "}
-                            </sup>
-                            <span>
-                              {kanjiTen ? number.ten_romaji_1 : " "}
-                              {kanjiHundred ? number.hundred_romaji_1 : " "}
-                              {kanjiThousand ? number.thousand_romaji_1 : " "}
-                              {kanjiTenthousand
-                                ? number.tenthousand_romaji_1
-                                : " "}
-                            </span>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            {kanjiTen ? number.ten_2 : " "}
-                            {kanjiHundred ? number.hundred_2 : " "}
-                            {kanjiThousand ? number.thousand_2 : " "}
-                            {kanjiTenthousand ? number.tenthousand_2 : " "}
-                            {kanjiTenthousand ? number.tenthousand : " "}
-                            <sup>
-                              {kanjiTenthousand
-                                ? number.tenthousand_elevated_2
-                                : " "}
-                            </sup>
-                            <span>
-                              {kanjiTen ? number.ten_romaji_2 : " "}
-                              {kanjiHundred ? number.hundred_romaji_2 : " "}
-                              {kanjiThousand ? number.thousand_romaji_2 : " "}
-                              {kanjiTenthousand
-                                ? number.tenthousand_romaji_2
-                                : " "}
-                            </span>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            {kanjiTen ? number.ten_3 : " "}
-                            {kanjiHundred ? number.hundred_3 : " "}
-                            {kanjiThousand ? number.thousand_3 : " "}
-                            {kanjiTenthousand ? number.tenthousand_3 : " "}
-                            {kanjiTenthousand ? number.tenthousand : " "}
-                            <sup>
-                              {kanjiTenthousand
-                                ? number.tenthousand_elevated_3
-                                : " "}
-                            </sup>
-                            <span>
-                              {kanjiTen ? number.ten_romaji_3 : " "}
-                              {kanjiHundred ? number.hundred_romaji_3 : " "}
-                              {kanjiThousand ? number.thousand_romaji_3 : " "}
-                              {kanjiTenthousand
-                                ? number.tenthousand_romaji_3
-                                : " "}
-                            </span>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            {kanjiTen ? number.ten_4 : " "}
-                            {kanjiHundred ? number.hundred_4 : " "}
-                            {kanjiThousand ? number.thousand_4 : " "}{" "}
-                            {kanjiTenthousand ? number.tenthousand_4 : " "}
-                            {kanjiTenthousand ? number.tenthousand : " "}
-                            <sup>
-                              {kanjiTenthousand
-                                ? number.tenthousand_elevated_4
-                                : " "}
-                            </sup>
-                            <span>
-                              {kanjiTen ? number.ten_romaji_4 : " "}
-                              {kanjiHundred ? number.hundred_romaji_4 : " "}
-                              {kanjiThousand ? number.thousand_romaji_4 : " "}
-                              {kanjiTenthousand
-                                ? number.tenthousand_romaji_4
-                                : " "}
-                            </span>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            {kanjiTen ? number.ten_5 : " "}
-                            {kanjiHundred ? number.hundred_5 : " "}
-                            {kanjiThousand ? number.thousand_5 : " "}
-                            {kanjiTenthousand ? number.tenthousand_5 : " "}
-                            {kanjiTenthousand ? number.tenthousand : " "}
-                            <sup>
-                              {kanjiTenthousand
-                                ? number.tenthousand_elevated_5
-                                : " "}
-                            </sup>
-                            <span>
-                              {kanjiTen ? number.ten_romaji_5 : " "}
-                              {kanjiHundred ? number.hundred_romaji_5 : " "}
-                              {kanjiThousand ? number.thousand_romaji_5 : " "}
-                              {kanjiTenthousand
-                                ? number.tenthousand_romaji_5
-                                : " "}
-                            </span>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            {kanjiTen ? number.ten_6 : " "}
-                            {kanjiHundred ? number.hundred_6 : " "}
-                            {kanjiThousand ? number.thousand_6 : " "}
-                            {kanjiTenthousand ? number.tenthousand_6 : " "}
-                            {kanjiTenthousand ? number.tenthousand : " "}
-                            <sup>
-                              {kanjiTenthousand
-                                ? number.tenthousand_elevated_6
-                                : " "}
-                            </sup>
-                            <span>
-                              {kanjiTen ? number.ten_romaji_6 : " "}
-                              {kanjiHundred ? number.hundred_romaji_6 : " "}
-                              {kanjiThousand ? number.thousand_romaji_6 : " "}
-                              {kanjiTenthousand
-                                ? number.tenthousand_romaji_6
-                                : " "}
-                            </span>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            {kanjiTen ? number.ten_7 : " "}
-                            {kanjiHundred ? number.hundred_7 : " "}
-                            {kanjiThousand ? number.thousand_7 : " "}
-                            {kanjiTenthousand ? number.tenthousand_7 : " "}
-                            {kanjiTenthousand ? number.tenthousand : " "}
-                            <sup>
-                              {kanjiTenthousand
-                                ? number.tenthousand_elevated_7
-                                : " "}
-                            </sup>
-                            <span>
-                              {kanjiTen ? number.ten_romaji_7 : " "}
-                              {kanjiHundred ? number.hundred_romaji_7 : " "}
-                              {kanjiThousand ? number.thousand_romaji_7 : " "}
-                              {kanjiTenthousand
-                                ? number.tenthousand_romaji_7
-                                : " "}
-                            </span>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            {kanjiTen ? number.ten_8 : " "}
-                            {kanjiHundred ? number.hundred_8 : " "}
-                            {kanjiThousand ? number.thousand_8 : " "}
-                            {kanjiTenthousand ? number.tenthousand_8 : " "}
-                            {kanjiTenthousand ? number.tenthousand : " "}
-                            <sup>
-                              {kanjiTenthousand
-                                ? number.tenthousand_elevated_8
-                                : " "}
-                            </sup>
-                            <span>
-                              {kanjiTen ? number.ten_romaji_8 : " "}
-                              {kanjiHundred ? number.hundred_romaji_8 : " "}
-                              {kanjiThousand ? number.thousand_romaji_8 : " "}
-                              {kanjiTenthousand
-                                ? number.tenthousand_romaji_8
-                                : " "}
-                            </span>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            {kanjiTen ? number.ten_9 : " "}
-                            {kanjiHundred ? number.hundred_9 : " "}
-                            {kanjiThousand ? number.thousand_9 : " "}
-                            {kanjiTenthousand ? number.tenthousand_9 : " "}
-                            {kanjiTenthousand ? number.tenthousand : " "}
-                            <sup>
-                              {kanjiTenthousand
-                                ? number.tenthousand_elevated_9
-                                : " "}
-                            </sup>
-
-                            <span>
-                              {kanjiTen ? number.ten_romaji_9 : " "}
-                              {kanjiHundred ? number.hundred_romaji_9 : " "}
-                              {kanjiThousand ? number.thousand_romaji_9 : " "}
-                              {kanjiTenthousand
-                                ? number.tenthousand_romaji_9
-                                : " "}
-                            </span>
-                          </td>
-                        </tr>
-                        {kanjiTen ? (
-                          <>
+                                  ? number.tenthousand_romaji
+                                  : " "}
+                                <span>
+                                  <sup>
+                                    {!kanjiTenthousand
+                                      ? number.ten_alternative
+                                      : ""}
+                                    {kanjiTenthousand
+                                      ? number.tenthousand_alternative
+                                      : ""}
+                                  </sup>
+                                  {kanjiTen ? number.ten_romaji_top : " "}
+                                  {kanjiHundred
+                                    ? number.hundred_romaji_top
+                                    : " "}
+                                  {kanjiThousand
+                                    ? number.thousand_romaji_top
+                                    : " "}
+                                  {kanjiTenthousand
+                                    ? number.tenthousand_romaji_top
+                                    : " "}
+                                </span>
+                              </th>
+                            </tr>
                             <tr>
                               <td>
-                                {number.ten_10}
-
-                                <span>{number.ten_romaji_10}</span>
+                                {kanjiTen ? number.ten_1 : " "}
+                                {kanjiHundred ? number.hundred_1 : " "}
+                                {kanjiThousand ? number.thousand_1 : " "}
+                                {kanjiTenthousand ? number.tenthousand_1 : " "}
+                                {kanjiTenthousand ? number.tenthousand : " "}
+                                <sup>
+                                  {kanjiTenthousand
+                                    ? number.tenthousand_elevated_1
+                                    : " "}
+                                </sup>
+                                <span>
+                                  {kanjiTen ? number.ten_romaji_1 : " "}
+                                  {kanjiHundred ? number.hundred_romaji_1 : " "}
+                                  {kanjiThousand
+                                    ? number.thousand_romaji_1
+                                    : " "}
+                                  {kanjiTenthousand
+                                    ? number.tenthousand_romaji_1
+                                    : " "}
+                                </span>
                               </td>
                             </tr>
-                          </>
-                        ) : (
-                          <></>
-                        )}
-                      </tbody>
-                    </Card>
-                  );
-                })
-              : countingMethods.map((number, index) => {
-                  return (
-                    <Card key={index}>
-                      <tbody>
-                        <tr>
-                          <th>
-                            {kanjiTen ? number.ten_romaji : " "}
-                            {kanjiHundred ? number.hundred_romaji : " "}
-                            {kanjiThousand ? number.thousand_romaji : " "}
-                            {kanjiTenthousand ? number.tenthousand_romaji : " "}
-                          </th>
-                        </tr>
-                        <tr>
-                          <td>
-                            {kanjiTen ? number.ten_1 : " "}
-                            {kanjiHundred ? number.hundred_1 : " "}
-                            {kanjiThousand ? number.thousand_1 : " "}
-                            {kanjiTenthousand ? number.tenthousand_1 : " "}
+                            <tr>
+                              <td>
+                                {kanjiTen ? number.ten_2 : " "}
+                                {kanjiHundred ? number.hundred_2 : " "}
+                                {kanjiThousand ? number.thousand_2 : " "}
+                                {kanjiTenthousand ? number.tenthousand_2 : " "}
+                                {kanjiTenthousand ? number.tenthousand : " "}
+                                <sup>
+                                  {kanjiTenthousand
+                                    ? number.tenthousand_elevated_2
+                                    : " "}
+                                </sup>
+                                <span>
+                                  {kanjiTen ? number.ten_romaji_2 : " "}
+                                  {kanjiHundred ? number.hundred_romaji_2 : " "}
+                                  {kanjiThousand
+                                    ? number.thousand_romaji_2
+                                    : " "}
+                                  {kanjiTenthousand
+                                    ? number.tenthousand_romaji_2
+                                    : " "}
+                                </span>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                {kanjiTen ? number.ten_3 : " "}
+                                {kanjiHundred ? number.hundred_3 : " "}
+                                {kanjiThousand ? number.thousand_3 : " "}
+                                {kanjiTenthousand ? number.tenthousand_3 : " "}
+                                {kanjiTenthousand ? number.tenthousand : " "}
+                                <sup>
+                                  {kanjiTenthousand
+                                    ? number.tenthousand_elevated_3
+                                    : " "}
+                                </sup>
+                                <span>
+                                  {kanjiTen ? number.ten_romaji_3 : " "}
+                                  {kanjiHundred ? number.hundred_romaji_3 : " "}
+                                  {kanjiThousand
+                                    ? number.thousand_romaji_3
+                                    : " "}
+                                  {kanjiTenthousand
+                                    ? number.tenthousand_romaji_3
+                                    : " "}
+                                </span>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                {kanjiTen ? number.ten_4 : " "}
+                                {kanjiHundred ? number.hundred_4 : " "}
+                                {kanjiThousand ? number.thousand_4 : " "}{" "}
+                                {kanjiTenthousand ? number.tenthousand_4 : " "}
+                                {kanjiTenthousand ? number.tenthousand : " "}
+                                <sup>
+                                  {kanjiTenthousand
+                                    ? number.tenthousand_elevated_4
+                                    : " "}
+                                </sup>
+                                <span>
+                                  {kanjiTen ? number.ten_romaji_4 : " "}
+                                  {kanjiHundred ? number.hundred_romaji_4 : " "}
+                                  {kanjiThousand
+                                    ? number.thousand_romaji_4
+                                    : " "}
+                                  {kanjiTenthousand
+                                    ? number.tenthousand_romaji_4
+                                    : " "}
+                                </span>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                {kanjiTen ? number.ten_5 : " "}
+                                {kanjiHundred ? number.hundred_5 : " "}
+                                {kanjiThousand ? number.thousand_5 : " "}
+                                {kanjiTenthousand ? number.tenthousand_5 : " "}
+                                {kanjiTenthousand ? number.tenthousand : " "}
+                                <sup>
+                                  {kanjiTenthousand
+                                    ? number.tenthousand_elevated_5
+                                    : " "}
+                                </sup>
+                                <span>
+                                  {kanjiTen ? number.ten_romaji_5 : " "}
+                                  {kanjiHundred ? number.hundred_romaji_5 : " "}
+                                  {kanjiThousand
+                                    ? number.thousand_romaji_5
+                                    : " "}
+                                  {kanjiTenthousand
+                                    ? number.tenthousand_romaji_5
+                                    : " "}
+                                </span>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                {kanjiTen ? number.ten_6 : " "}
+                                {kanjiHundred ? number.hundred_6 : " "}
+                                {kanjiThousand ? number.thousand_6 : " "}
+                                {kanjiTenthousand ? number.tenthousand_6 : " "}
+                                {kanjiTenthousand ? number.tenthousand : " "}
+                                <sup>
+                                  {kanjiTenthousand
+                                    ? number.tenthousand_elevated_6
+                                    : " "}
+                                </sup>
+                                <span>
+                                  {kanjiTen ? number.ten_romaji_6 : " "}
+                                  {kanjiHundred ? number.hundred_romaji_6 : " "}
+                                  {kanjiThousand
+                                    ? number.thousand_romaji_6
+                                    : " "}
+                                  {kanjiTenthousand
+                                    ? number.tenthousand_romaji_6
+                                    : " "}
+                                </span>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                {kanjiTen ? number.ten_7 : " "}
+                                {kanjiHundred ? number.hundred_7 : " "}
+                                {kanjiThousand ? number.thousand_7 : " "}
+                                {kanjiTenthousand ? number.tenthousand_7 : " "}
+                                {kanjiTenthousand ? number.tenthousand : " "}
+                                <sup>
+                                  {kanjiTenthousand
+                                    ? number.tenthousand_elevated_7
+                                    : " "}
+                                </sup>
+                                <span>
+                                  {kanjiTen ? number.ten_romaji_7 : " "}
+                                  {kanjiHundred ? number.hundred_romaji_7 : " "}
+                                  {kanjiThousand
+                                    ? number.thousand_romaji_7
+                                    : " "}
+                                  {kanjiTenthousand
+                                    ? number.tenthousand_romaji_7
+                                    : " "}
+                                </span>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                {kanjiTen ? number.ten_8 : " "}
+                                {kanjiHundred ? number.hundred_8 : " "}
+                                {kanjiThousand ? number.thousand_8 : " "}
+                                {kanjiTenthousand ? number.tenthousand_8 : " "}
+                                {kanjiTenthousand ? number.tenthousand : " "}
+                                <sup>
+                                  {kanjiTenthousand
+                                    ? number.tenthousand_elevated_8
+                                    : " "}
+                                </sup>
+                                <span>
+                                  {kanjiTen ? number.ten_romaji_8 : " "}
+                                  {kanjiHundred ? number.hundred_romaji_8 : " "}
+                                  {kanjiThousand
+                                    ? number.thousand_romaji_8
+                                    : " "}
+                                  {kanjiTenthousand
+                                    ? number.tenthousand_romaji_8
+                                    : " "}
+                                </span>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                {kanjiTen ? number.ten_9 : " "}
+                                {kanjiHundred ? number.hundred_9 : " "}
+                                {kanjiThousand ? number.thousand_9 : " "}
+                                {kanjiTenthousand ? number.tenthousand_9 : " "}
+                                {kanjiTenthousand ? number.tenthousand : " "}
+                                <sup>
+                                  {kanjiTenthousand
+                                    ? number.tenthousand_elevated_9
+                                    : " "}
+                                </sup>
 
-                            <span>
-                              {kanjiTen ? number.ten_romaji_1 : " "}
-                              {kanjiHundred ? number.hundred_romaji_1 : " "}
-                              {kanjiThousand ? number.thousand_romaji_1 : " "}
-                              {kanjiTenthousand
-                                ? number.tenthousand_romaji_1
-                                : " "}
-                            </span>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            {kanjiTen ? number.ten_2 : " "}
-                            {kanjiHundred ? number.hundred_2 : " "}
-                            {kanjiThousand ? number.thousand_2 : " "}
-                            {kanjiTenthousand ? number.tenthousand_2 : " "}
-                            <span>
-                              {kanjiTen ? number.ten_romaji_2 : " "}
-                              {kanjiHundred ? number.hundred_romaji_2 : " "}
-                              {kanjiThousand ? number.thousand_romaji_2 : " "}
-                              {kanjiTenthousand
-                                ? number.tenthousand_romaji_2
-                                : " "}
-                            </span>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            {kanjiTen ? number.ten_3 : " "}
-                            {kanjiHundred ? number.hundred_3 : " "}
-                            {kanjiThousand ? number.thousand_3 : " "}
-                            {kanjiTenthousand ? number.tenthousand_3 : " "}
-                            <span>
-                              {kanjiTen ? number.ten_romaji_3 : " "}
-                              {kanjiHundred ? number.hundred_romaji_3 : " "}
-                              {kanjiThousand ? number.thousand_romaji_3 : " "}
-                              {kanjiTenthousand
-                                ? number.tenthousand_romaji_3
-                                : " "}
-                            </span>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            {kanjiTen ? number.ten_4 : " "}
-                            {kanjiHundred ? number.hundred_4 : " "}
-                            {kanjiThousand ? number.thousand_4 : " "}{" "}
-                            {kanjiTenthousand ? number.tenthousand_4 : " "}
-                            <span>
-                              {kanjiTen ? number.ten_romaji_4 : " "}
-                              {kanjiHundred ? number.hundred_romaji_4 : " "}
-                              {kanjiThousand ? number.thousand_romaji_4 : " "}
-                              {kanjiTenthousand
-                                ? number.tenthousand_romaji_4
-                                : " "}
-                            </span>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </Card>
-                  );
-                })}
-          </>
-        )}
-      </GridSmall>
+                                <span>
+                                  {kanjiTen ? number.ten_romaji_9 : " "}
+                                  {kanjiHundred ? number.hundred_romaji_9 : " "}
+                                  {kanjiThousand
+                                    ? number.thousand_romaji_9
+                                    : " "}
+                                  {kanjiTenthousand
+                                    ? number.tenthousand_romaji_9
+                                    : " "}
+                                </span>
+                              </td>
+                            </tr>
+                            {kanjiTen ? (
+                              <>
+                                <tr>
+                                  <td>
+                                    {number.ten_10}
+
+                                    <span>{number.ten_romaji_10}</span>
+                                  </td>
+                                </tr>
+                              </>
+                            ) : (
+                              <></>
+                            )}
+                          </tbody>
+                        </Card>
+                      );
+                    })
+                  : countingMethods.map((counting, index) => {
+                      return (
+                        <Card key={index}>
+                          <tbody>
+                            <tr>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td>COMING SOON</td>
+                            </tr>
+                            <tr>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td></td>
+                            </tr>
+                          </tbody>
+                        </Card>
+                      );
+                    })}
+              </>
+            )}
+          </TableGrid>
+        </ScrollContainer>
+      </PaddingContainer>
       {alphabets ? (
         <>
           <FlexWrapper>
@@ -1548,6 +1671,18 @@ export default function Alphabets() {
               </li>
               <li>
                 無量大数/10<sup>68</sup> &rarr; muryōtaisū
+              </li>
+            </ul>
+          </InfoBlock>
+          <FlexWrapper>
+            <InfoTitle>
+              <span>Counting</span>
+            </InfoTitle>
+          </FlexWrapper>
+          <InfoBlock>
+            <ul>
+              <li>
+                <span></span>
               </li>
             </ul>
           </InfoBlock>

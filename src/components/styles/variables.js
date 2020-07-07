@@ -1,6 +1,7 @@
 const ThemePalette = {
   //sun
   sunBackground: "#f5f5f5",
+  sunBackgroundLight: "#f7f7f7",
   sunShadowLight: "#ffffff",
   sunShadowDark: "#dbe3ec",
   sunShadowText: "#d3dbe4",
@@ -10,22 +11,27 @@ const ThemePalette = {
   sunLinkPink: "#ff73e7",
   sunLinkPurple: "#a273ff",
   sunLinkBlue: "#4970ff",
-  sunLinkCyan: "#29ffba",
+  sunLinkTurquoise: "#29ffba",
   sunButtonDefault: "linear-gradient(to top right, #ffa151, #ff73e7)",
   sunButtonSecondary: "linear-gradient(to top right, #4970ff, #29ffba)",
+  sunScroll: "#bebafdde",
+  sunScrollHover: "#b4afff",
   //moon
   moonBackground: "#232C40",
+  moonBackgroundLight: "#2C354A",
   moonShadowLight: "#2C354A",
   moonShadowDark: "#192338",
   moonShadowTextDark: "#1C263D",
   moonText: "#9FAED2",
   moonTextLight: "#212b40",
-  moonLinkOrange: "#ff9841",
-  moonLinkPink: "#f76bdf",
-  moonLinkBlue: "#2044cc",
-  moonLinkCyan: "#04d894",
-  moonButtonDefault: "linear-gradient(to top right, #ff9841, #f76bdf)",
-  moonButtonSecondary: "linear-gradient(to top right, #2044cc, #04d894)",
+  moonLinkOrange: "#c57b39",
+  moonLinkPink: "#c359b2",
+  moonLinkBlue: "#2b43a0",
+  moonLinkTurquoise: "#31b58b",
+  moonButtonDefault: "linear-gradient(to top right, #c57b39, #c359b2)",
+  moonButtonSecondary: "linear-gradient(to top right, #2b43a0, #31b58b)",
+  moonScroll: "#7760a5de",
+  moonScrollHover: "#8765ccde",
 };
 
 export default ThemePalette;

@@ -29,7 +29,7 @@ const Button = styled.button`
   outline: 0px transparent;
   position: relative;
   text-align: left;
-  transition: 150ms;
+  transition: 250ms;
   top: -10px;
 
   img {

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const Card = styled.table`
   max-width: 100%;
@@ -6,7 +6,7 @@ const Card = styled.table`
   text-align: center;
   justify-content: center;
   text-align: center;
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
   color: ${(props) => props.theme.globalText};
   background: ${(props) => props.theme.globalBackground};
   border-left: ${(props) => props.theme.alphabetLine};
