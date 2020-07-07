@@ -10,6 +10,9 @@ const Global = styled.div`
   a {
     text-decoration: none;
   }
+  button:disabled {
+    cursor: default;
+  }
 `;
 
 export default Global;

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const GridSmall = styled.div`
   display: grid;
@@ -19,7 +19,7 @@ const GridSmall = styled.div`
   }
 
   ul {
-    font-family: 'Noto Sans JP', sans-serif;
+    font-family: "Noto Sans JP", sans-serif;
     color: ${(props) => props.theme.globalText}a9;
     list-style: none;
     li {
@@ -28,6 +28,9 @@ const GridSmall = styled.div`
         font-weight: bold;
       }
     }
+  }
+  sup {
+    font-weight: bold;
   }
 `;
 

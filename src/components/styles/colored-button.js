@@ -1,11 +1,22 @@
-import styled from 'styled-components';
+import styled, { keyframes } from "styled-components";
+
+const activeButton = keyframes`
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+`;
 
 const Button = styled.button`
   background: ${(props) =>
     props.secondary ? props.theme.buttonSecondary : props.theme.buttonDefault};
   border: none;
   border-radius: 100px;
-  padding: 15px 40px;
   min-height: 63px;
   min-width: 235px;
   box-shadow: ${(props) =>
@@ -29,18 +40,18 @@ const Button = styled.button`
   }
 
   span::after {
-    font-family: 'Comfortaa', sans-serif;
+    font-family: "Comfortaa", sans-serif;
     transition: 300ms;
     opacity: 0;
     font-size: 18px;
     position: absolute;
-    top: 23px;
+    top: 24px;
   }
   span::before {
-    font-family: 'Noto Sans JP', sans-serif;
-    font-size: 21px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 22px;
     position: absolute;
-    top: 16px;
+    top: 14px;
     opacity: 1;
     transition: 300ms;
   }
@@ -52,7 +63,6 @@ const Button = styled.button`
     }
     span::after {
       opacity: 1;
-      top: 23px;
       transition: 300ms;
     }
     img {
@@ -61,6 +71,7 @@ const Button = styled.button`
   }
 
   &:active {
+    animation: ${activeButton} 500ms;
     span::before {
       opacity: 0;
     }
@@ -68,16 +79,22 @@ const Button = styled.button`
       left: 88px;
       opacity: 1;
     }
+    span::after,
+    img {
+      animation: ${activeButton} 500ms;
+    }
+  }
+  &:disabled {
+    animation: ${activeButton} 500ms;
+    span::after,
+    span::before {
+      animation: ${activeButton} 500ms;
+    }
     &:active {
-      transform: translateY(5px);
       box-shadow: ${(props) =>
         props.secondary
-          ? props.theme.buttonSecondaryShadowActive
-          : props.theme.buttonShadowActive};
-      span::after,
-      img {
-        transform: translateY(5px);
-      }
+          ? props.theme.buttonShadowSecondary
+          : props.theme.buttonShadow};
     }
   }
 `;
