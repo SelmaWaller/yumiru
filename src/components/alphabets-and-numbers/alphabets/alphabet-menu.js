@@ -81,7 +81,6 @@ const AlphabetMenu = ({
       <div>
         <SmallButton
           disabled={!isButtonOne}
-          secondary
           as={Katakana}
           onClick={() => {
             toggleMainButtons();

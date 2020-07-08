@@ -9,7 +9,7 @@ const InfoBlock = styled(GridMedium)`
       ? "repeat(auto-fit, minmax(150px, 1fr))"
       : "repeat(auto-fit, minmax(250px, 1fr))"};
   border-bottom: ${(props) => props.theme.alphabetLine};
-  transition: 150ms;
+  transition: 250ms;
   &:nth-last-child(1) {
     border: none;
   }

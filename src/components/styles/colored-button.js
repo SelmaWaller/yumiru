@@ -13,16 +13,12 @@ const activeButton = keyframes`
 `;
 
 const Button = styled.button`
-  background: ${(props) =>
-    props.secondary ? props.theme.buttonSecondary : props.theme.buttonDefault};
+  background: ${(props) => props.theme.buttonDefault};
   border: none;
   border-radius: 100px;
   min-height: 63px;
   min-width: 235px;
-  box-shadow: ${(props) =>
-    props.secondary
-      ? props.theme.buttonShadowSecondary
-      : props.theme.buttonShadow};
+  box-shadow: ${(props) => props.theme.buttonShadow};
   cursor: pointer;
   transition: 300ms;
   color: #ffffff;
@@ -91,10 +87,7 @@ const Button = styled.button`
       animation: ${activeButton} 500ms;
     }
     &:active {
-      box-shadow: ${(props) =>
-        props.secondary
-          ? props.theme.buttonShadowSecondary
-          : props.theme.buttonShadow};
+      box-shadow: ${(props) => props.theme.buttonShadow};
     }
   }
 `;

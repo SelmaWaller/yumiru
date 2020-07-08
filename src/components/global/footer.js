@@ -1,13 +1,15 @@
 import React from "react";
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 
 import FlexWrapper from "../styles/flex-wrapper";
 import JustifyContent from "../styles/justify-content";
 
 const FooterBox = styled.div`
+  margin-top: 47px;
   padding: 60px 0 10px;
   background: ${(props) => props.theme.footer};
   color: ${(props) => props.theme.globalText};
+  bottom: 0;
 `;
 
 const Copyright = styled.p`
@@ -45,7 +47,7 @@ const JustifyFooter = styled(JustifyContent)`
     a {
       transition: 250ms;
       font-family: "Roboto Mono", sans-serif;
-      font-weight: 300;
+      font-weight: 400;
       padding: 20px;
       color: ${(props) => props.theme.globalText};
       text-decoration: underline;

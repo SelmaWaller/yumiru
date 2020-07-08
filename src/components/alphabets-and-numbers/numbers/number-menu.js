@@ -83,7 +83,6 @@ const NumberMenu = ({
       <div>
         <SmallButton
           disabled={!isButtonOne}
-          secondary
           as={Counting}
           onClick={() => {
             toggleMainButtons();

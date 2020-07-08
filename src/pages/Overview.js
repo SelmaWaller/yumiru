@@ -27,7 +27,12 @@ export default function Overview() {
           return (
             <div key={index}>
               {!item.disabled ? (
-                <Link to={item.disabled ? "" : item.url} onClick={() => {window.scrollTo(0, 0)}}>
+                <Link
+                  to={item.disabled ? "" : item.url}
+                  onClick={() => {
+                    window.scrollTo(0, 0);
+                  }}
+                >
                   <OverviewCard
                     game={item.game}
                     as={item.disabled ? Disabled : ""}
