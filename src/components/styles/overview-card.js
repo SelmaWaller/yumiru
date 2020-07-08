@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const OverviewCard = styled.div`
   background: ${(props) => props.theme.globalBackground};
@@ -26,12 +26,11 @@ const OverviewCard = styled.div`
     text-decoration: none;
     text-transform: uppercase;
     font-weight: normal;
-    font-family: 'Sawarabi Mincho', sans-serif;
+    font-family: "Sawarabi Mincho", sans-serif;
     color: ${(props) => props.theme.globalText};
     font-size: 28px;
     margin: 0;
     padding: 0 20px;
-    cursor: pointer;
     transition: 250ms;
   }
 
@@ -39,7 +38,7 @@ const OverviewCard = styled.div`
     top: 10px;
     left: -5px;
     font-size: 18px;
-    font-family: 'Noto Sans JP', sans-serif;
+    font-family: "Noto Sans JP", sans-serif;
     font-weight: normal;
     opacity: 0.6;
     writing-mode: vertical-rl;
@@ -49,7 +48,7 @@ const OverviewCard = styled.div`
   }
 
   h3 {
-    font-family: 'Comfortaa', sans-serif;
+    font-family: "Comfortaa", sans-serif;
     bottom: 15px;
     left: 0;
     font-size: 15px;
