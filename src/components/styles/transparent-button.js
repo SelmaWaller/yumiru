@@ -9,9 +9,9 @@ const TransparentButton = styled.button`
       : props.theme.transparentButtonShadowActive};
   background-image: ${(props) =>
     props.home ? props.theme.homeButtonImage : props.theme.modeButtonImage};
-  background-position: ${(props) => (props.home ? "-20px 2px" : "-34px 8px")};
+  background-position: ${(props) => (props.home ? "-20px 2px" : "-37px 10px")};
   background-repeat: no-repeat;
-  background-size: ${(props) => (props.home ? "135px" : "170px")};
+  background-size: ${(props) => (props.home ? "135px" : "175px")};
   border: none;
   border-radius: 100px;
   top: 25px;

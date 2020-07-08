@@ -27,6 +27,7 @@ const JustifyFooter = styled(JustifyContent)`
       position: relative;
     }
     span::before {
+      transition: 250ms;
       content: "༶";
       position: absolute;
       left: 0;
@@ -36,6 +37,7 @@ const JustifyFooter = styled(JustifyContent)`
       transform: rotate(90deg);
     }
     span::after {
+      transition: 250ms;
       content: "༶";
       position: absolute;
       right: 0;

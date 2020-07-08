@@ -1,15 +1,10 @@
 import variables from "../../components/styles/variables";
 
-import moon_evening from "../../svgs/icons/moon/moon_evening.gif";
-import logo_small_evening from "../../svgs/logo/logo_no-text_evening.png";
-import logo_big_evening from "../../svgs/logo/logo_big_evening.png";
-import games_evening from "../../svgs/icons/tags/games_evening.png";
-import other_evening from "../../svgs/icons/tags/other_evening.png";
+import moon_evening from "../../illustrations/moon/moon_evening.gif";
+import house_evening from "../../illustrations/house/house_evening.png";
 
 const evening = {
   //global
-  logo: `url(${logo_small_evening})`,
-  logoMobile: `url(${logo_big_evening})`,
   titleShadow: `3px -3px 2px ${variables.moonShadowLight}, 3px -3px 10px ${variables.moonShadowLight}, -3px 2px 10px ${variables.moonShadowDark}, -2px 2px 2px ${variables.moonShadowDark} , -3px 2px 10px ${variables.moonShadowDark}, -2px 2px 2px ${variables.moonShadowDark}, -3px 2px 10px ${variables.moonShadowDark}, -2px 2px 2px ${variables.moonShadowDark}`,
   titleShadowMobile: `1px -1px 2px ${variables.moonShadowLight}, 2px -2px 4px ${variables.moonShadowLight}, -3px 2px 10px ${variables.moonShadowDark}, -2px 2px 2px ${variables.moonShadowDark} , -3px 2px 10px ${variables.moonShadowDark}, -2px 2px 2px ${variables.moonShadowDark}, -3px 2px 10px ${variables.moonShadowDark}, -2px 2px 2px ${variables.moonShadowDark}`,
   buttonDefault: variables.moonButtonDefault,
@@ -23,19 +18,16 @@ const evening = {
   floatShadow: `-5px 5px 10px ${variables.moonShadowDark}55`,
   globalScroll: variables.moonDimmed,
   globalScrollHover: variables.moonDimmedHover,
-  //date and time
+  //date, time and logo
   shadowText: variables.moonDimmed,
   lightTextShadow: `3px 3px 2px ${variables.moonShadowLight}, 3px 3px 10px ${variables.moonShadowLight}, -3px -2px 10px ${variables.moonShadowDark}, -2px -2px 2px ${variables.moonShadowDark}, -3px -2px 10px ${variables.moonShadowDark}, -2px -2px 2px ${variables.moonShadowDark}, -3px -2px 10px ${variables.moonShadowDark}, -2px -2px 2px ${variables.moonShadowDark}`,
   lightTextShadowMobile: `1px 1px 1px ${variables.moonShadowLight}, 2px 2px 4px ${variables.moonShadowLight}, -3px -1px 10px ${variables.moonShadowDark}, -2px -2px 2px ${variables.moonShadowDark} , -3px -1px 10px ${variables.moonShadowDark}, -2px -2px 2px ${variables.moonShadowDark}, -3px -1px 10px ${variables.moonShadowDark}, -2px -2px 2px ${variables.moonShadowDark}`,
   //transparentButtons
-  homeButtonImage: `url(${logo_small_evening})`,
+  homeButtonImage: `url(${house_evening})`,
   modeButtonImage: `url(${moon_evening})`,
   transparentButtonShadow: `3px -3px 10px ${variables.moonShadowDark}15, inset -3px 3px 4px ${variables.moonShadowLight}, -3px 3px 10px ${variables.moonShadowDark}80, inset 2px -2px 2px ${variables.moonShadowDark}, inset 3px -3px 10px ${variables.moonShadowDark}`,
   transparentButtonShadowHover: `3px -3px 10px ${variables.moonShadowDark}00, inset -3px 3px 4px ${variables.moonShadowLight}00, -3px 3px 10px ${variables.moonShadowDark}00, inset 2px -2px 2px ${variables.moonShadowDark}00, inset 3px -3px 10px ${variables.moonShadowDark}00, inset 3px -3px 3px ${variables.moonShadowLight}65, inset -5px 5px 5px ${variables.moonShadowDark}65`,
   transparentButtonShadowActive: `3px -3px 10px ${variables.moonShadowDark}00, inset -3px 3px 4px ${variables.moonShadowLight}00, -3px 3px 10px ${variables.moonShadowDark}00, inset 2px -2px 2px ${variables.moonShadowDark}00, inset 3px -3px 10px ${variables.moonShadowDark}00, inset 3px -3px 3px ${variables.moonShadowLight}, inset -5px 5px 5px ${variables.moonShadowDark}`,
-  //overview
-  gameTag: `url(${games_evening})`,
-  otherTag: `url(${other_evening})`,
   //alphabet
   alphabetShadow: `inset 8px -8px 15px ${variables.moonShadowLight}85, inset -4px 4px 10px ${variables.moonShadowDark}`,
   alphabetLine: `1px solid ${variables.moonDimmed}40`,
