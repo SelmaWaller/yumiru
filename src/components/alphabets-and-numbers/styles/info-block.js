@@ -4,18 +4,24 @@ import GridMedium from "../../styles/grid-medium";
 
 const InfoBlock = styled(GridMedium)`
   max-width: 1200px;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: ${(props) =>
+    props.small
+      ? "repeat(auto-fit, minmax(150px, 1fr))"
+      : "repeat(auto-fit, minmax(250px, 1fr))"};
   border-bottom: ${(props) => props.theme.alphabetLine};
+  transition: 150ms;
   &:nth-last-child(1) {
     border: none;
   }
   ul {
+    transition: 150ms;
     font-family: "Noto Sans JP", sans-serif;
     color: ${(props) => props.theme.globalText}a9;
     padding-bottom: 20px;
     li {
+      transition: 250ms;
       line-height: 26px;
-      max-width: 250px;
+      max-width: 100%;
       margin: 0 10px;
       padding: 5px 0;
       span {

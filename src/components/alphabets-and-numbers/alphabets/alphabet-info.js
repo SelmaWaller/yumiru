@@ -12,7 +12,7 @@ const AlphabetInfo = () => {
           <span>Newer katakana methods</span>
         </InfoTitle>
       </FlexWrapper>
-      <InfoBlock>
+      <InfoBlock small>
         <ul>
           <li>
             <span>f-</span>
@@ -72,13 +72,13 @@ const AlphabetInfo = () => {
           <li>
             <span>Double consonants and vowels</span>
           </li>
-          <li>っ/ッ &rarr; small tsu/pause: prolongs the next consonant</li>
+          <li>っ/ッ &rarr; small tsu/pause: lengthens the next consonant</li>
           <li>ん/ン &rarr; exception for double n</li>
-          <li>ー &rarr; katakana only: prolongs syllables</li>
-          <li>あ &rarr; normal a: prolongs a/ya (aa/ā)</li>
-          <li>い &rarr; normal i: prolongs e/-e or i/-i (ee/ei/ē, ii/ī)</li>
-          <li>う &rarr; normal u: prolongs u/yu, o/yo (uu/ū, ou/ō)</li>
-          <li>お &rarr; normal o: prolongs o/yo (oo/ō)</li>
+          <li>ー &rarr; katakana only: lengthens syllables</li>
+          <li>あ &rarr; normal a: lengthens a/ya (aa/ā)</li>
+          <li>い &rarr; normal i: lengthens e/-e or i/-i (ee/ei/ē, ii/ī)</li>
+          <li>う &rarr; normal u: lengthens u/yu, o/yo (uu/ū, ou/ō)</li>
+          <li>お &rarr; normal o: lengthens o/yo (oo/ō)</li>
         </ul>
         <ul>
           <li>
@@ -114,7 +114,7 @@ const AlphabetInfo = () => {
             お/オ &rarr; as in r<span>o</span>ck
           </li>
           <li>
-            The <span>R</span> should be pronounced with the tip of your tongue
+            The <span>r</span> should be pronounced with the tip of your tongue
             thouching the front ridges
           </li>
           <li>
