@@ -84,6 +84,15 @@ const Footer = () => {
           </div>
           <div>
             <a
+              href="https://github.com/SelmaWaller/"
+              rel="no-opener no-referrer"
+              target="blank"
+            >
+              <span>github</span>
+            </a>
+          </div>
+          <div>
+            <a
               href="https://selma-waller.netlify.app/"
               rel="no-opener no-referrer"
               target="blank"
