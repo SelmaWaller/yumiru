@@ -6,8 +6,8 @@ import variables from "./components/styles/variables";
 import moon_daytime from "./svgs/icons/moon/moon_daytime.gif";
 import sun_evening from "./svgs/icons/sun/sun_evening.gif";
 
-import logo_small_daytime from "./svgs/logo/logo_daytime.png";
-import logo_small_evening from "./svgs/logo/logo_evening.png";
+import logo_small_daytime from "./svgs/logo/logo_no-text_daytime.png";
+import logo_small_evening from "./svgs/logo/logo_no-text_evening.png";
 import logo_big_daytime from "./svgs/logo/logo_big_daytime.png";
 import logo_big_evening from "./svgs/logo/logo_big_evening.png";
 import games_daytime from "./svgs/icons/tags/games_daytime.png";
@@ -45,7 +45,7 @@ const day = {
   lightTextShadow: `3px 3px 2px ${variables.sunShadowLight}, 3px 3px 10px ${variables.sunShadowLight}, -3px -2px 10px ${variables.sunShadowText}, -2px -2px 2px ${variables.sunShadowText} , -3px -2px 10px ${variables.sunShadowText}, -2px -2px 2px ${variables.sunShadowText}, -3px -2px 10px ${variables.sunShadowText}, -2px -2px 2px ${variables.sunShadowText}`,
   lightTextShadowMobile: `1px 1px 1px ${variables.sunShadowLight}, 2px 2px 4px ${variables.sunShadowLight}, -3px -1px 10px ${variables.sunShadowText}, -2px -2px 2px ${variables.sunShadowText} , -3px -1px 10px ${variables.sunShadowText}, -2px -2px 2px ${variables.sunShadowText}, -3px -1px 10px ${variables.sunShadowText}, -2px -2px 2px ${variables.sunShadowText}`,
   //transparentButtons
-  homeButtonImage: `url(${logo_big_daytime})`,
+  homeButtonImage: `url(${logo_small_daytime})`,
   modeButtonImage: `url(${moon_daytime})`,
   transparentButtonShadow: `3px -3px 10px ${variables.sunShadowDark}15, inset -3px 3px 4px ${variables.sunShadowLight}, -3px 3px 10px ${variables.sunShadowDark}80, inset 2px -2px 2px ${variables.sunShadowDark}, inset 3px -3px 10px ${variables.sunShadowDark}, inset 3px -3px 3px ${variables.sunShadowLight}00, inset -5px 5px 5px ${variables.sunShadowDark}00`,
   transparentButtonShadowHover: `3px -3px 10px ${variables.sunShadowDark}00, inset -3px 3px 4px ${variables.sunShadowLight}00, -3px 3px 10px ${variables.sunShadowDark}00, inset 2px -2px 2px ${variables.sunShadowDark}00, inset 3px -3px 10px ${variables.sunShadowDark}00, inset 3px -3px 3px ${variables.sunShadowLight}65, inset -5px 5px 5px ${variables.sunShadowDark}65`,
@@ -81,7 +81,7 @@ const evening = {
   lightTextShadow: `3px 3px 2px ${variables.moonShadowLight}, 3px 3px 10px ${variables.moonShadowLight}, -3px -2px 10px ${variables.moonShadowDark}, -2px -2px 2px ${variables.moonShadowDark}, -3px -2px 10px ${variables.moonShadowDark}, -2px -2px 2px ${variables.moonShadowDark}, -3px -2px 10px ${variables.moonShadowDark}, -2px -2px 2px ${variables.moonShadowDark}`,
   lightTextShadowMobile: `1px 1px 1px ${variables.moonShadowLight}, 2px 2px 4px ${variables.moonShadowLight}, -3px -1px 10px ${variables.moonShadowDark}, -2px -2px 2px ${variables.moonShadowDark} , -3px -1px 10px ${variables.moonShadowDark}, -2px -2px 2px ${variables.moonShadowDark}, -3px -1px 10px ${variables.moonShadowDark}, -2px -2px 2px ${variables.moonShadowDark}`,
   //transparentButtons
-  homeButtonImage: `url(${logo_big_evening})`,
+  homeButtonImage: `url(${logo_small_evening})`,
   modeButtonImage: `url(${sun_evening})`,
   transparentButtonShadow: `3px -3px 10px ${variables.moonShadowDark}15, inset -3px 3px 4px ${variables.moonShadowLight}, -3px 3px 10px ${variables.moonShadowDark}80, inset 2px -2px 2px ${variables.moonShadowDark}, inset 3px -3px 10px ${variables.moonShadowDark}`,
   transparentButtonShadowHover: `3px -3px 10px ${variables.moonShadowDark}00, inset -3px 3px 4px ${variables.moonShadowLight}00, -3px 3px 10px ${variables.moonShadowDark}00, inset 2px -2px 2px ${variables.moonShadowDark}00, inset 3px -3px 10px ${variables.moonShadowDark}00, inset 3px -3px 3px ${variables.moonShadowLight}65, inset -5px 5px 5px ${variables.moonShadowDark}65`,
@@ -116,7 +116,7 @@ function App({ children }) {
   return (
     <ThemeProvider theme={theme}>
       <Global>
-        <Link to="/overview">
+        <Link to="/">
           <TransparentButton home />
         </Link>
         <Time />

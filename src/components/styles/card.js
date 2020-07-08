@@ -9,7 +9,7 @@ const Card = styled.table`
   font-family: "Noto Sans JP", sans-serif;
   color: ${(props) => props.theme.globalText};
   background: ${(props) => props.theme.globalBackground};
-  border-left: ${(props) => props.theme.alphabetLine};
+  border-right: ${(props) => props.theme.alphabetLine};
   transition: 150ms;
   th,
   td {

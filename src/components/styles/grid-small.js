@@ -10,9 +10,9 @@ const GridSmall = styled.div`
   transition: 150ms;
   table {
     &:nth-child(1) {
-      border-left: none;
+      border-right: none;
     }
-    &:nth-last-child(1) {
+    &:nth-child(1) {
       color: ${(props) => props.theme.globalText}a9;
     }
   }

@@ -11,7 +11,7 @@ import OverviewCard from "../components/styles/overview-card";
 const Disabled = styled(OverviewCard)`
   box-shadow: ${(props) => props.theme.contentShadowHover};
   cursor: default;
-  opacity: 0.5;
+  opacity: 0.8;
 `;
 
 export default function Overview() {
@@ -25,14 +25,14 @@ export default function Overview() {
       <GridLarge>
         {OverviewObjects.map((item, index) => {
           return (
-            <>
+            <div key={index}>
               {!item.disabled ? (
-                <Link key={index} to={item.disabled ? "" : item.url}>
+                <Link to={item.disabled ? "" : item.url} onClick={() => {window.scrollTo(0, 0)}}>
                   <OverviewCard
                     game={item.game}
                     as={item.disabled ? Disabled : ""}
                   >
-                    <div key={index}>
+                    <div>
                       <h1>{item.japName}</h1>
                       <h2>{item.furigana}</h2>
                       <h3>{item.engName}</h3>
@@ -44,14 +44,14 @@ export default function Overview() {
                   game={item.game}
                   as={item.disabled ? Disabled : ""}
                 >
-                  <div key={index}>
+                  <div>
                     <h1>{item.japName}</h1>
                     <h2>{item.furigana}</h2>
                     <h3>{item.engName}</h3>
                   </div>
                 </OverviewCard>
               )}
-            </>
+            </div>
           );
         })}
       </GridLarge>
