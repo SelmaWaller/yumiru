@@ -10,6 +10,7 @@ const InfoBlock = styled(GridMedium)`
       : "repeat(auto-fit, minmax(250px, 1fr))"};
   border-bottom: ${(props) => props.theme.alphabetLine};
   transition: 250ms;
+  font-size: 16px;
   &:nth-last-child(1) {
     border: none;
   }
