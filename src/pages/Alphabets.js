@@ -15,14 +15,14 @@ import AlphabetInfo from "../components/alphabets-and-numbers/alphabets/alphabet
 import NumberInfo from "../components/alphabets-and-numbers/numbers/number-info";
 
 export default function Alphabets() {
-  const [alphabets, setAlphabets] = useState(true);
-  const [isButtonOne, setIsButtonOne] = useState(true);
+  const [alphabets, setAlphabets] = useState(false);
+  const [isButtonOne, setIsButtonOne] = useState(false);
 
   const [buttonOneTabOne, setButtonOneTabOne] = useState(true);
   const [buttonOneTabTwo, setButtonOneTabTwo] = useState(false);
   const [buttonOneTabThree, setButtonOneTabThree] = useState(false);
   const [buttonOneTabFour, setButtonOneTabFour] = useState(false);
-  const [buttonTwoTabOne, setButtonTwoTabOne] = useState(false);
+  const [buttonTwoTabOne, setButtonTwoTabOne] = useState(true);
   const [buttonTwoTabTwo, setButtonTwoTabTwo] = useState(false);
   const [buttonTwoTabThree, setButtonTwoTabThree] = useState(false);
   const [buttonTwoTabFour, setButtonTwoTabFour] = useState(false);
@@ -31,7 +31,7 @@ export default function Alphabets() {
   const [tabTwoActive, setTabTwoActive] = useState(false);
   const [tabThreeActive, setTabThreeActive] = useState(false);
   const [tabFourActive, setTabFourActive] = useState(false);
-    
+
   useEffect(() => {
     document.title = "Yumiru | Alphabets";
   }, []);
@@ -41,7 +41,7 @@ export default function Alphabets() {
     setTabTwoActive(false);
     setTabThreeActive(false);
     setTabFourActive(false);
-  }
+  };
 
   const clearTables = () => {
     setButtonOneTabOne(false);
@@ -52,13 +52,21 @@ export default function Alphabets() {
     setButtonTwoTabTwo(false);
     setButtonTwoTabThree(false);
     setButtonTwoTabFour(false);
-  }
+  };
 
-   const toTabOne = () => {isButtonOne ? setButtonOneTabOne(true) : setButtonTwoTabOne(true)};
-  const toTabTwo = () => {isButtonOne ? setButtonOneTabTwo(true) : setButtonTwoTabTwo(true)};
-  const toTabThree = () => {isButtonOne ? setButtonOneTabThree(true) : setButtonTwoTabThree(true)};
-  const toTabFour = () => {isButtonOne ? setButtonOneTabFour(true) : setButtonTwoTabFour(true)};
-  
+  const toTabOne = () => {
+    isButtonOne ? setButtonOneTabOne(true) : setButtonTwoTabOne(true);
+  };
+  const toTabTwo = () => {
+    isButtonOne ? setButtonOneTabTwo(true) : setButtonTwoTabTwo(true);
+  };
+  const toTabThree = () => {
+    isButtonOne ? setButtonOneTabThree(true) : setButtonTwoTabThree(true);
+  };
+  const toTabFour = () => {
+    isButtonOne ? setButtonOneTabFour(true) : setButtonTwoTabFour(true);
+  };
+
   const toggleMainButtons = () => {
     setIsButtonOne(!isButtonOne);
     if (tabOneActive) {
@@ -75,7 +83,7 @@ export default function Alphabets() {
       setButtonTwoTabFour(true);
     }
   };
-  
+
   return (
     <>
       <Title />
@@ -172,16 +180,21 @@ export default function Alphabets() {
             ) : (
               <NumberTable
                 isButtonOne={isButtonOne}
+                isButtonTwo={!isButtonOne}
                 buttonOneTabOne={buttonOneTabOne}
                 buttonOneTabTwo={buttonOneTabTwo}
                 buttonOneTabThree={buttonOneTabThree}
                 buttonOneTabFour={buttonOneTabFour}
+                buttonTwoTabOne={buttonTwoTabOne}
+                buttonTwoTabTwo={buttonTwoTabTwo}
+                buttonTwoTabThree={buttonTwoTabThree}
+                buttonTwoTabFour={buttonTwoTabFour}
               />
             )}
           </TableGrid>
         </ScrollContainer>
       </PaddingContainer>
-      {alphabets ? <AlphabetInfo /> : <NumberInfo />}
+      {alphabets ? <AlphabetInfo /> : <NumberInfo isButtonOne={isButtonOne} />}
     </>
   );
 }

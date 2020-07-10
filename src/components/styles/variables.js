@@ -9,13 +9,10 @@ const ThemePalette = {
   sunDimmed: "#4d5169",
   sunDimmedHover: "#404456",
   sunTextLight: "#f3f3f3",
-  sunOrange: "#ffa151",
-  sunPink: "#ff73e7",
-  sunPurple: "#bebafdde",
-  sunBlue: "#4970ff",
-  sunSkyBlue: "#5B66FF",
+  sunOrange: "#de8a4e",
+  sunLightBlue: "#6791dc",
+  sunDarkBlue: "#5B66FF",
   sunAqua: "#9EF2FF",
-  sunTurquoise: "#29ffba",
   sunButtonDefault: "linear-gradient(to top right, #5B66FF, #9EF2FF)",
 
   //moon
@@ -28,13 +25,10 @@ const ThemePalette = {
   moonDimmed: "#687596",
   moonDimmedHover: "#778cc3",
   moonTextLight: "#212b40",
-  moonOrange: "#de8c43",
-  moonPink: "#d062be",
-  moonPurple: "#7760a5de",
-  moonBlue: "#3854c1",
-  moonSkyBlue: "#4c53b1",
+  moonOrange: "#cc8756",
+  moonLightBlue: "#689ad8",
+  moonDarkBlue: "#4c53b1",
   moonAqua: "#81d6e4",
-  moonTurquoise: "#2bdaa2",
   moonButtonDefault: "linear-gradient(to top right, #4c53b1, #81d6e4)",
 };
 

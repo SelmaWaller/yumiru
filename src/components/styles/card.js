@@ -19,9 +19,15 @@ const Card = styled.table`
     font-size: 20px;
     font-weight: normal;
     transition: 250ms;
+    min-width: 60px;
   }
   th {
     color: ${(props) => props.theme.globalText}a9;
+    sub {
+      opacity: 0;
+      user-select: none;
+      user-drag: none;
+    }
   }
   span {
     display: block;

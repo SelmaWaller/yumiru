@@ -1,12 +1,12 @@
-import React from 'react';
+import React from "react";
 
-import Justify from '../styles/justify-content';
-import TransparentText from '../styles/transparent-text';
+import Justify from "../styles/justify-content";
+import RaisedText from "../styles/raised-text";
 
 const Title = () => {
   return (
     <Justify>
-      <TransparentText titleText>YUMIRU</TransparentText>
+      <RaisedText title>YUMIRU</RaisedText>
     </Justify>
   );
 };

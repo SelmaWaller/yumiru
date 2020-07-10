@@ -1,10 +1,15 @@
 import React from "react";
+import styled from "styled-components";
 
 import FlexWrapper from "../../styles/flex-wrapper";
 import InfoTitle from "../styles/info-title";
 import InfoBlock from "../styles/info-block";
 
-const NumberInfo = () => {
+const counters = styled(FlexWrapper)`
+  margin-top: -60px;
+`;
+
+const NumberInfo = ({ isButtonOne }) => {
   return (
     <>
       <FlexWrapper>
@@ -90,7 +95,7 @@ const NumberInfo = () => {
           </li>
         </ul>
       </InfoBlock>
-      <FlexWrapper>
+      <FlexWrapper as={counters}>
         <InfoTitle>
           <span>Counting</span>
         </InfoTitle>
@@ -98,7 +103,7 @@ const NumberInfo = () => {
       <InfoBlock>
         <ul>
           <li>
-            <span></span>
+            <span>Important counters</span>
           </li>
         </ul>
       </InfoBlock>

@@ -1,6 +1,7 @@
 import React from "react";
 
 import kanjiNumbers from "../../../components/kanji-numbers";
+import counters from "../../../components/counters";
 
 import Card from "../../styles/card";
 
@@ -10,12 +11,15 @@ const NumberTable = ({
   buttonOneTabTwo,
   buttonOneTabThree,
   buttonOneTabFour,
+  buttonTwoTabOne,
+  buttonTwoTabTwo,
+  buttonTwoTabThree,
+  buttonTwoTabFour,
 }) => {
   return (
     <>
-      <>
-        {isButtonOne ? (
-          kanjiNumbers.map((number, index) => {
+      {isButtonOne
+        ? kanjiNumbers.map((number, index) => {
             return (
               <Card key={index}>
                 <tbody>
@@ -25,12 +29,17 @@ const NumberTable = ({
                       {buttonOneTabTwo ? number.hundred_romaji : " "}
                       {buttonOneTabThree ? number.thousand_romaji : " "}
                       {buttonOneTabFour ? number.tenthousand_romaji : " "}
+                      <sup>
+                        {buttonOneTabFour
+                          ? number.tenthousand_elevated_top
+                          : ""}
+                      </sup>
                       <span>
+                        <sub>i</sub>
                         <sup>
-                          {!buttonOneTabFour ? number.ten_alternative : ""}
-                          {buttonOneTabFour
-                            ? number.tenthousand_alternative
-                            : ""}
+                          {!buttonOneTabFour
+                            ? number.ten_alternative
+                            : number.tenthousand_alternative}
                         </sup>
                         {buttonOneTabOne ? number.ten_romaji_top : " "}
                         {buttonOneTabTwo ? number.hundred_romaji_top : " "}
@@ -219,31 +228,41 @@ const NumberTable = ({
               </Card>
             );
           })
-        ) : (
-          <Card>
-            <tbody>
-              <tr>
-                <td></td>
-              </tr>
-              <tr>
-                <td></td>
-              </tr>
-              <tr>
-                <td>COMING SOON</td>
-              </tr>
-              <tr>
-                <td></td>
-              </tr>
-              <tr>
-                <td></td>
-              </tr>
-              <tr>
-                <td></td>
-              </tr>
-            </tbody>
-          </Card>
-        )}
-      </>
+        : counters.map((counter, index) => {
+            return (
+              <Card key={index}>
+                <tbody>
+                  <tr>
+                    <th>
+                      {buttonTwoTabOne ? counter.category_1 : " "}
+                      {buttonTwoTabTwo ? counter.category_2 : " "}
+                      {buttonTwoTabThree ? counter.category_3 : " "}
+                    </th>
+                  </tr>
+                  <tr>
+                    <td>
+                      {buttonTwoTabOne ? counter.counter_1 : " "}
+                      {buttonTwoTabOne ? counter.page_1_type_1 : ""}
+                      <span>
+                        {buttonTwoTabOne ? counter.counter_romaji_1 : ""}
+                      </span>
+                      <span>{buttonTwoTabOne ? counter.list_1 : ""}</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      {buttonTwoTabOne ? counter.counter_2 : " "}
+                      {buttonTwoTabOne ? counter.page_1_type_2 : ""}
+                      <span>
+                        {buttonTwoTabOne ? counter.counter_romaji_2 : ""}
+                      </span>
+                      <span>{buttonTwoTabOne ? counter.list_2 : ""}</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </Card>
+            );
+          })}
     </>
   );
 };
