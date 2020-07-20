@@ -20,6 +20,7 @@ const Card = styled.table`
     font-weight: normal;
     transition: 250ms;
     min-width: 60px;
+    max-width: 200px;
   }
   th {
     color: ${(props) => props.theme.globalText}a9;
@@ -32,7 +33,7 @@ const Card = styled.table`
   span {
     display: block;
     font-size: 16px;
-    opacity: 0.7;
+    opacity: ${(props) => (props.hidden ? "0" : "0.7")};
     padding-top: 2px;
   }
 `;

@@ -6,7 +6,7 @@ import RaisedText from "../styles/raised-text";
 const Title = () => {
   return (
     <Justify>
-      <RaisedText title>YUMIRU</RaisedText>
+      <RaisedText title="true">YUMIRU</RaisedText>
     </Justify>
   );
 };

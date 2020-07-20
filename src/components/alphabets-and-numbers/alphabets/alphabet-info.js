@@ -72,7 +72,7 @@ const AlphabetInfo = () => {
           <li>
             <span>Double consonants and vowels</span>
           </li>
-          <li>っ/ッ &rarr; small tsu/pause: lengthens the next consonant</li>
+          <li>っ/ッ &rarr; small tsu: pause/lengthens the next consonant</li>
           <li>ん/ン &rarr; exception for double n</li>
           <li>ー &rarr; katakana only: lengthens syllables</li>
           <li>あ &rarr; normal a: lengthens a/ya (aa/ā)</li>

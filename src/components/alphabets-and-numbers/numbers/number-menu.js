@@ -38,10 +38,21 @@ const NumberMenu = ({
             toTabOne();
           }}
         >
-          <span>十</span>
-          <div>
-            <span>ten</span>
-          </div>
+          {isButtonOne ? (
+            <>
+              <span>十</span>
+              <div>
+                <span>ten</span>
+              </div>
+            </>
+          ) : (
+            <>
+              <span>&#9733;&#9733;</span>
+              <div>
+                <span>most&nbsp;important</span>
+              </div>
+            </>
+          )}
         </TabButton>
         <TabButton
           disabled={tabTwoActive}
@@ -50,10 +61,21 @@ const NumberMenu = ({
             toTabTwo();
           }}
         >
-          <span>百</span>
-          <div>
-            <span>hundred</span>
-          </div>
+          {isButtonOne ? (
+            <>
+              <span>百</span>
+              <div>
+                <span>hundred</span>
+              </div>
+            </>
+          ) : (
+            <>
+              <span>&#9733;</span>
+              <div>
+                <span>important</span>
+              </div>
+            </>
+          )}
         </TabButton>
         <TabButton
           disabled={tabThreeActive}
@@ -62,10 +84,21 @@ const NumberMenu = ({
             toTabThree();
           }}
         >
-          <span>千</span>
-          <div>
-            <span>thousand</span>
-          </div>
+          {isButtonOne ? (
+            <>
+              <span>千</span>
+              <div>
+                <span>thousand</span>
+              </div>
+            </>
+          ) : (
+            <>
+              <span>&#9734;&#9734;</span>
+              <div>
+                <span>common</span>
+              </div>
+            </>
+          )}
         </TabButton>
         <TabButton
           disabled={tabFourActive}
@@ -74,10 +107,21 @@ const NumberMenu = ({
             toTabFour();
           }}
         >
-          <span>万+</span>
-          <div>
-            <span>tenthousand&nbsp;+</span>
-          </div>
+          {isButtonOne ? (
+            <>
+              <span>万+</span>
+              <div>
+                <span>tenthousand&nbsp;+</span>
+              </div>
+            </>
+          ) : (
+            <>
+              <span>&#9734;</span>
+              <div>
+                <span>less&nbsp;common</span>
+              </div>
+            </>
+          )}
         </TabButton>
       </div>
       <div>

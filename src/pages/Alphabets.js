@@ -15,14 +15,14 @@ import AlphabetInfo from "../components/alphabets-and-numbers/alphabets/alphabet
 import NumberInfo from "../components/alphabets-and-numbers/numbers/number-info";
 
 export default function Alphabets() {
-  const [alphabets, setAlphabets] = useState(false);
-  const [isButtonOne, setIsButtonOne] = useState(false);
+  const [alphabets, setAlphabets] = useState(true);
+  const [isButtonOne, setIsButtonOne] = useState(true);
 
   const [buttonOneTabOne, setButtonOneTabOne] = useState(true);
   const [buttonOneTabTwo, setButtonOneTabTwo] = useState(false);
   const [buttonOneTabThree, setButtonOneTabThree] = useState(false);
   const [buttonOneTabFour, setButtonOneTabFour] = useState(false);
-  const [buttonTwoTabOne, setButtonTwoTabOne] = useState(true);
+  const [buttonTwoTabOne, setButtonTwoTabOne] = useState(false);
   const [buttonTwoTabTwo, setButtonTwoTabTwo] = useState(false);
   const [buttonTwoTabThree, setButtonTwoTabThree] = useState(false);
   const [buttonTwoTabFour, setButtonTwoTabFour] = useState(false);
@@ -180,7 +180,6 @@ export default function Alphabets() {
             ) : (
               <NumberTable
                 isButtonOne={isButtonOne}
-                isButtonTwo={!isButtonOne}
                 buttonOneTabOne={buttonOneTabOne}
                 buttonOneTabTwo={buttonOneTabTwo}
                 buttonOneTabThree={buttonOneTabThree}

@@ -1,9 +1,42 @@
 import React from "react";
+import styled from "styled-components";
 
 import kanjiNumbers from "../../../components/kanji-numbers";
 import counters from "../../../components/counters";
 
 import Card from "../../styles/card";
+
+const LineHeight = styled.div`
+  padding-bottom: 10px;
+`;
+
+const CounterCard = styled(Card)`
+  td {
+    transition-delay: 50ms;
+    position: relative;
+    max-width: 170px;
+    &:hover span {
+      transition: 150ms;
+      opacity: 1;
+      transform: scale(1);
+      right: -160px;
+      top: -20px;
+    }
+  }
+  span:nth-last-child(2) {
+    opacity: 0;
+    transform: scale(0.3);
+    top: 0;
+    right: -60px;
+    max-width: 200px;
+    position: absolute;
+    transition: 150ms;
+    color: ${(props) => props.theme.globalText};
+    box-shadow: ${(props) => props.theme.floatShadow};
+    padding: 10px;
+    background: ${(props) => props.theme.globalBackgroundLight};
+  }
+`;
 
 const NumberTable = ({
   isButtonOne,
@@ -230,37 +263,249 @@ const NumberTable = ({
           })
         : counters.map((counter, index) => {
             return (
-              <Card key={index}>
+              <CounterCard key={index}>
                 <tbody>
                   <tr>
                     <th>
-                      {buttonTwoTabOne ? counter.category_1 : " "}
-                      {buttonTwoTabTwo ? counter.category_2 : " "}
-                      {buttonTwoTabThree ? counter.category_3 : " "}
+                      {buttonTwoTabOne ? counter.heading_1 : counter.heading_2}
                     </th>
                   </tr>
                   <tr>
                     <td>
-                      {buttonTwoTabOne ? counter.counter_1 : " "}
-                      {buttonTwoTabOne ? counter.page_1_type_1 : ""}
+                      {buttonTwoTabOne ? counter.category : " "}
+                      {buttonTwoTabOne ? counter.counter_1_1 : " "}
+                      {buttonTwoTabTwo ? counter.counter_2_1 : " "}
+                      {buttonTwoTabThree ? counter.counter_3_1 : " "}
+                      {buttonTwoTabFour ? counter.counter_4_1 : " "}
                       <span>
-                        {buttonTwoTabOne ? counter.counter_romaji_1 : ""}
+                        {buttonTwoTabOne ? counter.counter_hiragana_1_1 : ""}
+                        {buttonTwoTabTwo ? counter.counter_hiragana_2_1 : ""}
+                        {buttonTwoTabThree ? counter.counter_hiragana_3_1 : " "}
+                        {buttonTwoTabFour ? counter.counter_hiragana_4_1 : " "}
                       </span>
-                      <span>{buttonTwoTabOne ? counter.list_1 : ""}</span>
+                      <span>
+                        {buttonTwoTabOne ? counter.title_1_1 : ""}
+                        {buttonTwoTabTwo ? counter.title_2_1 : ""}
+                        {buttonTwoTabThree ? counter.title_3_1 : " "}
+                        {buttonTwoTabFour ? counter.title_4_1 : " "}
+                      </span>
+                      <span>
+                        {buttonTwoTabOne ? counter.list_1_1 : ""}
+                        {buttonTwoTabTwo ? counter.list_2_1 : ""}
+                        {buttonTwoTabThree ? counter.list_3_1 : " "}
+                        {buttonTwoTabFour ? counter.list_4_1 : " "}
+                      </span>
+                      <div as={LineHeight}>
+                        <span>&nbsp;</span>
+                      </div>
                     </td>
                   </tr>
-                  <tr>
-                    <td>
-                      {buttonTwoTabOne ? counter.counter_2 : " "}
-                      {buttonTwoTabOne ? counter.page_1_type_2 : ""}
-                      <span>
-                        {buttonTwoTabOne ? counter.counter_romaji_2 : ""}
-                      </span>
-                      <span>{buttonTwoTabOne ? counter.list_2 : ""}</span>
-                    </td>
-                  </tr>
+                  {!buttonTwoTabOne ? (
+                    <>
+                      <tr>
+                        <td>
+                          {buttonTwoTabTwo ? counter.counter_2_2 : " "}
+                          {buttonTwoTabThree ? counter.counter_3_2 : " "}
+                          {buttonTwoTabFour ? counter.counter_4_2 : " "}
+                          <span>
+                            {buttonTwoTabTwo
+                              ? counter.counter_hiragana_2_2
+                              : ""}
+                            {buttonTwoTabThree
+                              ? counter.counter_hiragana_3_2
+                              : " "}
+                            {buttonTwoTabFour
+                              ? counter.counter_hiragana_4_2
+                              : " "}
+                          </span>
+                          <span>
+                            {buttonTwoTabTwo ? counter.title_2_2 : ""}
+                            {buttonTwoTabThree ? counter.title_3_2 : " "}
+                            {buttonTwoTabFour ? counter.title_4_2 : " "}
+                          </span>
+                          <span>
+                            {buttonTwoTabTwo ? counter.list_2_2 : ""}
+                            {buttonTwoTabThree ? counter.list_3_2 : " "}
+                            {buttonTwoTabFour ? counter.list_4_2 : " "}
+                          </span>
+                          <div as={LineHeight}>
+                            <span>&nbsp;</span>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          {buttonTwoTabTwo || buttonTwoTabFour
+                            ? counter.category
+                            : " "}
+                          {buttonTwoTabTwo ? counter.counter_2_3 : " "}
+                          {buttonTwoTabThree ? counter.counter_3_3 : " "}
+                          {buttonTwoTabFour ? counter.counter_4_3 : " "}
+                          <span>
+                            {buttonTwoTabTwo
+                              ? counter.counter_hiragana_2_3
+                              : ""}
+                            {buttonTwoTabThree
+                              ? counter.counter_hiragana_3_3
+                              : " "}
+                            {buttonTwoTabFour
+                              ? counter.counter_hiragana_4_3
+                              : " "}
+                          </span>
+                          <span>
+                            {buttonTwoTabTwo ? counter.title_2_3 : ""}
+                            {buttonTwoTabThree ? counter.title_3_3 : ""}
+                            {buttonTwoTabFour ? counter.title_4_3 : ""}
+                          </span>
+                          <span>
+                            {buttonTwoTabTwo ? counter.list_2_3 : ""}
+                            {buttonTwoTabThree ? counter.list_3_3 : ""}
+                            {buttonTwoTabFour ? counter.list_4_3 : ""}
+                          </span>
+                          <div as={LineHeight}>
+                            <span>&nbsp;</span>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          {buttonTwoTabTwo ? counter.counter_2_4 : " "}
+                          {buttonTwoTabThree ? counter.counter_3_4 : " "}
+                          {buttonTwoTabFour ? counter.counter_4_4 : " "}
+                          <span>
+                            {buttonTwoTabTwo
+                              ? counter.counter_hiragana_2_4
+                              : ""}
+                            {buttonTwoTabThree
+                              ? counter.counter_hiragana_3_4
+                              : ""}
+                            {buttonTwoTabFour
+                              ? counter.counter_hiragana_4_4
+                              : ""}
+                          </span>
+                          <span>
+                            {buttonTwoTabTwo ? counter.title_2_4 : ""}
+                            {buttonTwoTabThree ? counter.title_3_4 : ""}
+                            {buttonTwoTabFour ? counter.title_4_4 : ""}
+                          </span>
+                          <span>
+                            {buttonTwoTabTwo ? counter.list_2_4 : ""}
+                            {buttonTwoTabThree ? counter.list_3_4 : ""}
+                            {buttonTwoTabFour ? counter.list_4_4 : ""}
+                          </span>
+                          <div as={LineHeight}>
+                            <span>&nbsp;</span>
+                          </div>
+                        </td>
+                      </tr>
+                    </>
+                  ) : (
+                    <></>
+                  )}
+                  {buttonTwoTabThree ? (
+                    <>
+                      <tr>
+                        <td>
+                          {buttonTwoTabThree ? counter.category : " "}
+                          {buttonTwoTabThree ? counter.counter_3_5 : " "}
+                          <span>
+                            {buttonTwoTabThree
+                              ? counter.counter_hiragana_3_5
+                              : ""}
+                          </span>
+                          <span>
+                            {buttonTwoTabThree ? counter.title_3_5 : ""}
+                          </span>
+                          <span>
+                            {buttonTwoTabThree ? counter.list_3_5 : ""}
+                          </span>
+                          <div as={LineHeight}>
+                            <span>&nbsp;</span>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          {buttonTwoTabThree ? counter.counter_3_6 : " "}
+                          <span>
+                            {buttonTwoTabThree
+                              ? counter.counter_hiragana_3_6
+                              : ""}
+                          </span>
+                          <span>
+                            {buttonTwoTabThree ? counter.title_3_6 : ""}
+                          </span>
+                          <span>
+                            {buttonTwoTabThree ? counter.list_3_6 : ""}
+                          </span>
+                          <div as={LineHeight}>
+                            <span>&nbsp;</span>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          {buttonTwoTabThree ? counter.counter_3_7 : " "}
+                          <span>
+                            {buttonTwoTabThree
+                              ? counter.counter_hiragana_3_7
+                              : ""}
+                          </span>
+                          <span>
+                            {buttonTwoTabThree ? counter.title_3_7 : ""}
+                          </span>
+                          <span>
+                            {buttonTwoTabThree ? counter.list_3_7 : ""}
+                          </span>
+                          <div as={LineHeight}>
+                            <span>&nbsp;</span>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          {buttonTwoTabThree ? counter.counter_3_8 : " "}
+                          <span>
+                            {buttonTwoTabThree
+                              ? counter.counter_hiragana_3_8
+                              : ""}
+                          </span>
+                          <span>
+                            {buttonTwoTabThree ? counter.title_3_8 : ""}
+                          </span>
+                          <span>
+                            {buttonTwoTabThree ? counter.list_3_8 : ""}
+                          </span>
+                          <div as={LineHeight}>
+                            <span>&nbsp;</span>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          {buttonTwoTabThree ? counter.counter_3_9 : " "}
+                          <span>
+                            {buttonTwoTabThree
+                              ? counter.counter_hiragana_3_9
+                              : ""}
+                          </span>
+                          <span>
+                            {buttonTwoTabThree ? counter.title_3_9 : ""}
+                          </span>
+                          <span>
+                            {buttonTwoTabThree ? counter.list_3_9 : ""}
+                          </span>
+                          <div as={LineHeight}>
+                            <span>&nbsp;</span>
+                          </div>
+                        </td>
+                      </tr>
+                    </>
+                  ) : (
+                    <></>
+                  )}
                 </tbody>
-              </Card>
+              </CounterCard>
             );
           })}
     </>

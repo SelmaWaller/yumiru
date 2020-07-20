@@ -4,7 +4,7 @@ import RaisedText from "../styles/raised-text";
 
 const Time = () => {
   const [getTime, setGetTime] = useState(new Date());
-  const isAm = useState(
+  const [isAm, setIsAm] = useState(
     getTime.getHours() >= 0 && getTime.getHours() < 12 ? true : false
   );
 
@@ -19,12 +19,12 @@ const Time = () => {
   );
 
   useEffect(() => {
+    setIsAm(getTime.getHours() >= 0 && getTime.getHours() < 12 ? true : false);
     let timer = setInterval(() => timeNow(), 1000);
-
     return () => {
       clearInterval(timer);
     };
-  });
+  }, [getTime]);
 
   const timeNow = () => {
     setGetTime(new Date());
