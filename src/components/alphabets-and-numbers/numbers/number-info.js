@@ -133,8 +133,8 @@ const NumberInfo = ({ isButtonOne }) => {
                 <span>Pronunciations</span>
               </li>
               <li>
-                As with counting numbers, the sound of each counter vary
-                depending on how many objects/units etc is being counted
+                As with counting numbers, the sounds of some counters vary
+                depending on how many countings they're at
               </li>
               <li>一匹 (ひき) &rarr; いっぴき</li>
               <li>一分 (ふん) &rarr; いっぷん</li>
