@@ -75,10 +75,10 @@ const AlphabetInfo = () => {
           <li>っ/ッ &rarr; small tsu: pause/lengthens the next consonant</li>
           <li>ん/ン &rarr; exception for double n</li>
           <li>ー &rarr; katakana only: lengthens syllables</li>
-          <li>あ &rarr; normal a: lengthens a/ya (aa/ā)</li>
-          <li>い &rarr; normal i: lengthens e/-e or i/-i (ee/ei/ē, ii/ī)</li>
-          <li>う &rarr; normal u: lengthens u/yu, o/yo (uu/ū, ou/ō)</li>
-          <li>お &rarr; normal o: lengthens o/yo (oo/ō)</li>
+          <li>あ &rarr; normal a: lengthens あ/や (aa/ā)</li>
+          <li>い &rarr; normal i: lengthens え/い (ee/ei/ē, ii/ī)</li>
+          <li>う &rarr; normal u: lengthens う/ゆ, お/よ (uu/ū, ou/ō)</li>
+          <li>お &rarr; normal o: lengthens お/よ (oo/ō)</li>
         </ul>
         <ul>
           <li>
