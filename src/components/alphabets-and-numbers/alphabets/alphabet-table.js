@@ -1,7 +1,7 @@
 import React from "react";
 
-import hiraganaAlphabets from "../../../components/hiragana-alphabets";
-import katakanaAlphabets from "../../../components/katakana-alphabets";
+import hiraganaAlphabets from "./hiragana-alphabets";
+import katakanaAlphabets from "../katakana-alphabets";
 
 import Card from "../../styles/card";
 

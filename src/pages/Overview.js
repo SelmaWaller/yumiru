@@ -6,7 +6,45 @@ import OverviewObjects from "../components/overview-objects";
 
 import Title from "../components/global/title";
 import GridLarge from "../components/styles/grid-large";
-import OverviewCard from "../components/styles/overview-card";
+import GlobalCard from "../components/styles/global-card";
+
+const OverviewCard = styled(GlobalCard)`
+  h1,
+  h2,
+  h3 {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-family: "Sawarabi Mincho", sans-serif;
+    color: ${(props) => props.theme.globalText};
+    font-size: 28px;
+    margin: 0;
+    padding: 0 20px;
+    transition: 250ms;
+  }
+
+  h2 {
+    top: 10px;
+    left: -5px;
+    font-size: 18px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: normal;
+    opacity: 0.6;
+    writing-mode: vertical-rl;
+    position: absolute;
+    text-align: justify;
+    padding-bottom: 50px;
+  }
+
+  h3 {
+    font-family: "Comfortaa", sans-serif;
+    bottom: 15px;
+    left: 0;
+    font-size: 15px;
+    opacity: 0.6;
+    position: absolute;
+  }
+`;
 
 const Disabled = styled(OverviewCard)`
   box-shadow: ${(props) => props.theme.contentShadowHover};

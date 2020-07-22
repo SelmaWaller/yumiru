@@ -1,8 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&family=Monsterrat&=Sawarabi+Mincho&family=Noto+Sans+JP&family=Cardo&family=Libre+Barcode+128+Text&family=Roboto+Mono:wght@400&display=swap");
-
-body {
-  margin: 0;
-}
-html {
-  scroll-behavior: smooth;
-}
+@import "/partials/main";
+@import "/partials/illustrations/people";
+@import "/partials/illustrations/home";

@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
-import kanjiNumbers from "../../../components/kanji-numbers";
-import counters from "../../../components/counters";
+import kanjiNumbers from "../kanji-numbers";
+import counters from "../counters";
 
 import Card from "../../styles/card";
 

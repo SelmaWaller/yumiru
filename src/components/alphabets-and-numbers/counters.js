@@ -222,7 +222,7 @@ const counters = [
     //less common
     counter_4_1: "海",
     counter_hiragana_4_1: "かい",
-    list_4_1: "this kanji means sea, and it counts just that",
+    list_4_1: "the meaning of this kanji is sea, and it counts just that",
     title_4_1: "seas, oceans",
     counter_4_2: "課",
     counter_hiragana_4_2: "か",
