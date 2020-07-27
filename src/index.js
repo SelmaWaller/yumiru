@@ -6,7 +6,7 @@ import "./scss/main.scss";
 import App from "./App";
 import Overview from "./pages/Overview";
 import Alphabets from "./pages/Alphabets";
-import Learn from "./pages/Learn";
+import Words from "./pages/Words";
 
 ReactDOM.render(
   <Router>
@@ -14,7 +14,7 @@ ReactDOM.render(
       <Switch>
         <Route path="/" exact component={Overview}></Route>
         <Route path="/alphabets" component={Alphabets}></Route>
-        <Route path="/learn" component={Learn}></Route>
+        <Route path="/words" component={Words}></Route>
       </Switch>
     </App>
   </Router>,

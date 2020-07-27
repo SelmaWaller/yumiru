@@ -1,6 +1,6 @@
 import React from "react";
 
-const Party = () => {
+const People = () => {
   return (
     <>
       <div className="man-container">
@@ -36,6 +36,8 @@ const Party = () => {
           <div className="belt" title="belt"></div>
           <div className="suspender" title="suspender"></div>
           <div className="suspender" title="suspender"></div>
+          <div className="tie" title="tie"></div>
+          <div className="tie" title="tie"></div>
           <div className="shirt" title="shirt"></div>
           <div className="shirt" title="shirt"></div>
           <div className="watch" title="watch"></div>
@@ -100,4 +102,4 @@ const Party = () => {
     </>
   );
 };
-export default Party;
+export default People;

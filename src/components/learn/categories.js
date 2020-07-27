@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 import GridLarge from "../styles/grid-large";
 import GlobalCard from "../styles/global-card";
-import Party from "./illustrations/party";
+import People from "./illustrations/people";
 import Home from "./illustrations/home";
 
 const IllustrationCard = styled(GlobalCard)`
@@ -12,6 +12,10 @@ const IllustrationCard = styled(GlobalCard)`
   max-width: 500px;
   height: 500px;
   margin: 20px;
+  opacity: 0.8;
+  &:hover {
+    opacity: 1;
+  }
   h1,
   p {
     text-align: center;
@@ -35,16 +39,17 @@ const Categories = () => {
       <IllustrationCard>
         <h1>人</h1>
         <p>PEOPLE</p>
-        <Party />
+        <People />
       </IllustrationCard>
       <IllustrationCard>
-        <h1>家 • いえ</h1>
+        <h1>家</h1>
         <p>HOME</p>
         <Home />
       </IllustrationCard>
       <IllustrationCard>
-        <h1>自然 • しぜん</h1>
+        <h1>自然</h1>
         <p>NATURE</p>
+        <Home />
       </IllustrationCard>
     </GridLarge>
   );

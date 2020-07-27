@@ -302,6 +302,21 @@
       }
     }
 
+    .tie {
+      position: absolute;
+      top: 1px;
+      left: 20px;
+      width: 4px;
+      height: 60px;
+      border-bottom-left-radius: 100px;
+      background: linear-gradient(to bottom, #4c4b85, #aea5e0);
+      transform: rotate(1deg) skewY(40deg);
+      &:nth-child(7) {
+        left: 22.5px;
+        transform: rotate(-1deg) skewY(-40deg) scaleX(-1);
+      }
+    }
+
     .shirt {
       position: absolute;
       top: -1px;
@@ -310,9 +325,9 @@
       height: 10px;
       border-width: 7px 2px 0 10px;
       border-style: solid;
-      border-color: rgb(240, 240, 240) transparent transparent transparent;
+      border-color: #f0f0f0 transparent transparent transparent;
       transform: rotate(10deg);
-      &:nth-child(6) {
+      &:nth-child(8) {
         left: 25px;
         transform: rotate(-10deg) scaleX(-1);
       }
@@ -516,12 +531,12 @@
 
     .lip {
       position: absolute;
-      top: 0.5px;
+      top: 1px;
       width: 10px;
       left: 5px;
-      height: 3px;
+      height: 4px;
       box-shadow: none;
-      background: radial-gradient(#692b01 30%, transparent 40%);
+      background: radial-gradient(#441b00 30%, transparent 40%);
       background-position: 0 0.8px;
       background-repeat: no-repeat;
       &:nth-child(13) {
@@ -529,9 +544,9 @@
         top: 34.5px;
         width: 20px;
         left: 7.3px;
-        height: 3px;
+        height: 4px;
         box-shadow: none;
-        background: radial-gradient(#692b01 30%, transparent 40%);
+        background: radial-gradient(#441b00 30%, transparent 40%);
         background-position: 0 0.8px;
         background-repeat: no-repeat;
       }
