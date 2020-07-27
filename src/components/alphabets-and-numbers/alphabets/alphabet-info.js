@@ -84,7 +84,7 @@ const AlphabetInfo = () => {
           <li>
             <span>Examples</span>
           </li>
-          <li>コップ &rarr; koppu (cup)</li>
+          <li>カップ &rarr; kappu (cup)</li>
           <li>コンピューター &rarr; konpyūtā/konpyuutaa (computer)</li>
           <li>がっこう &rarr; gakkō/gakkou (school)</li>
           <li>おんな &rarr; onna (woman)</li>
@@ -124,7 +124,7 @@ const AlphabetInfo = () => {
         </ul>
         <ul>
           <li>
-            <span>Foreign/loan words & endings with consonants</span>
+            <span>Loan words & endings with consonants</span>
           </li>
           <li>
             Katakana is usually used for countries and foreign words, places and

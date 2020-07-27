@@ -29,7 +29,7 @@ const kanjiNumbers = [
     hundred_2: "200",
     hundred_romaji_2: "nihyaku",
     hundred_3: "300",
-    hundred_romaji_3: "sanhyaku",
+    hundred_romaji_3: "sanbyaku",
     hundred_4: "400",
     hundred_romaji_4: "yonhyaku",
     hundred_5: "500",
