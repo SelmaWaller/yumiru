@@ -9,16 +9,16 @@
   top: 144px;
   .tree {
     position: absolute;
-    left: -20px;
+    left: -60px;
     z-index: -10;
     &__top,
     &__middle,
     &__bottom {
       position: absolute;
-      top: 110px;
-      left: 70px;
+      top: 100px;
+      left: 80px;
       border-style: solid;
-      border-width: 0 0 40px 40px;
+      border-width: 0 0 50px 30px;
       border-color: transparent transparent #508355 transparent;
       z-index: -1;
       &:nth-child(2) {
@@ -28,9 +28,9 @@
       }
     }
     &__middle {
-      top: 135px;
-      left: 55px;
-      border-width: 0 0 55px 55px;
+      top: 125px;
+      left: 65px;
+      border-width: 0 0 65px 45px;
       border-color: transparent transparent #3d6441 transparent;
       z-index: -2;
       &:nth-child(4) {
@@ -40,9 +40,9 @@
       }
     }
     &__bottom {
-      top: 162px;
-      left: 40px;
-      border-width: 0 0 75px 75px;
+      top: 152px;
+      left: 50px;
+      border-width: 0 0 85px 60px;
       border-color: transparent transparent #314e34 transparent;
       z-index: -3;
       &:nth-child(6) {
@@ -221,36 +221,38 @@
   transform: scale(1.2);
   z-index: 1;
   top: 144px;
-  .tree {
-    position: absolute;
-    top: 10px;
-    left: unset;
-    right: 50px;
-    z-index: 1;
-    &__top {
-      position: absolute;
-      top: 160px;
-      border-style: solid;
-      border-width: 0 0 100px 25px;
-      border-color: transparent transparent #508355 transparent;
-      z-index: -1;
-      &:nth-child(2) {
-        left: 95px;
-        transform: scaleX(-1);
-        border-color: transparent transparent #62a067 transparent;
-      }
-    }
-    &__trunk {
-      top: 241px;
-      left: 89px;
-      width: 12px;
-    }
-  }
 
   .rocks {
     left: unset;
     right: -100px;
     transform: scale(1) scaleX(-1) rotate(1deg);
+    .tree {
+      position: absolute;
+      top: -291px;
+      left: unset;
+      right: 70px;
+      z-index: 1;
+      &__top {
+        position: absolute;
+        left: 81px;
+        top: 160px;
+        border-style: solid;
+        border-width: 0 0 100px 30px;
+        border-color: transparent transparent #36633a transparent;
+        z-index: -1;
+        &:nth-child(2) {
+          left: 110px;
+          transform: scaleX(-1);
+          border-color: transparent transparent #4e8053 transparent;
+        }
+      }
+      &__trunk {
+        top: 241px;
+        left: 103.5px;
+        width: 12px;
+        background: linear-gradient(to left, #574040 50%, #3d2d2d 52%);
+      }
+    }
   }
   .bird {
     position: absolute;
