@@ -5,6 +5,7 @@ import GridLarge from "../styles/grid-large";
 import GlobalCard from "../styles/global-card";
 import People from "./illustrations/people";
 import Home from "./illustrations/home";
+import Nature from "./illustrations/nature";
 
 const IllustrationCard = styled(GlobalCard)`
   position: relative;
@@ -12,7 +13,7 @@ const IllustrationCard = styled(GlobalCard)`
   max-width: 500px;
   height: 500px;
   margin: 20px;
-  opacity: 0.8;
+  opacity: 1;
   &:hover {
     opacity: 1;
   }
@@ -49,7 +50,7 @@ const Categories = () => {
       <IllustrationCard>
         <h1>自然</h1>
         <p>NATURE</p>
-        <Home />
+        <Nature />
       </IllustrationCard>
     </GridLarge>
   );

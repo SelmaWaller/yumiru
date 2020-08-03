@@ -6,7 +6,7 @@ import "./scss/main.scss";
 import App from "./App";
 import Overview from "./pages/Overview";
 import Alphabets from "./pages/Alphabets";
-import Words from "./pages/Words";
+import Nouns from "./pages/Nouns";
 
 ReactDOM.render(
   <Router>
@@ -14,7 +14,7 @@ ReactDOM.render(
       <Switch>
         <Route path="/" exact component={Overview}></Route>
         <Route path="/alphabets" component={Alphabets}></Route>
-        <Route path="/words" component={Words}></Route>
+        <Route path="/Nouns" component={Nouns}></Route>
       </Switch>
     </App>
   </Router>,

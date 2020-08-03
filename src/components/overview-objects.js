@@ -1,5 +1,29 @@
 const OverviewObjects = [
   {
+    furigana: "も 文 — すう 数 — じ 字",
+    japName: "文字と数字",
+    engName: "Letters and numbers",
+    url: "/alphabets",
+    game: false,
+    disabled: false,
+  },
+  {
+    furigana: "めい 名 — し 詞",
+    japName: "名詞",
+    engName: "Nouns",
+    url: "/nouns",
+    game: false,
+    disabled: false,
+  },
+  {
+    furigana: "ぶん 文",
+    japName: "文",
+    engName: "Sentences",
+    url: "/",
+    game: false,
+    disabled: true,
+  },
+  {
     furigana: "は 梯 — しご 子",
     japName: "梯子ゲーム",
     engName: "Ladder Game",
@@ -22,30 +46,6 @@ const OverviewObjects = [
     url: "/",
     game: true,
     disabled: true,
-  },
-  {
-    furigana: "てい 提 — あん 案",
-    japName: "アニメ提案",
-    engName: "Anime Tips",
-    url: "/",
-    game: false,
-    disabled: true,
-  },
-  {
-    furigana: "こと 言 — ば 葉",
-    japName: "言葉",
-    engName: "Words",
-    url: "/words",
-    game: false,
-    disabled: false,
-  },
-  {
-    furigana: "すう 数 — じ 字",
-    japName: "アルファベットと数字",
-    engName: "Alphabets and numbers",
-    url: "/alphabets",
-    game: false,
-    disabled: false,
   },
 ];
 
