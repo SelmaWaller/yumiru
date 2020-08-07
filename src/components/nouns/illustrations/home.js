@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 const Home = () => {
   return (
@@ -42,25 +42,25 @@ const Home = () => {
         <div className="drawer__top" title="drawer"></div>
         <div className="mirror" title="mirror"></div>
         <div className="mirror" title="mirror"></div>
-        <div class="light" title="candle">
-          <div class="candlestick" title="candle">
-            <div class="shine" title="candle"></div>
-            <div class="shine" title="candle"></div>
-            <div class="candle" title="candle">
-              <div class="candlewick" title="candle"></div>
-              <div class="flame" title="candle"></div>
-              <div class="flame__inner" title="candle"></div>
+        <div className="light" title="candle">
+          <div className="candlestick" title="candle">
+            <div className="shine" title="candle"></div>
+            <div className="shine" title="candle"></div>
+            <div className="candle" title="candle">
+              <div className="candlewick" title="candle"></div>
+              <div className="flame" title="candle"></div>
+              <div className="flame__inner" title="candle"></div>
             </div>
           </div>
         </div>
-        <div class="light" title="candle">
-          <div class="candlestick" title="candle">
-            <div class="shine" title="candle"></div>
-            <div class="shine" title="candle"></div>
-            <div class="candle" title="candle">
-              <div class="candlewick" title="candle"></div>
-              <div class="flame" title="fire"></div>
-              <div class="flame__inner" title="fire"></div>
+        <div className="light" title="candle">
+          <div className="candlestick" title="candle">
+            <div className="shine" title="candle"></div>
+            <div className="shine" title="candle"></div>
+            <div className="candle" title="candle">
+              <div className="candlewick" title="candle"></div>
+              <div className="flame" title="fire"></div>
+              <div className="flame__inner" title="fire"></div>
             </div>
           </div>
         </div>
