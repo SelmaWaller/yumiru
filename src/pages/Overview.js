@@ -1,19 +1,19 @@
-import React, {useEffect} from 'react';
-import {Link} from 'react-router-dom';
-import styled from 'styled-components';
+import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
+import styled from "styled-components";
 
-import OverviewObjects from '../components/overview-objects';
+import OverviewObjects from "../components/overview-objects";
 
-import Title from '../components/global/title';
-import GridLarge from '../components/styles/grid-large';
-import GlobalCard from '../components/styles/global-card';
+import Title from "../components/global/title";
+import GridLarge from "../components/styles/grid-large";
+import GlobalCard from "../components/styles/global-card";
 
 const OverviewCard = styled(GlobalCard)`
   background-size: 100%;
   position: realtive;
   img {
     position: absolute;
-    width: 85%;
+    height: 80%;
     opacity: 0;
   }
 
@@ -34,7 +34,7 @@ const OverviewCard = styled(GlobalCard)`
     text-decoration: none;
     text-transform: uppercase;
     font-weight: normal;
-    font-family: 'Sawarabi Mincho', sans-serif;
+    font-family: "Sawarabi Mincho", sans-serif;
     color: ${(props) => props.theme.globalText};
     font-size: 28px;
     margin: 0;
@@ -46,7 +46,7 @@ const OverviewCard = styled(GlobalCard)`
     top: 10px;
     left: -5px;
     font-size: 18px;
-    font-family: 'Noto Sans JP', sans-serif;
+    font-family: "Noto Sans JP", sans-serif;
     font-weight: normal;
     opacity: 0.6;
     writing-mode: vertical-rl;
@@ -56,7 +56,7 @@ const OverviewCard = styled(GlobalCard)`
   }
 
   h3 {
-    font-family: 'Comfortaa', sans-serif;
+    font-family: "Comfortaa", sans-serif;
     bottom: 15px;
     left: 0;
     font-size: 15px;
@@ -69,11 +69,21 @@ const Disabled = styled(OverviewCard)`
   box-shadow: ${(props) => props.theme.contentShadowHover};
   cursor: default;
   opacity: 0.8;
+
+  &:hover {
+    h1 {
+      opacity: 1;
+    }
+    h2,
+    h3 {
+      opacity: 0.6;
+    }
+  }
 `;
 
 export default function Overview() {
   useEffect(() => {
-    document.title = 'Yumiru | Overview';
+    document.title = "Yumiru | Overview";
   }, []);
 
   return (
@@ -85,14 +95,14 @@ export default function Overview() {
             <div key={index}>
               {!item.disabled ? (
                 <Link
-                  to={item.disabled ? '' : item.url}
+                  to={item.disabled ? "" : item.url}
                   onClick={() => {
                     window.scrollTo(0, 0);
                   }}
                 >
                   <OverviewCard
                     game={item.game}
-                    as={item.disabled ? Disabled : ''}
+                    as={item.disabled ? Disabled : ""}
                   >
                     <img src={item.preview} alt="preview" />
                     <div>
@@ -105,7 +115,7 @@ export default function Overview() {
               ) : (
                 <OverviewCard
                   game={item.game}
-                  as={item.disabled ? Disabled : ''}
+                  as={item.disabled ? Disabled : ""}
                 >
                   <div>
                     <h1>{item.japName}</h1>
