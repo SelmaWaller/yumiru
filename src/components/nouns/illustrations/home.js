@@ -1,77 +1,77 @@
-import React from 'react';
+import React from "react";
 
 const Home = () => {
   return (
     <>
       <div className="coat-hanger">
-        <div className="hanger" title="coat hanger">
+        <div className="hanger">
           <div className="hanger__top"></div>
-          <div className="hanger__arm" title="coat hanger"></div>
-          <div className="hanger__arm" title="coat hanger"></div>
-          <div className="hanger__arm" title="coat hanger"></div>
-          <div className="hanger__foot" title="coat hanger"></div>
-          <div className="hanger__foot" title="coat hanger"></div>
-          <div className="hanger__foot" title="coat hanger"></div>
-          <div className="knob" title="coat hanger"></div>
-          <div className="knob" title="coat hanger"></div>
-          <div className="knob" title="coat hanger"></div>
-          <div className="knob" title="coat hanger"></div>
-          <div className="knob" title="coat hanger"></div>
-          <div className="scarf" title="scarf"></div>
-          <div className="scarf" title="scarf"></div>
-          <div className="coat" title="coat">
-            <div className="coat__back" title="coat"></div>
-            <div className="coat__arm" title="coat"></div>
-            <div className="coat__arm" title="coat"></div>
+          <div className="hanger__arm"></div>
+          <div className="hanger__arm"></div>
+          <div className="hanger__arm"></div>
+          <div className="hanger__foot"></div>
+          <div className="hanger__foot"></div>
+          <div className="hanger__foot"></div>
+          <div className="knob"></div>
+          <div className="knob"></div>
+          <div className="knob"></div>
+          <div className="knob"></div>
+          <div className="knob"></div>
+          <div className="scarf"></div>
+          <div className="scarf"></div>
+          <div className="coat">
+            <div className="coat__back"></div>
+            <div className="coat__arm"></div>
+            <div className="coat__arm"></div>
           </div>
         </div>
       </div>
       <div className="drawer">
-        <div className="drawer__shelf" title="drawer">
-          <div className="drawer__knob" title="knob"></div>
-          <div className="drawer__knob" title="knob"></div>
+        <div className="drawer__shelf">
+          <div className="drawer__knob"></div>
+          <div className="drawer__knob"></div>
         </div>
-        <div className="drawer__shelf" title="drawer">
-          <div className="drawer__knob" title="knob"></div>
-          <div className="drawer__knob" title="knob"></div>
+        <div className="drawer__shelf">
+          <div className="drawer__knob"></div>
+          <div className="drawer__knob"></div>
         </div>
-        <div className="drawer__shelf" title="drawer">
-          <div className="drawer__knob" title="knob"></div>
-          <div className="drawer__knob" title="knob"></div>
+        <div className="drawer__shelf">
+          <div className="drawer__knob"></div>
+          <div className="drawer__knob"></div>
         </div>
-        <div className="drawer__top" title="drawer"></div>
-        <div className="mirror" title="mirror"></div>
-        <div className="mirror" title="mirror"></div>
-        <div className="light" title="candle">
-          <div className="candlestick" title="candle">
-            <div className="shine" title="candle"></div>
-            <div className="shine" title="candle"></div>
-            <div className="candle" title="candle">
-              <div className="candlewick" title="candle"></div>
-              <div className="flame" title="candle"></div>
-              <div className="flame__inner" title="candle"></div>
+        <div className="drawer__top"></div>
+        <div className="mirror"></div>
+        <div className="mirror"></div>
+        <div className="light">
+          <div className="candlestick">
+            <div className="shine"></div>
+            <div className="shine"></div>
+            <div className="candle">
+              <div className="candlewick"></div>
+              <div className="flame"></div>
+              <div className="flame__inner"></div>
             </div>
           </div>
         </div>
-        <div className="light" title="candle">
-          <div className="candlestick" title="candle">
-            <div className="shine" title="candle"></div>
-            <div className="shine" title="candle"></div>
-            <div className="candle" title="candle">
-              <div className="candlewick" title="candle"></div>
-              <div className="flame" title="fire"></div>
-              <div className="flame__inner" title="fire"></div>
+        <div className="light">
+          <div className="candlestick">
+            <div className="shine"></div>
+            <div className="shine"></div>
+            <div className="candle">
+              <div className="candlewick"></div>
+              <div className="flame"></div>
+              <div className="flame__inner"></div>
             </div>
           </div>
         </div>
-        <div className="plant" title="plant">
-          <div className="leaf" title="plant"></div>
-          <div className="leaf" title="plant"></div>
-          <div className="leaf" title="plant"></div>
-          <div className="leaf" title="plant"></div>
-          <div className="leaf" title="plant"></div>
-          <div className="pot" title="pot"></div>
-          <div className="pot" title="pot"></div>
+        <div className="plant">
+          <div className="leaf"></div>
+          <div className="leaf"></div>
+          <div className="leaf"></div>
+          <div className="leaf"></div>
+          <div className="leaf"></div>
+          <div className="pot"></div>
+          <div className="pot"></div>
         </div>
       </div>
     </>

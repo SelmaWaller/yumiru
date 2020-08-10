@@ -24,6 +24,7 @@ const OverviewCard = styled(GlobalCard)`
     h1,
     h2,
     h3 {
+      transition: 0ms;
       opacity: 0;
     }
   }

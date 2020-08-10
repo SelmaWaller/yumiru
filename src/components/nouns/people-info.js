@@ -1,13 +1,19 @@
-import React from 'react';
+import React from "react";
+import Collapsible from "react-collapsible";
+
+import FlexWrapper from "../styles/flex-wrapper";
 
 const PeopleInfo = () => {
   return (
     <>
-      {/* collapsible */}
-      <p>relations</p>
-      <p>professional</p>
-      <p>clothes</p>
-      <p>body parts</p>
+      <FlexWrapper>
+        <Collapsible trigger="Relations">
+          <p>relations</p>
+          <p>professional</p>
+          <p>clothes</p>
+        </Collapsible>
+        <Collapsible trigger="Body"></Collapsible>
+      </FlexWrapper>
     </>
   );
 };
