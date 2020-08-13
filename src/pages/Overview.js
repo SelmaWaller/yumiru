@@ -17,18 +17,6 @@ const OverviewCard = styled(GlobalCard)`
     opacity: 0;
   }
 
-  &:hover {
-    img {
-      opacity: 1;
-    }
-    h1,
-    h2,
-    h3 {
-      transition: 0ms;
-      opacity: 0;
-    }
-  }
-
   h1,
   h2,
   h3 {
@@ -70,21 +58,11 @@ const Disabled = styled(OverviewCard)`
   box-shadow: ${(props) => props.theme.contentShadowHover};
   cursor: default;
   opacity: 0.8;
-
-  &:hover {
-    h1 {
-      opacity: 1;
-    }
-    h2,
-    h3 {
-      opacity: 0.6;
-    }
-  }
 `;
 
 export default function Overview() {
   useEffect(() => {
-    document.title = "Yumiru | Overview";
+    document.title = "Yumiru";
   }, []);
 
   return (
@@ -105,7 +83,6 @@ export default function Overview() {
                     game={item.game}
                     as={item.disabled ? Disabled : ""}
                   >
-                    <img src={item.preview} alt="preview" />
                     <div>
                       <h1>{item.japName}</h1>
                       <h2>{item.furigana}</h2>

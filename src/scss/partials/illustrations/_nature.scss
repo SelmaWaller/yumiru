@@ -6,7 +6,7 @@
   position: absolute;
   transform: scale(1.2);
   z-index: 2;
-  top: 144px;
+  bottom: 60px;
   .tree {
     position: absolute;
     left: -60px;
@@ -220,7 +220,7 @@
   width: 200px;
   transform: scale(1.2);
   z-index: 1;
-  top: 144px;
+  bottom: 59px;
 
   .rocks {
     left: unset;

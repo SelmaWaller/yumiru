@@ -14,9 +14,8 @@ const IllustrationCard = styled(GlobalCard)`
   position: relative;
   display: block;
   max-width: 100%;
-  height: 500px;
+  min-height: 500px;
   margin: 20px;
-  opacity: 0.9;
   transition: 300ms ease-out;
   cursor: default;
   &:hover {
@@ -75,10 +74,10 @@ const ExpandCategory = styled.div`
 `;
 
 const Categories = () => {
-  const [people, setPeople] = useState(true);
-  const [home, setHome] = useState(true);
+  const [people, setPeople] = useState(false);
+  const [home, setHome] = useState(false);
   const [nature, setNature] = useState(true);
-  const [info, setInfo] = useState(false);
+  const [info, setInfo] = useState(true);
 
   const arrow = info ? "«" : "»";
 
