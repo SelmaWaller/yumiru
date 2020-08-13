@@ -22,7 +22,7 @@ const IllustrationCard = styled(GlobalCard)`
     box-shadow: ${(props) => props.theme.contentShadow};
   }
   h1,
-  p {
+  h4 {
     text-align: center;
     margin-top: 10px;
     margin-bottom: 0;
@@ -30,11 +30,16 @@ const IllustrationCard = styled(GlobalCard)`
     color: ${(props) => props.theme.globalText};
     font-size: 24px;
   }
-  p {
+  h4 {
+    font-weight: normal;
     font-family: "Comfortaa", sans-serif;
     margin-top: 0;
     opacity: 0.65;
     font-size: 18px;
+  }
+  p {
+    font-family: "Comfortaa", sans-serif;
+    color: ${(props) => props.theme.globalText};
   }
   &:active,
   &:focus {
@@ -94,7 +99,7 @@ const Categories = () => {
           <p>{arrow}</p>
         </ExpandCategory>
         <h1>人</h1>
-        <p>PEOPLE</p>
+        <h4>PEOPLE</h4>
         {info ? <PeopleInfo /> : ""}
         <People />
       </IllustrationCard>
@@ -109,7 +114,7 @@ const Categories = () => {
           <p>{arrow}</p>
         </ExpandCategory>
         <h1>家</h1>
-        <p>HOME</p>
+        <h4>HOME</h4>
         {info ? <HomeInfo /> : ""}
         <Home />
       </IllustrationCard>
@@ -124,7 +129,7 @@ const Categories = () => {
           <p>{arrow}</p>
         </ExpandCategory>
         <h1>自然</h1>
-        <p>NATURE</p>
+        <h4>NATURE</h4>
         {info ? <NatureInfo /> : ""}
         <Nature />
       </IllustrationCard>
