@@ -67,7 +67,6 @@ const Titles = styled.div`
     .is-open::after {
       content: "\\276F";
       position: absolute;
-      margin-left: 10px;
       transform: rotate(270deg);
       transition: 200ms ease;
     }
@@ -151,9 +150,9 @@ const PeopleInfo = () => {
             <table>
               <tr>
                 <td>Family</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>家族</td>
+                <td>かぞく</td>
+                <td>Kazoku</td>
               </tr>
               <tr>
                 <td>Grandfather</td>
@@ -368,87 +367,87 @@ const PeopleInfo = () => {
             <table>
               <tr>
                 <td>Head</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>頭</td>
+                <td>あたま</td>
+                <td>Atama</td>
               </tr>
               <tr>
                 <td>Hair</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>髪</td>
+                <td>かみ</td>
+                <td>Kami</td>
               </tr>
               <tr>
                 <td>Forehead</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>額</td>
+                <td>ひたい</td>
+                <td>Hitai</td>
               </tr>
               <tr>
                 <td>Eyebrow</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>眉</td>
+                <td>まゆ</td>
+                <td>Mayu</td>
               </tr>
               <tr>
                 <td>Eye</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>眼</td>
+                <td>め</td>
+                <td>Me</td>
               </tr>
               <tr>
                 <td>Eyelash</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>&nbsp;</td>
+                <td>まつげ</td>
+                <td>Matsuge</td>
               </tr>
               <tr>
                 <td>Nose</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>鼻</td>
+                <td>はな</td>
+                <td>Hana</td>
               </tr>
               <tr>
                 <td>Mouth</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>口</td>
+                <td>くち</td>
+                <td>Kuchi</td>
               </tr>
               <tr>
                 <td>Lip</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>唇</td>
+                <td>くちびる</td>
+                <td>Kuchibiru</td>
               </tr>
               <tr>
                 <td>Teeth</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>歯並び</td>
+                <td>はならび</td>
+                <td>Hanarabi</td>
               </tr>
               <tr>
                 <td>Cheek</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>頬</td>
+                <td>ほお</td>
+                <td>Hō</td>
               </tr>
               <tr>
                 <td>Chin</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>顎</td>
+                <td>あご</td>
+                <td>Ago</td>
               </tr>
               <tr>
                 <td>Ear</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>耳</td>
+                <td>みみ</td>
+                <td>Mimi</td>
               </tr>
               <tr>
                 <td>Tongue</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>舌</td>
+                <td>した</td>
+                <td>Shita</td>
               </tr>
             </table>
           </Collapsible>
@@ -456,45 +455,45 @@ const PeopleInfo = () => {
             <table>
               <tr>
                 <td>Body</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>体</td>
+                <td>からだ</td>
+                <td>Karada</td>
               </tr>
               <tr>
                 <td>Neck</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>首</td>
+                <td>くび</td>
+                <td>Kubi</td>
               </tr>
               <tr>
                 <td>Chest</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>胸</td>
+                <td>むね</td>
+                <td>Mune</td>
               </tr>
               <tr>
                 <td>Back</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>背</td>
+                <td>せ</td>
+                <td>Se</td>
               </tr>
               <tr>
                 <td>Rib</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>肋</td>
+                <td>あばら</td>
+                <td>Abara</td>
               </tr>
               <tr>
                 <td>Stomach</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>腹</td>
+                <td>はら</td>
+                <td>Hara</td>
               </tr>
               <tr>
                 <td>Waist</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>腰</td>
+                <td>こし</td>
+                <td>Koshi</td>
               </tr>
             </table>
           </Collapsible>
@@ -502,51 +501,51 @@ const PeopleInfo = () => {
             <table>
               <tr>
                 <td>Arm</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>腕</td>
+                <td>うで</td>
+                <td>Ude</td>
               </tr>
               <tr>
                 <td>Shoulder</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>肩</td>
+                <td>かた</td>
+                <td>Kata</td>
               </tr>
               <tr>
                 <td>Elbow</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>肘</td>
+                <td>ひじ</td>
+                <td>Hiji</td>
               </tr>
               <tr>
                 <td>Wrist</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>手首</td>
+                <td>てくび</td>
+                <td>Tekubi</td>
               </tr>
               <tr>
                 <td>Hand</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>手</td>
+                <td>て</td>
+                <td>Te</td>
               </tr>
               <tr>
                 <td>Palm</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>平手</td>
+                <td>ひらて</td>
+                <td>Hirate</td>
               </tr>
               <tr>
                 <td>Finger</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>指</td>
+                <td>ゆび</td>
+                <td>Yubi</td>
               </tr>
               <tr>
                 <td>Nail</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>爪</td>
+                <td>つめ</td>
+                <td>Tsume</td>
               </tr>
             </table>
           </Collapsible>
@@ -554,45 +553,39 @@ const PeopleInfo = () => {
             <table>
               <tr>
                 <td>Leg</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>脚</td>
+                <td>あし</td>
+                <td>Ashi</td>
               </tr>
               <tr>
                 <td>Thigh</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>股</td>
+                <td>もも</td>
+                <td>Momo</td>
               </tr>
               <tr>
                 <td>Knee</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>膝</td>
+                <td>ひざ</td>
+                <td>Hiza</td>
               </tr>
               <tr>
                 <td>Calf</td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>Ancle</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>腓</td>
+                <td>こむら</td>
+                <td>Komura</td>
               </tr>
               <tr>
                 <td>Foot</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>足</td>
+                <td>あし</td>
+                <td>Ashi</td>
               </tr>
               <tr>
                 <td>Toe</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>足の指</td>
+                <td>あしのゆび</td>
+                <td>Ashi no yubi</td>
               </tr>
             </table>
           </Collapsible>
@@ -611,39 +604,39 @@ const PeopleInfo = () => {
             <table>
               <tr>
                 <td>Hat</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>帽子</td>
+                <td>ぼうし</td>
+                <td>Bōshi</td>
               </tr>
               <tr>
                 <td>Scarf</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>&nbsp;</td>
+                <td>スカーフ</td>
+                <td>Skāfu</td>
               </tr>
               <tr>
                 <td>Jacket</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>上着</td>
+                <td>うわぎ</td>
+                <td>Uwagi</td>
               </tr>
               <tr>
                 <td>Coat</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>&nbsp;</td>
+                <td>コート</td>
+                <td>Kōto</td>
               </tr>
               <tr>
                 <td>Boots</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>&nbsp;</td>
+                <td>ブーツ</td>
+                <td>Būtsu</td>
               </tr>
               <tr>
                 <td>Mittens</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>手袋</td>
+                <td>てぶくろ</td>
+                <td>Tebukuro</td>
               </tr>
             </table>
           </Collapsible>
@@ -651,57 +644,51 @@ const PeopleInfo = () => {
             <table>
               <tr>
                 <td>Sweater</td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>T-shirt</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>&nbsp;</td>
+                <td>セーター</td>
+                <td>Sētā</td>
               </tr>
               <tr>
                 <td>Shirt</td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>Singlet</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>&nbsp;</td>
+                <td>シャツ</td>
+                <td>Shatsu</td>
               </tr>
               <tr>
                 <td>Pants</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>&nbsp;</td>
+                <td>ズボン</td>
+                <td>Zubon</td>
               </tr>
               <tr>
                 <td>Shorts</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>短パン</td>
+                <td>たんパン</td>
+                <td>Tanpan</td>
+              </tr>
+              <tr>
+                <td>Underwear</td>
+                <td>下着</td>
+                <td>したぎ</td>
+                <td>Shitagi</td>
               </tr>
               <tr>
                 <td>Socks</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>靴下</td>
+                <td>くつした</td>
+                <td>Kutsushita</td>
               </tr>
               <tr>
                 <td>Shoes</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>靴</td>
+                <td>くつ</td>
+                <td>Kutsu</td>
               </tr>
               <tr>
                 <td>Hoodie</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>&nbsp;</td>
+                <td>パーカー</td>
+                <td>Pākā</td>
               </tr>
             </table>
           </Collapsible>
@@ -709,79 +696,67 @@ const PeopleInfo = () => {
             <table>
               <tr>
                 <td>Dress</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>身なり</td>
+                <td>みなり</td>
+                <td>Minari</td>
               </tr>
               <tr>
                 <td>Suit</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>背広</td>
+                <td>せびろ</td>
+                <td>Sebiro</td>
               </tr>
               <tr>
                 <td>Dress shirt</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>&nbsp;</td>
+                <td>ワイシャツ</td>
+                <td>Waishatsu</td>
               </tr>
               <tr>
                 <td>Skirt</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>&nbsp;</td>
+                <td>スカート</td>
+                <td>Skāto</td>
               </tr>
               <tr>
                 <td>Blazer</td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>Stockings</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>&nbsp;</td>
+                <td>ブレザー</td>
+                <td>Burezā</td>
               </tr>
               <tr>
                 <td>Blouse</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>&nbsp;</td>
+                <td>ブラウス</td>
+                <td>Burausu</td>
               </tr>
               <tr>
                 <td>Pumps</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>&nbsp;</td>
+                <td>パンプス</td>
+                <td>Pampusu</td>
               </tr>
             </table>
           </Collapsible>
           <Collapsible trigger="Workout">
             <table>
               <tr>
-                <td>Leggings</td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
                 <td>Swimsuit</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>水着</td>
+                <td>みずぎ</td>
+                <td>Mizugi</td>
               </tr>
               <tr>
                 <td>Bikini</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>&nbsp;</td>
+                <td>ビキニ</td>
+                <td>Bikini</td>
               </tr>
               <tr>
                 <td>Sneakers</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>運動靴</td>
+                <td>うんどうぐつ</td>
+                <td>Undōgutsu</td>
               </tr>
             </table>
           </Collapsible>
@@ -789,69 +764,69 @@ const PeopleInfo = () => {
             <table>
               <tr>
                 <td>Accessories</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>部品</td>
+                <td>ぶひん</td>
+                <td>Buhin</td>
               </tr>
               <tr>
                 <td>Belt</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>&nbsp;</td>
+                <td>ベルト</td>
+                <td>Beruto</td>
               </tr>
               <tr>
                 <td>Wrist watch</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>腕時計</td>
+                <td>うでどけい</td>
+                <td>Udedokē</td>
               </tr>
               <tr>
                 <td>Necklace</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>首飾り</td>
+                <td>くびかざ</td>
+                <td>kubikazaku</td>
               </tr>
               <tr>
-                <td>Tie</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>Necktie</td>
+                <td>&nbsp;</td>
+                <td>ネクタイ</td>
+                <td>Nekutai</td>
               </tr>
               <tr>
                 <td>Earrings</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>耳飾り</td>
+                <td>みみかざり</td>
+                <td>Mimikazari</td>
               </tr>
               <tr>
                 <td>Ring</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>指輪</td>
+                <td>ゆびわ</td>
+                <td>Yubiwa</td>
               </tr>
               <tr>
                 <td>Bracelet</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>腕飾り</td>
+                <td>うでかざり</td>
+                <td>Udekazari</td>
               </tr>
               <tr>
                 <td>Suspenders</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>靴下止め</td>
+                <td>くつしたどめ</td>
+                <td>Kutsushitadome</td>
               </tr>
               <tr>
                 <td>Bag</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>鞄</td>
+                <td>かばん</td>
+                <td>Kaban</td>
               </tr>
               <tr>
-                <td>Backpack</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>Handbag</td>
+                <td>手提げ</td>
+                <td>てさげ</td>
+                <td>Tesage</td>
               </tr>
             </table>
           </Collapsible>
