@@ -74,10 +74,10 @@ const ExpandCategory = styled.div`
 `;
 
 const Categories = () => {
-  const [people, setPeople] = useState(false);
-  const [home, setHome] = useState(false);
+  const [people, setPeople] = useState(true);
+  const [home, setHome] = useState(true);
   const [nature, setNature] = useState(true);
-  const [info, setInfo] = useState(true);
+  const [info, setInfo] = useState(false);
 
   const arrow = info ? "«" : "»";
 

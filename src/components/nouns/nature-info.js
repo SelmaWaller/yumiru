@@ -7,7 +7,7 @@ import GridSmall from "../styles/grid-small";
 const CollapsibleCard = styled(GridSmall)`
   max-width: 600px;
   background: none;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 `;
 
 const Titles = styled.div`
