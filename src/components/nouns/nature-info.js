@@ -224,7 +224,7 @@ const NatureInfo = () => {
           <Collapsible trigger="Insects">
             <table>
               <tr>
-                <td>Insects</td>
+                <td>Insect</td>
                 <td>虫</td>
                 <td>むし</td>
                 <td>Mushi</td>
@@ -240,6 +240,12 @@ const NatureInfo = () => {
                 <td>甲虫</td>
                 <td>かぶとむし</td>
                 <td>Kabutomushi</td>
+              </tr>
+              <tr>
+                <td>Black fly</td>
+                <td>蚋</td>
+                <td>ぶゆ</td>
+                <td>Buyu</td>
               </tr>
               <tr>
                 <td>Butterfly</td>
@@ -478,6 +484,143 @@ const NatureInfo = () => {
                 <td>葡萄</td>
                 <td>ぶどう</td>
                 <td>Budō</td>
+              </tr>
+            </table>
+          </Collapsible>
+          <Collapsible trigger="Meat">
+            <table>
+              <tr>
+                <td>Meat</td>
+                <td>肉</td>
+                <td>にく</td>
+                <td>Niku</td>
+              </tr>
+              <tr>
+                <td>Steak</td>
+                <td>&nbsp;</td>
+                <td>ステーキ</td>
+                <td>Sutēki</td>
+              </tr>
+              <tr>
+                <td>Pork</td>
+                <td>豚肉</td>
+                <td>ぶたにく</td>
+                <td>Butaniku</td>
+              </tr>
+              <tr>
+                <td>Beef</td>
+                <td>牛肉</td>
+                <td>ぎゅうにく</td>
+                <td>Gyūniku</td>
+              </tr>
+              <tr>
+                <td>Fish meat</td>
+                <td>魚肉</td>
+                <td>ぎょにく</td>
+                <td>Gyoniku</td>
+              </tr>
+            </table>
+          </Collapsible>
+        </Titles>
+      </CollapsibleCard>
+
+      <CollapsibleCard>
+        <Titles>
+          <div>
+            <p>Colors</p>
+            <p>
+              色<span>いろ</span>
+            </p>
+          </div>
+          <Collapsible trigger="Rainbow">
+            <table>
+              <tr>
+                <td>Rainbow</td>
+                <td>虹</td>
+                <td>にじ</td>
+                <td>Niji</td>
+              </tr>
+              <tr>
+                <td>Red</td>
+                <td>赤</td>
+                <td>あか</td>
+                <td>Aka</td>
+              </tr>
+              <tr>
+                <td>Orange</td>
+                <td>橙色</td>
+                <td>だいだいいろ</td>
+                <td>Daidaiiro</td>
+              </tr>
+              <tr>
+                <td>Yellow</td>
+                <td>黄色</td>
+                <td>きいろ</td>
+                <td>Kiiro</td>
+              </tr>
+              <tr>
+                <td>Green</td>
+                <td>緑</td>
+                <td>みどり</td>
+                <td>Midori</td>
+              </tr>
+              <tr>
+                <td>Blue</td>
+                <td>青</td>
+                <td>あお</td>
+                <td>Ao</td>
+              </tr>
+              <tr>
+                <td>Purple</td>
+                <td>紫</td>
+                <td>むらさき</td>
+                <td>Murasaki</td>
+              </tr>
+              <tr>
+                <td>Pink</td>
+                <td>桃色</td>
+                <td>ももいろ</td>
+                <td>Momoiro</td>
+              </tr>
+            </table>
+          </Collapsible>
+          <Collapsible trigger="Other">
+            <table>
+              <tr>
+                <td>Brown</td>
+                <td>茶色</td>
+                <td>ちゃいろ</td>
+                <td>Chairo</td>
+              </tr>
+              <tr>
+                <td>Gold</td>
+                <td>金</td>
+                <td>きん</td>
+                <td>Kin</td>
+              </tr>
+              <tr>
+                <td>Silver</td>
+                <td>銀</td>
+                <td>ぎん</td>
+                <td>Gin</td>
+              </tr>
+              <tr>
+                <td>Black</td>
+                <td>黒</td>
+                <td>くろ</td>
+                <td>Kuro</td>
+              </tr>
+              <tr>
+                <td>Grey</td>
+                <td>灰色</td>
+                <td>はいいろ</td>
+                <td>Haiiro</td>
+              </tr>
+              <tr>
+                <td>White</td>
+                <td>白</td>
+                <td>しろ</td>
+                <td>Shiro</td>
               </tr>
             </table>
           </Collapsible>

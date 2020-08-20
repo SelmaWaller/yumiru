@@ -17,7 +17,7 @@ const OverviewObjects = [
     furigana: "せ 世 — かい 界 — ち 地 — ず 図",
     japName: "世界地図",
     engName: "World Map",
-    url: "/",
+    url: "/map",
     disabled: true,
   },
   {

@@ -9,6 +9,8 @@ import Home from "./illustrations/home";
 import HomeInfo from "./home-info";
 import Nature from "./illustrations/nature";
 import NatureInfo from "./nature-info.js";
+import Travel from "./illustrations/travel";
+import TravelInfo from "./travel-info.js";
 
 const IllustrationCard = styled(GlobalCard)`
   position: relative;
@@ -82,6 +84,7 @@ const Categories = () => {
   const [people, setPeople] = useState(true);
   const [home, setHome] = useState(true);
   const [nature, setNature] = useState(true);
+  const [travel, setTravel] = useState(true);
   const [info, setInfo] = useState(false);
 
   const arrow = info ? "«" : "»";
@@ -91,9 +94,11 @@ const Categories = () => {
       <IllustrationCard as={people ? "" : closed}>
         <ExpandCategory
           onClick={() => {
+            window.scrollTo(0, 0);
             setInfo(!info);
             setHome(!home);
             setNature(!nature);
+            setTravel(!travel);
           }}
         >
           <p>{arrow}</p>
@@ -106,9 +111,11 @@ const Categories = () => {
       <IllustrationCard as={home ? "" : closed}>
         <ExpandCategory
           onClick={() => {
+            window.scrollTo(0, 0);
             setInfo(!info);
             setPeople(!people);
             setNature(!nature);
+            setTravel(!travel);
           }}
         >
           <p>{arrow}</p>
@@ -121,9 +128,11 @@ const Categories = () => {
       <IllustrationCard as={nature ? "" : closed}>
         <ExpandCategory
           onClick={() => {
+            window.scrollTo(0, 0);
             setInfo(!info);
             setPeople(!people);
             setHome(!home);
+            setTravel(!travel);
           }}
         >
           <p>{arrow}</p>
@@ -132,6 +141,23 @@ const Categories = () => {
         <h4>NATURE</h4>
         {info ? <NatureInfo /> : ""}
         <Nature />
+      </IllustrationCard>
+      <IllustrationCard as={travel ? "" : closed}>
+        <ExpandCategory
+          onClick={() => {
+            window.scrollTo(0, 0);
+            setInfo(!info);
+            setPeople(!people);
+            setHome(!home);
+            setNature(!nature);
+          }}
+        >
+          <p>{arrow}</p>
+        </ExpandCategory>
+        <h1>旅行</h1>
+        <h4>TRAVEL</h4>
+        {info ? <TravelInfo /> : ""}
+        <Travel />
       </IllustrationCard>
     </GridLarge>
   );

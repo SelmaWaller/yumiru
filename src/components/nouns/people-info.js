@@ -299,10 +299,10 @@ const PeopleInfo = () => {
                 <td>Kuchibiru</td>
               </tr>
               <tr>
-                <td>Teeth</td>
-                <td>歯並び</td>
-                <td>はならび</td>
-                <td>Hanarabi</td>
+                <td>Tooth</td>
+                <td>歯</td>
+                <td>は</td>
+                <td>Ha</td>
               </tr>
               <tr>
                 <td>Cheek</td>
@@ -364,9 +364,9 @@ const PeopleInfo = () => {
               </tr>
               <tr>
                 <td>Stomach</td>
-                <td>腹</td>
-                <td>はら</td>
-                <td>Hara</td>
+                <td>お腹</td>
+                <td>おなか</td>
+                <td>Onaka</td>
               </tr>
               <tr>
                 <td>Waist</td>
@@ -432,7 +432,7 @@ const PeopleInfo = () => {
             <table>
               <tr>
                 <td>Leg</td>
-                <td>脚</td>
+                <td>足</td>
                 <td>あし</td>
                 <td>Ashi</td>
               </tr>

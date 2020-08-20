@@ -38,7 +38,12 @@ function App({ children }) {
     <ThemeProvider theme={theme}>
       <Global>
         <Link to="/">
-          <TransparentButton home />
+          <TransparentButton
+            home
+            onClick={() => {
+              window.scrollTo(0, 0);
+            }}
+          />
         </Link>
         <Time />
         <Today />
