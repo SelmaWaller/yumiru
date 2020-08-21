@@ -5,8 +5,8 @@ import GridLarge from "../styles/grid-large";
 import GlobalCard from "../styles/global-card";
 import People from "./illustrations/people";
 import PeopleInfo from "./people-info";
-import Home from "./illustrations/home";
-import HomeInfo from "./home-info";
+import Buildings from "./illustrations/buildings";
+import BuildingsInfo from "./buildings-info";
 import Nature from "./illustrations/nature";
 import NatureInfo from "./nature-info.js";
 import Travel from "./illustrations/travel";
@@ -91,39 +91,22 @@ const Categories = () => {
 
   return (
     <GridLarge>
-      <IllustrationCard as={people ? "" : closed}>
-        <ExpandCategory
-          onClick={() => {
-            window.scrollTo(0, 0);
-            setInfo(!info);
-            setHome(!home);
-            setNature(!nature);
-            setTravel(!travel);
-          }}
-        >
-          <p>{arrow}</p>
-        </ExpandCategory>
-        <h1>人</h1>
-        <h4>PEOPLE</h4>
-        {info ? <PeopleInfo /> : ""}
-        <People />
-      </IllustrationCard>
-      <IllustrationCard as={home ? "" : closed}>
+      <IllustrationCard as={travel ? "" : closed}>
         <ExpandCategory
           onClick={() => {
             window.scrollTo(0, 0);
             setInfo(!info);
             setPeople(!people);
+            setHome(!home);
             setNature(!nature);
-            setTravel(!travel);
           }}
         >
           <p>{arrow}</p>
         </ExpandCategory>
-        <h1>家</h1>
-        <h4>HOME</h4>
-        {info ? <HomeInfo /> : ""}
-        <Home />
+        <h1>旅行</h1>
+        <h4>TRAVEL</h4>
+        {info ? <TravelInfo /> : ""}
+        <Travel />
       </IllustrationCard>
       <IllustrationCard as={nature ? "" : closed}>
         <ExpandCategory
@@ -142,22 +125,39 @@ const Categories = () => {
         {info ? <NatureInfo /> : ""}
         <Nature />
       </IllustrationCard>
-      <IllustrationCard as={travel ? "" : closed}>
+      <IllustrationCard as={home ? "" : closed}>
         <ExpandCategory
           onClick={() => {
             window.scrollTo(0, 0);
             setInfo(!info);
             setPeople(!people);
-            setHome(!home);
             setNature(!nature);
+            setTravel(!travel);
           }}
         >
           <p>{arrow}</p>
         </ExpandCategory>
-        <h1>旅行</h1>
-        <h4>TRAVEL</h4>
-        {info ? <TravelInfo /> : ""}
-        <Travel />
+        <h1>造営物と家具</h1>
+        <h4>BUILDINGS & FURNITURE</h4>
+        {info ? <BuildingsInfo /> : ""}
+        <Buildings />
+      </IllustrationCard>
+      <IllustrationCard as={people ? "" : closed}>
+        <ExpandCategory
+          onClick={() => {
+            window.scrollTo(0, 0);
+            setInfo(!info);
+            setHome(!home);
+            setNature(!nature);
+            setTravel(!travel);
+          }}
+        >
+          <p>{arrow}</p>
+        </ExpandCategory>
+        <h1>人</h1>
+        <h4>PEOPLE</h4>
+        {info ? <PeopleInfo /> : ""}
+        <People />
       </IllustrationCard>
     </GridLarge>
   );

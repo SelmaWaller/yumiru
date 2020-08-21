@@ -164,7 +164,7 @@ const NatureInfo = () => {
               </tr>
             </table>
           </Collapsible>
-          <Collapsible trigger="Bus/Subway station">
+          <Collapsible trigger="Bus and subway">
             <table>
               <tr>
                 <td>Bus station</td>

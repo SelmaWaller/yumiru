@@ -4,6 +4,86 @@
   width: 200px;
   position: absolute;
   bottom: 32px;
+  z-index: 2;
+  .skis {
+    position: absolute;
+    width: 160px;
+    height: 300px;
+    bottom: 0;
+    .ski {
+      position: absolute;
+      width: 20px;
+      height: 265px;
+      bottom: 25px;
+      left: 25px;
+      background: linear-gradient(
+        to top,
+        #3b60b1,
+        #7b8a9c 40%,
+        #c4cbda 90%,
+        #dde4f8 100%
+      );
+      border-top-left-radius: 20px;
+      border-top-right-radius: 5px;
+      box-shadow: inset 2px 2px 3px #a0adc021, inset -2px -2px 5px #6974862c,
+        -3px 5px 5px #2b211936;
+      transform: rotate(-20deg) skewY(-30deg) skewX(-10deg);
+      &:nth-child(2) {
+        height: 290px;
+        transform: rotate(-11deg) skewY(-30deg) skewX(-10deg);
+      }
+    }
+  }
+  .roll {
+    position: absolute;
+    width: 80px;
+    height: 135px;
+    background: linear-gradient(to top right, #1e3127 30%, #416855);
+    box-shadow: inset 10px -10px 15px #273f32, inset -5px 5px 20px #56866f,
+      -3px 5px 5px #192b2136;
+    bottom: 7px;
+    right: 28px;
+    border-radius: 10px;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+    &__top {
+      position: absolute;
+      left: 28px;
+      width: 5px;
+      height: 20px;
+      top: -3px;
+      background: linear-gradient(to top, #23382d, #64967e);
+      border-bottom-left-radius: 100%;
+      border-top-right-radius: 0%;
+      transform: rotate(35deg);
+      &:nth-child(2) {
+        left: 50px;
+        height: 22px;
+        background: linear-gradient(to top, #334b3e, #6ca087);
+        transform: scaleX(-1) rotate(30deg);
+      }
+      &:nth-child(3) {
+        left: 37px;
+        top: -2px;
+        height: 30px;
+        transform: rotate(5deg);
+      }
+      &--ribbon {
+        position: absolute;
+        width: 13px;
+        height: 6px;
+        border-radius: 100%;
+        background: radial-gradient(#00000025 20%, #527c68 23%);
+        transform: rotate(7deg);
+        left: 29px;
+        top: -5px;
+        &:nth-child(4) {
+          left: 41px;
+          transform: rotate(-7deg) scaleX(-1);
+        }
+      }
+    }
+  }
   &__stamp {
     position: absolute;
     width: 20px;
@@ -20,19 +100,20 @@
       bottom: 40px;
       left: 90px;
       transform: rotate(30deg);
-      background: linear-gradient(to top right, #3a717a, #6ab7c5);
+      background: linear-gradient(to top right, #396970, #6eafbb);
       border: 3px dotted #29717e;
     }
   }
-  &__front {
+  &__case {
     position: absolute;
     bottom: 0;
     width: 160px;
     height: 110px;
-    background: linear-gradient(to top right, #423131, #4d3939);
+    background: linear-gradient(to top right, #3b2d2d, #664c4c);
     box-shadow: inset -5px 5px 20px #815c5cb4, inset 5px -5px 20px #352626;
     border-radius: 5px;
-    box-shadow: inset 6px 0px 10px #49382f, -3px 5px 5px #18234436;
+    box-shadow: inset 6px -4px 10px #3a2d25, inset -6px 4px 10px #866767,
+      -3px 5px 5px #18234436;
     &--strap {
       position: absolute;
       left: -2px;
@@ -40,8 +121,8 @@
       height: 13px;
       bottom: 75px;
       border-radius: 2px;
-      background: linear-gradient(to top right, #5f4444, #745757);
-      box-shadow: inset -1px 1px 1px #815c5cc5, inset 1px -1px 1px #352626b9;
+      background: linear-gradient(to top right, #573e3e, #745757);
+      box-shadow: inset -1px 1px 1px #8a6464c5, inset 1px -1px 1px #352626b9;
       z-index: 2;
       &:nth-child(3) {
         bottom: 20px;
@@ -110,6 +191,8 @@
         left: unset;
         right: 20px;
         transform: scaleX(-1);
+        box-shadow: inset -1px 1px 6px #815c5cc5,
+          inset 1px -1px 1px -0.5px #352626b9, 0 4px 8px #2419199a;
       }
     }
     &--handle {
@@ -124,12 +207,190 @@
       &:nth-child(13) {
         height: 9px;
         width: 35px;
-        background: linear-gradient(to top right, #533e3e 25%, #694949 75%);
+        background: linear-gradient(to top right, #533e3e 45%, #7a5858 85%);
       }
       &:nth-child(14) {
         transform: scaleX(-1);
         left: 94px;
-        background: linear-gradient(to top, #533e3e 0%, #694949 50%);
+        background: linear-gradient(to top, #533e3e 0%, #7a5858 70%);
+      }
+    }
+  }
+}
+
+.passport-red,
+.passport-blue {
+  position: absolute;
+  right: 40px;
+  height: 200px;
+  width: 200px;
+  bottom: 32px;
+  transform: scale(0.7) rotate(-10deg);
+  z-index: 1;
+  .passport {
+    position: absolute;
+    width: 140px;
+    height: 190px;
+    bottom: 20px;
+    right: 80px;
+    background: linear-gradient(to top right, #1c1f49, #303570);
+    border-radius: 5px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    box-shadow: -3px 5px 5px #18234436;
+    &__coat {
+      position: absolute;
+      left: 49px;
+      top: 60px;
+      position: absolute;
+      width: 42px;
+      height: 42px;
+      border-radius: 100%;
+      background: linear-gradient(to top right, #966c2c, #ce994b);
+    }
+    &__text {
+      span::after {
+        position: absolute;
+        content: "JAPAN";
+        font-family: "Arial";
+        bottom: 57px;
+        left: 45px;
+        background-image: -webkit-linear-gradient(#ce994b, #966c2c);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      &:nth-child(2) {
+        span::after {
+          left: 44px;
+          bottom: 32px;
+          content: "PASSPORT";
+          font-family: "Open Sans Condensed";
+          font-weight: bold;
+        }
+      }
+    }
+    &__symbol {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      top: 20px;
+      left: 45px;
+      background: linear-gradient(
+        to top,
+        #966c2c,
+        #1c1f49 25%,
+        #ce994b 50%,
+        #1c1f49 75%,
+        #ce994b 100%
+      );
+      opacity: 0.5;
+      border-radius: 2px;
+      &:nth-child(5) {
+        left: 65px;
+        background: linear-gradient(
+          to right,
+          #966c2c 10%,
+          #303570 65%,
+          #ce994b 65%,
+          #303570 75%
+        );
+      }
+      &:nth-child(6) {
+        left: 85px;
+        background: radial-gradient(#966c2c 40%, #303570 50%, #ce994b 50%);
+      }
+      &:nth-child(7) {
+        top: 40px;
+        background: linear-gradient(85deg, #966c2c, #1c1f49 50%, #ce994b 20%);
+      }
+      &:nth-child(8) {
+        left: 85px;
+        top: 40px;
+        background: radial-gradient(#966c2c, #303570 30%, #ce994b 30%);
+        background-position: 0 -6px;
+      }
+    }
+    &__footer {
+      position: absolute;
+      bottom: 14px;
+      width: 15px;
+      height: 8px;
+      left: 62px;
+      background: radial-gradient(
+        #b4853d 15%,
+        #303570 16%,
+        #303570 30%,
+        #b4853d 31%
+      );
+      background-size: 15px 15px;
+      background-position: 0 -3.5px;
+      &--line {
+        position: absolute;
+        background: #303570;
+        width: 6px;
+        height: 1px;
+        bottom: 3.5px;
+        &:nth-child(2) {
+          right: 0;
+        }
+      }
+    }
+  }
+}
+
+.passport-red {
+  .passport {
+    background: linear-gradient(to top right, #581515, #802626);
+    right: 0;
+    bottom: -45px;
+    transform: rotate(10deg);
+    box-shadow: -3px 5px 5px #33101036;
+    &__symbol {
+      background: linear-gradient(
+        to top,
+        #966c2c,
+        #581515 25%,
+        #ce994b 50%,
+        #581515 75%,
+        #ce994b 100%
+      );
+      &:nth-child(5) {
+        left: 65px;
+        background: linear-gradient(
+          to right,
+          #966c2c 10%,
+          #802626 65%,
+          #ce994b 65%,
+          #802626 75%
+        );
+      }
+      &:nth-child(6) {
+        left: 85px;
+        background: radial-gradient(#966c2c 40%, #802626 50%, #ce994b 50%);
+      }
+      &:nth-child(7) {
+        top: 40px;
+        background: linear-gradient(85deg, #966c2c, #581515 50%, #ce994b 20%);
+      }
+      &:nth-child(8) {
+        left: 85px;
+        top: 40px;
+        background: radial-gradient(#966c2c, #802626 30%, #ce994b 30%);
+        background-position: 0 -6px;
+      }
+    }
+    &__footer {
+      background: radial-gradient(
+        #b4853d 15%,
+        #581515 16%,
+        #581515 30%,
+        #b4853d 31%
+      );
+      background-size: 15px 15px;
+      background-position: 0 -3.5px;
+      &--line {
+        background: #581515;
       }
     }
   }
