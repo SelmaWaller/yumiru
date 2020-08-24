@@ -14,11 +14,11 @@ const OverviewObjects = [
     disabled: false,
   },
   {
-    furigana: "せ 世 — かい 界 — ち 地 — ず 図",
-    japName: "世界地図",
-    engName: "World Map",
+    furigana: "ち 地 — ず 図",
+    japName: "地図",
+    engName: "Map",
     url: "/map",
-    disabled: true,
+    disabled: false,
   },
   {
     furigana: "は 梯 — しご 子",

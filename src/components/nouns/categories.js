@@ -3,14 +3,16 @@ import styled, { keyframes } from "styled-components";
 
 import GridLarge from "../styles/grid-large";
 import GlobalCard from "../styles/global-card";
-import People from "./illustrations/people";
-import PeopleInfo from "./people-info";
-import Buildings from "./illustrations/buildings";
-import BuildingsInfo from "./buildings-info";
-import Nature from "./illustrations/nature";
-import NatureInfo from "./nature-info.js";
 import Travel from "./illustrations/travel";
 import TravelInfo from "./travel-info.js";
+import Nature from "./illustrations/nature";
+import NatureInfo from "./nature-info.js";
+import Buildings from "./illustrations/buildings";
+import BuildingsInfo from "./buildings-info";
+import People from "./illustrations/people";
+import PeopleInfo from "./people-info";
+import Food from "./illustrations/food";
+import FoodInfo from "./food-info";
 
 const IllustrationCard = styled(GlobalCard)`
   position: relative;
@@ -81,10 +83,11 @@ const ExpandCategory = styled.div`
 `;
 
 const Categories = () => {
-  const [people, setPeople] = useState(true);
-  const [home, setHome] = useState(true);
-  const [nature, setNature] = useState(true);
   const [travel, setTravel] = useState(true);
+  const [nature, setNature] = useState(true);
+  const [buildings, setBuildings] = useState(true);
+  const [people, setPeople] = useState(true);
+  const [food, setFood] = useState(true);
   const [info, setInfo] = useState(false);
 
   const arrow = info ? "«" : "»";
@@ -96,9 +99,10 @@ const Categories = () => {
           onClick={() => {
             window.scrollTo(0, 0);
             setInfo(!info);
-            setPeople(!people);
-            setHome(!home);
             setNature(!nature);
+            setBuildings(!buildings);
+            setPeople(!people);
+            setFood(!food);
           }}
         >
           <p>{arrow}</p>
@@ -113,9 +117,10 @@ const Categories = () => {
           onClick={() => {
             window.scrollTo(0, 0);
             setInfo(!info);
-            setPeople(!people);
-            setHome(!home);
             setTravel(!travel);
+            setBuildings(!buildings);
+            setPeople(!people);
+            setFood(!food);
           }}
         >
           <p>{arrow}</p>
@@ -125,14 +130,15 @@ const Categories = () => {
         {info ? <NatureInfo /> : ""}
         <Nature />
       </IllustrationCard>
-      <IllustrationCard as={home ? "" : closed}>
+      <IllustrationCard as={buildings ? "" : closed}>
         <ExpandCategory
           onClick={() => {
             window.scrollTo(0, 0);
             setInfo(!info);
-            setPeople(!people);
-            setNature(!nature);
             setTravel(!travel);
+            setNature(!nature);
+            setPeople(!people);
+            setFood(!food);
           }}
         >
           <p>{arrow}</p>
@@ -147,9 +153,10 @@ const Categories = () => {
           onClick={() => {
             window.scrollTo(0, 0);
             setInfo(!info);
-            setHome(!home);
-            setNature(!nature);
             setTravel(!travel);
+            setNature(!nature);
+            setBuildings(!buildings);
+            setFood(!food);
           }}
         >
           <p>{arrow}</p>
@@ -158,6 +165,24 @@ const Categories = () => {
         <h4>PEOPLE</h4>
         {info ? <PeopleInfo /> : ""}
         <People />
+      </IllustrationCard>
+      <IllustrationCard as={food ? "" : closed}>
+        <ExpandCategory
+          onClick={() => {
+            window.scrollTo(0, 0);
+            setInfo(!info);
+            setTravel(!travel);
+            setNature(!nature);
+            setBuildings(!buildings);
+            setPeople(!people);
+          }}
+        >
+          <p>{arrow}</p>
+        </ExpandCategory>
+        <h1>食べ物</h1>
+        <h4>FOOD</h4>
+        {info ? <FoodInfo /> : ""}
+        <Food />
       </IllustrationCard>
     </GridLarge>
   );

@@ -34,34 +34,28 @@ const PeopleInfo = () => {
                 <td>Kazoku</td>
               </tr>
               <tr>
-                <td>Grandfather</td>
-                <td>祖父</td>
-                <td>そふ</td>
-                <td>Sofu</td>
-              </tr>
-              <tr>
                 <td>Grandmother</td>
-                <td>祖母</td>
-                <td>そぼ</td>
-                <td>Sobo</td>
+                <td>お祖母さん</td>
+                <td>おばあさん</td>
+                <td>Obāsan</td>
               </tr>
               <tr>
-                <td>Uncle</td>
-                <td>伯父</td>
-                <td>おじ</td>
-                <td>Oji</td>
+                <td>Grandfather</td>
+                <td>お祖父さん</td>
+                <td>おじいさん</td>
+                <td>Ojīsan</td>
               </tr>
               <tr>
                 <td>Aunt</td>
-                <td>叔母</td>
-                <td>おば</td>
-                <td>Oba</td>
+                <td>伯母さん</td>
+                <td>おばさん</td>
+                <td>Obasan</td>
               </tr>
               <tr>
-                <td>Husband</td>
-                <td>夫</td>
-                <td>おっと</td>
-                <td>Otto</td>
+                <td>Uncle</td>
+                <td>伯父さん</td>
+                <td>おじさん</td>
+                <td>Ojisan</td>
               </tr>
               <tr>
                 <td>Wife</td>
@@ -70,16 +64,22 @@ const PeopleInfo = () => {
                 <td>Tsuma</td>
               </tr>
               <tr>
+                <td>Husband</td>
+                <td>夫</td>
+                <td>おっと</td>
+                <td>Otto</td>
+              </tr>
+              <tr>
                 <td>Mother</td>
-                <td>母</td>
-                <td>はは</td>
-                <td>Haha</td>
+                <td>お母さん</td>
+                <td>おかあさん</td>
+                <td>Okāsan</td>
               </tr>
               <tr>
                 <td>Father</td>
-                <td>父</td>
-                <td>ちち</td>
-                <td>Chichi</td>
+                <td>お父さん</td>
+                <td>おとうさん</td>
+                <td>Otōsan</td>
               </tr>
               <tr>
                 <td>Sibling</td>
@@ -89,21 +89,21 @@ const PeopleInfo = () => {
               </tr>
               <tr>
                 <td>Older sister</td>
-                <td>姉</td>
-                <td>あね</td>
-                <td>Ane</td>
+                <td>お姉さん</td>
+                <td>おねえさん</td>
+                <td>Onēsan</td>
+              </tr>
+              <tr>
+                <td>Older brother</td>
+                <td>お兄さん</td>
+                <td>おにいさん</td>
+                <td>Onīsan</td>
               </tr>
               <tr>
                 <td>Younger sister</td>
                 <td>妹</td>
                 <td>いもうと</td>
                 <td>Imōto</td>
-              </tr>
-              <tr>
-                <td>Older brother</td>
-                <td>兄</td>
-                <td>あに</td>
-                <td>Ani</td>
               </tr>
               <tr>
                 <td>Younger brother</td>
@@ -130,16 +130,16 @@ const PeopleInfo = () => {
                 <td>Kodomo</td>
               </tr>
               <tr>
-                <td>Son</td>
-                <td>息子</td>
-                <td>むすこ</td>
-                <td>Musuko</td>
-              </tr>
-              <tr>
                 <td>Daughter</td>
                 <td>娘</td>
                 <td>むすめ</td>
                 <td>Musume</td>
+              </tr>
+              <tr>
+                <td>Son</td>
+                <td>息子</td>
+                <td>むすこ</td>
+                <td>Musuko</td>
               </tr>
               <tr>
                 <td>Grandchild</td>
@@ -148,16 +148,16 @@ const PeopleInfo = () => {
                 <td>Mago</td>
               </tr>
               <tr>
-                <td>Grandson</td>
-                <td>孫息子</td>
-                <td>まごむすこ</td>
-                <td>Magomusuko</td>
-              </tr>
-              <tr>
                 <td>Granddaughter</td>
                 <td>孫娘</td>
                 <td>まごむすめ</td>
                 <td>Magomusume</td>
+              </tr>
+              <tr>
+                <td>Grandson</td>
+                <td>孫息子</td>
+                <td>まごむすこ</td>
+                <td>Magomusuko</td>
               </tr>
             </table>
           </Collapsible>
@@ -521,7 +521,7 @@ const PeopleInfo = () => {
                 <td>Serenity</td>
                 <td>冷静</td>
                 <td>れいせい</td>
-                <td>Reisei</td>
+                <td>Rēsē</td>
               </tr>
               <tr>
                 <td>Awe</td>
