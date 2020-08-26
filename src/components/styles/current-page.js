@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import PaginationButton from "../../styles/pagination";
+import PaginationButton from "../styles/pagination";
 
 const CurrentPage = styled(PaginationButton)`
   font-size: 16px;

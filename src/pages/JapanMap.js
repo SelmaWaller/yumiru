@@ -117,7 +117,7 @@ export default function JapanMap() {
             return (
               <path
                 key={index}
-                d={`${path.d}`}
+                d={path.d}
                 onMouseOver={() => {
                   setCityKanji(path.kanji);
                   setCityName(path.name);

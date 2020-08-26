@@ -21,6 +21,13 @@ const OverviewObjects = [
     disabled: false,
   },
   {
+    furigana: "きほん 基本 — かんじ 漢字",
+    japName: "基本漢字",
+    engName: "Basic Kanji",
+    url: "/kanji",
+    disabled: false,
+  },
+  {
     furigana: "は 梯 — しご 子",
     japName: "梯子ゲーム",
     engName: "Ladder Game",
@@ -31,13 +38,6 @@ const OverviewObjects = [
     furigana: "き 記 — おく 憶",
     japName: "記憶ゲーム",
     engName: "Memory Game",
-    url: "/",
-    disabled: true,
-  },
-  {
-    furigana: "お 合",
-    japName: "カードを合わせる",
-    engName: "Match the Cards",
     url: "/",
     disabled: true,
   },

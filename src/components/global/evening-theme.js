@@ -33,6 +33,11 @@ const evening = {
   alphabetLine: `1px solid ${variables.moonDimmed}40`,
   counterOrange: variables.moonOrange,
   counterBlue: variables.moonLightBlue,
+  // flash cards
+  invertedBackground: variables.invertedMoonBackground,
+  invertedText: variables.invertedMoonText,
+  flashCardShadowFront: `-3px 3px 10px ${variables.moonShadowDark}, inset 0 0 30px ${variables.moonShadowLight}70`,
+  flashCardShadowBack: `-3px 3px 10px ${variables.moonShadowDark}, inset 0 0 30px ${variables.sunShadowLight}50`,
   //footer
   footer: variables.moonShadowLight,
 };

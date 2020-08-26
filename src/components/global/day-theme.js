@@ -16,6 +16,7 @@ const day = {
   globalText: variables.sunText,
   contentShadow: `3px -3px 10px ${variables.sunShadowDark}15, inset -3px 3px 8px ${variables.sunShadowLight}, -3px 3px 10px ${variables.sunShadowDark}80, inset 2px -2px 2px ${variables.sunShadowDark}, inset 3px -3px 10px ${variables.sunShadowDark}f5, inset 3px -3px 3px ${variables.sunShadowLight}00, inset -5px 5px 5px ${variables.sunShadowDark}00`,
   contentShadowHover: `5px -5px 8px ${variables.sunShadowDark}00, inset -5px 5px 10px ${variables.sunShadowLight}00, -5px 5px 15px ${variables.sunShadowDark}00, inset 5px -5px 5px ${variables.sunShadowDark}00, inset 1px -1px 25px ${variables.sunShadowDark}00, inset 8px -8px 15px ${variables.sunShadowLight}, inset -4px 4px 10px ${variables.sunShadowDark}`,
+  contentShadowFlip: `-3px -3px 10px ${variables.sunShadowDark}15, inset 3px 3px 8px ${variables.sunShadowLight}, 3px 3px 10px ${variables.sunShadowDark}80, inset -2px -2px 2px ${variables.sunShadowDark}, inset -3px -3px 10px ${variables.sunShadowDark}f5, inset -3px -3px 3px ${variables.sunShadowLight}00, inset 5px 5px 5px ${variables.sunShadowDark}00`,
   floatShadow: `-5px 5px 10px ${variables.moonShadowLight}15`,
   globalScroll: variables.sunDimmed,
   globalScrollHover: variables.sunDimmedHover,
@@ -34,6 +35,11 @@ const day = {
   alphabetLine: `2px solid ${variables.sunShadowDark}`,
   counterOrange: variables.sunOrange,
   counterBlue: variables.sunLightBlue,
+  // flash cards
+  invertedBackground: variables.invertedSunBackground,
+  invertedText: variables.invertedSunText,
+  flashCardShadowFront: `-3px 3px 10px ${variables.sunShadowDark}, inset 0 0 30px ${variables.sunShadowLight}`,
+  flashCardShadowBack: `-3px 3px 10px ${variables.sunShadowDark}, inset 0 0 30px ${variables.moonShadowLight}70`,
   //footer
   footer: variables.sunShadowDark,
 };

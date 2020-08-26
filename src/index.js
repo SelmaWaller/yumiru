@@ -8,6 +8,7 @@ import Overview from "./pages/Overview";
 import Alphabets from "./pages/Alphabets";
 import Nouns from "./pages/Nouns";
 import JapanMap from "./pages/JapanMap";
+import BasicKanji from "./pages/BasicKanji";
 
 ReactDOM.render(
   <Router>
@@ -17,6 +18,7 @@ ReactDOM.render(
         <Route path="/alphabets" component={Alphabets}></Route>
         <Route path="/nouns" component={Nouns}></Route>
         <Route path="/map" component={JapanMap}></Route>
+        <Route path="/kanji" component={BasicKanji}></Route>
       </Switch>
     </App>
   </Router>,

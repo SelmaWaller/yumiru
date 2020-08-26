@@ -4,8 +4,8 @@ import FlexWrapper from "../styles/flex-wrapper";
 import GridSmall from "../styles/grid-small";
 
 import PaginationButton from "../styles/pagination";
-import CurrentPage from "./styles/current-page";
-import Number from "./styles/number-page";
+import CurrentPage from "../styles/current-page";
+import NextPage from "../styles/next-page";
 
 const Pagination = ({ alphabets, setAlphabets }) => {
   const toggleNumbers = () => {
@@ -27,7 +27,7 @@ const Pagination = ({ alphabets, setAlphabets }) => {
           <span>{alphabets ? `ALPHABETS` : `NUMBERS`}</span>
         </CurrentPage>
         <PaginationButton
-          as={Number}
+          as={NextPage}
           disabled={!alphabets}
           onClick={() => {
             toggleNumbers();

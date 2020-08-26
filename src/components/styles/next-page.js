@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
-import PaginationButton from "../../styles/pagination";
+import PaginationButton from "./pagination";
 
-const Number = styled(PaginationButton)`
+const NextPage = styled(PaginationButton)`
   span::after {
     right: unset;
     left: 86px;
@@ -30,4 +30,4 @@ const Number = styled(PaginationButton)`
   }
 `;
 
-export default Number;
+export default NextPage;

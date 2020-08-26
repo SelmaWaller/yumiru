@@ -20,7 +20,7 @@ const IllustrationCard = styled(GlobalCard)`
   max-width: 100%;
   min-height: 500px;
   margin: 20px;
-  transition: 300ms ease-out;
+  transition: 150ms;
   cursor: default;
   &:hover {
     box-shadow: ${(props) => props.theme.contentShadow};
@@ -44,11 +44,6 @@ const IllustrationCard = styled(GlobalCard)`
   p {
     font-family: "Comfortaa", sans-serif;
     color: ${(props) => props.theme.globalText};
-  }
-  &:active,
-  &:focus {
-    transition: 200ms ease-out;
-    max-width: 100%;
   }
 `;
 
