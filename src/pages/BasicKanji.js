@@ -105,6 +105,7 @@ const FlashCard = styled(Card)`
 const Grades = styled.div`
     margin-top: 20px;
     text-align: center;
+    min-height: 540px;
     select, option {
       font-size: 20px;
       font-weight: bold;
@@ -120,6 +121,7 @@ export default function BasicKanji() {
   const [end, setEnd] = useState(12);
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedGrade, setSelectedGrade] = useState(Grade1);
+  const gradeCount = selectedGrade.length;
 
   let nextPage = () => {
     setStart(start + 12);
@@ -174,7 +176,7 @@ export default function BasicKanji() {
           >
             <span>☆☆☆</span>
             <div>
-              <span>Grade&nbsp;3</span>
+              <span>Grade&nbsp;3&nbsp;(coming)</span>
             </div>
           </TabButton>
           <TabButton
@@ -186,7 +188,7 @@ export default function BasicKanji() {
           >
             <span>★</span>
             <div>
-              <span>Grade&nbsp;4</span>
+              <span>Grade&nbsp;4&nbsp;(coming)</span>
             </div>
           </TabButton>
           <TabButton
@@ -198,7 +200,7 @@ export default function BasicKanji() {
           >
             <span>★★</span>
             <div>
-              <span>Grade&nbsp;5</span>
+              <span>Grade&nbsp;5&nbsp;(coming)</span>
             </div>
           </TabButton>
           <TabButton
@@ -210,7 +212,7 @@ export default function BasicKanji() {
           >
             <span>★★★</span>
             <div>
-              <span>Grade&nbsp;6</span>
+              <span>Grade&nbsp;6&nbsp;(coming)</span>
             </div>
           </TabButton>
           <TabButton
@@ -222,14 +224,14 @@ export default function BasicKanji() {
           >
             <span>✯</span>
             <div>
-              <span>Junior&nbsp;High&nbsp;School</span>
+              <span>Jr.&nbsp;High&nbsp;(coming)</span>
             </div>
           </TabButton>
         </FlexWrapper>
         <FlexWrapper>
           <GridSmall>
             <PaginationButton
-              disabled={start <= 1}
+              disabled={currentPage === 1}
               onClick={() => {
                 prevPage();
               }}
@@ -237,11 +239,13 @@ export default function BasicKanji() {
               <span>PREV</span>
             </PaginationButton>
             <CurrentPage>
-              <span>{currentPage} / 7</span>
+              <span>
+                {currentPage} / {Math.round(gradeCount / 12 + 0.5)}
+              </span>
             </CurrentPage>
             <PaginationButton
+              disabled={currentPage === Math.round(gradeCount / 12 + 0.5)}
               as={NextPage}
-              disabled={start >= 70}
               onClick={() => {
                 nextPage();
               }}
