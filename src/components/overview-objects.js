@@ -7,6 +7,13 @@ const OverviewObjects = [
     disabled: false,
   },
   {
+    furigana: "きほん 基本 — かんじ 漢字",
+    japName: "基本漢字",
+    engName: "Basic Kanji",
+    url: "/kanji",
+    disabled: false,
+  },
+  {
     furigana: "めい 名 — し 詞",
     japName: "名詞",
     engName: "Nouns",
@@ -18,13 +25,6 @@ const OverviewObjects = [
     japName: "地図",
     engName: "Map",
     url: "/map",
-    disabled: false,
-  },
-  {
-    furigana: "きほん 基本 — かんじ 漢字",
-    japName: "基本漢字",
-    engName: "Basic Kanji",
-    url: "/kanji",
     disabled: false,
   },
   {

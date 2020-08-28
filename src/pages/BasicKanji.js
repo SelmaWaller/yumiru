@@ -8,15 +8,16 @@ import FlexWrapper from "../components/styles/flex-wrapper";
 import Card from "../components/styles/global-card";
 import PaginationButton from "../components/styles/pagination";
 import TabButton from "../components/alphabets-and-numbers/styles/tab-button";
-import Grade1 from "../components/flash-cards/grade-1";
-import Grade2 from "../components/flash-cards/grade-2";
-import Grade3 from "../components/flash-cards/grade-3";
-import Grade4 from "../components/flash-cards/grade-4";
-import Grade5 from "../components/flash-cards/grade-5";
-import Grade6 from "../components/flash-cards/grade-6";
-import Grade7 from "../components/flash-cards/grade-7";
+import Grade1 from "../components/flash-cards/grades/grade-1";
+import Grade2 from "../components/flash-cards/grades/grade-2";
+import Grade3 from "../components/flash-cards/grades/grade-3";
+import Grade4 from "../components/flash-cards/grades/grade-4";
+import Grade5 from "../components/flash-cards/grades/grade-5";
+import Grade6 from "../components/flash-cards/grades/grade-6";
+import Grade7 from "../components/flash-cards/grades/grade-7";
 import NextPage from "../components/styles/next-page";
 import CurrentPage from "../components/styles/current-page";
+import KanjiInfo from "../components/flash-cards/kanji-info";
 
 const FlashCardGrid = styled(GridMedium)`
   margin-top: -20px;
@@ -48,6 +49,10 @@ const FlashCard = styled(Card)`
     box-shadow: ${(props) => props.theme.flashCardShadowFront};
   }
 
+  &:hover .flip {
+    transform: rotateY(10deg);
+  }
+
   &:active .flip {
     transform: rotateY(180deg);
   }
@@ -60,25 +65,44 @@ const FlashCard = styled(Card)`
     align-items: center;
     justify-content: center;
     h1 {
-      margin: 0;
+      margin: 0 -195px 0 0;
       font-size: 70px;
       font-family: "Comfortaa", sans-serif;
       color: ${(props) => props.theme.globalText};
+      z-index: 2;
     }
     div {
       display: block;
-      margin-left: 20px;
+      position: absolute;
+      top: -55px; 
+      left: -125px;
       margin-right: 20px;
       min-width: 140px;
       max-width: 140px;
-      ul {
-        padding: 0;
-        li {
+      p {
           line-height: 30px;
+          padding-left: 25px;
           text-align: left;
+          margin-bottom: 0;
           font-size: 16px;
           font-family: "Noto Sans JP", sans-serif;
-          color: ${(props) => props.theme.globalText}a9;
+          color: ${(props) => props.theme.globalText}dd;
+          span {
+            font-size: 14px;
+            position: absolute;
+            color: ${(props) => props.theme.globalText}75;
+            font-family: "Comfortaa", sans-serif;
+            left: -20px;
+            top: 19px;
+            font-weight: bold;
+          }
+          &:nth-child(2) {
+            margin-top: 5px;
+            span {
+              top: unset;
+              bottom: -3px;
+            }
+          }
         }
       }
     }
@@ -96,8 +120,22 @@ const FlashCard = styled(Card)`
     text-transform: uppercase;
     padding: 20px;
     h1 {
+      margin: 0;
       color: ${(props) => props.theme.invertedText};
       font-size: 16px;
+      line-height: 25px;
+    }
+  }
+`;
+
+const HighSchool = styled(TabButton)`
+  span {
+    font-size: 20px;
+  }
+  div {
+    span {
+      margin-top: -5px;
+      font-size: 14px;
     }
   }
 `;
@@ -105,7 +143,7 @@ const FlashCard = styled(Card)`
 const Grades = styled.div`
     margin-top: 20px;
     text-align: center;
-    min-height: 540px;
+    min-height: 550px;
     select, option {
       font-size: 20px;
       font-weight: bold;
@@ -176,7 +214,7 @@ export default function BasicKanji() {
           >
             <span>☆☆☆</span>
             <div>
-              <span>Grade&nbsp;3&nbsp;(coming)</span>
+              <span>Grade&nbsp;3</span>
             </div>
           </TabButton>
           <TabButton
@@ -216,6 +254,7 @@ export default function BasicKanji() {
             </div>
           </TabButton>
           <TabButton
+            as={HighSchool}
             disabled={selectedGrade === Grade7}
             onClick={() => {
               resetPage();
@@ -261,15 +300,19 @@ export default function BasicKanji() {
                 <div className="flip">
                   <div className="flip__kanji">
                     <div>
-                      <ul>
-                        <li>{card.hiragana}</li>
-                        <li>{card.katakana}</li>
-                      </ul>
+                      <p>
+                        {card.kun ? <span>KUN </span> : ""}
+                        {card.kun}
+                      </p>
+                      <p>
+                        {card.on ? <span>ON </span> : ""}
+                        {card.on}
+                      </p>
                     </div>
                     <h1>{card.kanji}</h1>
                   </div>
                   <div className="flip__solution">
-                    <h1>{card.english}</h1>
+                    <h1>{card.meaning}</h1>
                   </div>
                 </div>
               </FlashCard>
@@ -277,6 +320,7 @@ export default function BasicKanji() {
           })}
         </FlashCardGrid>
       </Grades>
+      <KanjiInfo />
     </>
   );
 }

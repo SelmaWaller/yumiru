@@ -25,7 +25,7 @@ const ThemePalette = {
   moonShadowDark: "#192338",
   moonShadowTextDark: "#1C263D",
   moonText: "#9FAED2",
-  invertedMoonText: "#53587E",
+  invertedMoonText: "#333f58",
   moonDimmed: "#687596",
   moonDimmedHover: "#778CC3",
   moonTextLight: "#212b40",
