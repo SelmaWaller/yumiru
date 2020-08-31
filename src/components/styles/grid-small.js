@@ -8,7 +8,7 @@ const GridSmall = styled.div`
   max-width: 500px;
   grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
   transition: 150ms;
-  table {
+  tbody {
     &:nth-child(1) {
       border-right: none;
     }

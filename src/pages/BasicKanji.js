@@ -65,26 +65,27 @@ const FlashCard = styled(Card)`
     align-items: center;
     justify-content: center;
     h1 {
-      margin: 0 -195px 0 0;
+      margin: 0 -190px 0 0;
       font-size: 70px;
-      font-family: "Comfortaa", sans-serif;
+      font-family: "Noto Sans JP", sans-serif;
       color: ${(props) => props.theme.globalText};
       z-index: 2;
+      font-weight: normal;
     }
     div {
       display: block;
       position: absolute;
-      top: -55px; 
+      top: -40px; 
       left: -125px;
       margin-right: 20px;
       min-width: 140px;
       max-width: 140px;
       p {
-          line-height: 30px;
+          line-height: 20px;
           padding-left: 25px;
           text-align: left;
           margin-bottom: 0;
-          font-size: 16px;
+          font-size: 14px;
           font-family: "Noto Sans JP", sans-serif;
           color: ${(props) => props.theme.globalText}dd;
           span {
@@ -97,7 +98,7 @@ const FlashCard = styled(Card)`
             font-weight: bold;
           }
           &:nth-child(2) {
-            margin-top: 5px;
+            margin-top: 10px;
             span {
               top: unset;
               bottom: -3px;
@@ -116,13 +117,13 @@ const FlashCard = styled(Card)`
     box-shadow: ${(props) => props.theme.flashCardShadowBack};
     backface-visibility: hidden;
     transform: rotateY(180deg);
-    font-family: "Comfortaa", sans-serif;
     text-transform: uppercase;
     padding: 20px;
     h1 {
       margin: 0;
       color: ${(props) => props.theme.invertedText};
-      font-size: 16px;
+            font-family: "Comfortaa", sans-serif;
+            font-size: 16px;
       line-height: 25px;
     }
   }
@@ -143,7 +144,7 @@ const HighSchool = styled(TabButton)`
 const Grades = styled.div`
     margin-top: 20px;
     text-align: center;
-    min-height: 550px;
+    min-height: 250px;
     select, option {
       font-size: 20px;
       font-weight: bold;
@@ -159,18 +160,29 @@ export default function BasicKanji() {
   const [end, setEnd] = useState(12);
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedGrade, setSelectedGrade] = useState(Grade1);
-  const gradeCount = selectedGrade.length;
+  const gradeCount = Math.round(selectedGrade.length / 12 + 0.5);
+  const GradeArray = [Grade1, Grade2, Grade3, Grade4, Grade5, Grade6, Grade7];
+  const [id, setId] = useState(1);
 
   let nextPage = () => {
     setStart(start + 12);
     setEnd(end + 12);
     setCurrentPage(currentPage + 1);
+    if (currentPage === gradeCount) {
+      setId(id + 1);
+      setStart(0);
+      setEnd(12);
+      setCurrentPage(1);
+      setSelectedGrade(GradeArray[id]);
+    }
   };
+
   let prevPage = () => {
     setStart(start - 12);
     setEnd(end - 12);
     setCurrentPage(currentPage - 1);
   };
+
   let resetPage = () => {
     setStart(0);
     setEnd(12);
@@ -184,6 +196,7 @@ export default function BasicKanji() {
           <TabButton
             disabled={selectedGrade === Grade1}
             onClick={() => {
+              setId(1);
               resetPage();
               setSelectedGrade(Grade1);
             }}
@@ -196,6 +209,7 @@ export default function BasicKanji() {
           <TabButton
             disabled={selectedGrade === Grade2}
             onClick={() => {
+              setId(2);
               resetPage();
               setSelectedGrade(Grade2);
             }}
@@ -208,6 +222,7 @@ export default function BasicKanji() {
           <TabButton
             disabled={selectedGrade === Grade3}
             onClick={() => {
+              setId(3);
               resetPage();
               setSelectedGrade(Grade3);
             }}
@@ -220,6 +235,7 @@ export default function BasicKanji() {
           <TabButton
             disabled={selectedGrade === Grade4}
             onClick={() => {
+              setId(4);
               resetPage();
               setSelectedGrade(Grade4);
             }}
@@ -232,6 +248,7 @@ export default function BasicKanji() {
           <TabButton
             disabled={selectedGrade === Grade5}
             onClick={() => {
+              setId(5);
               resetPage();
               setSelectedGrade(Grade5);
             }}
@@ -244,6 +261,7 @@ export default function BasicKanji() {
           <TabButton
             disabled={selectedGrade === Grade6}
             onClick={() => {
+              setId(6);
               resetPage();
               setSelectedGrade(Grade6);
             }}
@@ -257,6 +275,7 @@ export default function BasicKanji() {
             as={HighSchool}
             disabled={selectedGrade === Grade7}
             onClick={() => {
+              setId(7);
               resetPage();
               setSelectedGrade(Grade7);
             }}
@@ -279,11 +298,11 @@ export default function BasicKanji() {
             </PaginationButton>
             <CurrentPage>
               <span>
-                {currentPage} / {Math.round(gradeCount / 12 + 0.5)}
+                {currentPage} / {gradeCount}
               </span>
             </CurrentPage>
             <PaginationButton
-              disabled={currentPage === Math.round(gradeCount / 12 + 0.5)}
+              disabled={selectedGrade === Grade7 && currentPage === gradeCount}
               as={NextPage}
               onClick={() => {
                 nextPage();

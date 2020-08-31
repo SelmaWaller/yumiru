@@ -433,7 +433,6 @@ const Grade1 = [
   },
   {
     kanji: "王",
-    kun: "---",
     on: "オウ, -ノウ",
     meaning: "King, rule, magnate",
   },
