@@ -102,7 +102,10 @@ const KanjiInfo = () => {
                         {radical.radical_strokes_2}
                         {radical.radical_2}
                         <span>{radical.position_2}</span>
-                        <span>{radical.meaning_2}</span>
+                        <span>
+                          {radical.meaning_2}
+                          <span>{radical.example_2}</span>
+                        </span>
                       </td>
                     </tr>
                     <tr>
@@ -110,14 +113,20 @@ const KanjiInfo = () => {
                         {radical.radical_strokes_3}
                         {radical.radical_3}
                         <span>{radical.position_3}</span>
-                        <span>{radical.meaning_3}</span>
+                        <span>
+                          {radical.meaning_3}
+                          <span>{radical.example_3}</span>
+                        </span>
                       </td>
                     </tr>
                     <tr>
                       <td>
                         {radical.radical_3_2}
                         <span>{radical.position_3_2}</span>
-                        <span>{radical.meaning_3_2}</span>
+                        <span>
+                          {radical.meaning_3_2}
+                          <span>{radical.example_3_2}</span>
+                        </span>
                       </td>
                     </tr>
                     <tr>
@@ -129,7 +138,10 @@ const KanjiInfo = () => {
                         ) : (
                           <span>&nbsp;</span>
                         )}
-                        <span>{radical.meaning_4}</span>
+                        <span>
+                          {radical.meaning_4}
+                          <span>{radical.example_4}</span>
+                        </span>
                       </td>
                     </tr>
                     <tr>
