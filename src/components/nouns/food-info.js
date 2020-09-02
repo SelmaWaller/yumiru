@@ -173,16 +173,10 @@ const FoodInfo = () => {
                   <td>Gyoniku</td>
                 </tr>
                 <tr>
-                  <td>Sausage</td>
-                  <td>&nbsp;</td>
-                  <td>ソーセージ</td>
-                  <td>Sōsēji</td>
-                </tr>
-                <tr>
-                  <td>Sushi</td>
-                  <td>寿司</td>
-                  <td>すし</td>
-                  <td>Sushi</td>
+                  <td>Chicken</td>
+                  <td>鳥肉</td>
+                  <td>とりにく</td>
+                  <td>Toriniku</td>
                 </tr>
               </tbody>
             </table>

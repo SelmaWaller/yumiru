@@ -10,8 +10,10 @@ const Time = () => {
   const Time = (
     <p>
       {displayAmpm}
-      <span>{(new Date().getHours() % 12).toString().padStart(2, "0")}</span>時
-      <span>{new Date().getMinutes().toString().padStart(2, "0")}</span>分
+      <span>
+        {(new Date().getHours() % 12 || 12).toString().padStart(2, "0")}
+      </span>
+      時<span>{new Date().getMinutes().toString().padStart(2, "0")}</span>分
       <span>{new Date().getSeconds().toString().padStart(2, "0")}</span>秒
     </p>
   );
