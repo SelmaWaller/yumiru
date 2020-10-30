@@ -14,17 +14,17 @@ const OverviewObjects = [
     disabled: false,
   },
   {
-    furigana: "めい 名 — し 詞",
-    japName: "名詞",
-    engName: "Nouns",
-    url: "/nouns",
-    disabled: false,
-  },
-  {
     furigana: "ち 地 — ず 図",
     japName: "地図",
     engName: "Map",
     url: "/map",
+    disabled: false,
+  },
+  {
+    furigana: "き 記 — おく 憶",
+    japName: "記憶ゲーム",
+    engName: "Memory Game",
+    url: "/",
     disabled: false,
   },
   {
@@ -35,10 +35,10 @@ const OverviewObjects = [
     disabled: true,
   },
   {
-    furigana: "き 記 — おく 憶",
-    japName: "記憶ゲーム",
-    engName: "Memory Game",
-    url: "/",
+    furigana: "めい 名 — し 詞",
+    japName: "名詞",
+    engName: "Nouns",
+    url: "/nouns",
     disabled: true,
   },
 ];
