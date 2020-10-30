@@ -82,6 +82,18 @@ const InfoWindow = styled.div`
     font-family: "Comfortaa", sans-serif;
     text-transform: uppercase;
   }
+  .normalCase {
+    text-transform: none;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: bold;
+    max-width: 350px;
+    position: relative;
+    span {
+      font-weight: normal;
+      position: absolute;
+      right: 0;
+    }
+  }
   .image {
     margin-top: 20px;
     max-width: 350px;
@@ -163,7 +175,11 @@ export default function JapanMap() {
   const [cityName, setCityName] = useState();
   const [cityKanji, setCityKanji] = useState();
   const [cityImage, setCityImage] = useState();
-  const [cityDescription, setCityDescription] = useState();
+  const [cityRegion, setCityRegion] = useState();
+  const [cityArea, setCityArea] = useState();
+  const [cityPopulation, setCityPopulation] = useState();
+  const [cityAverageHigh, setCityAverageHigh] = useState();
+  const [cityAverageLow, setCityAverageLow] = useState();
   const [activeCity, setActiveCity] = useState();
 
   return (
@@ -189,11 +205,15 @@ export default function JapanMap() {
                 <path
                   d={city.d}
                   onMouseDown={() => {
-                    setActiveCity(city.d);
-                    setCityKanji(city.kanji);
-                    setCityName(city.name);
-                    setCityImage(city.image);
-                    setCityDescription(city.description);
+                    setActiveCity(city.d)
+                    setCityKanji(city.kanji)
+                    setCityName(city.name)
+                    setCityImage(city.image)
+                    setCityRegion(city.region)
+                    setCityArea(city.area)
+                    setCityPopulation(city.population)
+                    setCityAverageHigh(city.averageHigh)
+                    setCityAverageLow(city.averageLow)
                   }}
                 />
                 <path className="activeCity" d={activeCity} />
@@ -210,13 +230,17 @@ export default function JapanMap() {
                   <button
                     className={activeCity === city.d ? "selectedCity" : ""}
                     onMouseOver={() => {
-                      setActiveCity(city.d);
+                      setActiveCity(city.d)
                     }}
                     onMouseDown={() => {
-                      setCityKanji(city.kanji);
-                      setCityName(city.name);
-                      setCityImage(city.image);
-                      setCityDescription(city.description);
+                      setCityKanji(city.kanji)
+                      setCityName(city.name)
+                      setCityImage(city.image)
+                      setCityRegion(city.region)
+                      setCityArea(city.area)
+                      setCityPopulation(city.population)
+                      setCityAverageHigh(city.averageHigh)
+                      setCityAverageLow(city.averageLow)
                     }}
                   >
                     {city.name}
@@ -236,7 +260,11 @@ export default function JapanMap() {
             <img src={cityImage ? cityImage : japan} alt={cityName} />
           </div>
           <div className="description">
-            <p>{cityDescription ? cityDescription : ""}</p>
+            <p className="normalCase">Region: <span>{cityRegion}</span></p>
+            <p className="normalCase area">Area: <span>{cityArea}</span></p>
+            <p className="normalCase">Population: <span>{cityPopulation}</span></p>
+            <p className="normalCase">Average high: <span>{cityAverageHigh}</span></p>
+            <p className="normalCase">Average low: <span>{cityAverageLow}</span></p>
           </div>
         </InfoWindow>
       </SVG>

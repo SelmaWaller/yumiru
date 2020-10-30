@@ -59,7 +59,11 @@ const JapanSVG = [
     name: "Hiroshima",
     kanji: "広島",
     image: Hiroshima,
-    description: "",
+    region: "Chūgoku (San'yō)",
+    area: "906.68 km2",
+    population: "1,199,391 (June 1st 2019)",
+    averageHigh: "29°C",
+    averageLow: "8°C"
   },
   {
     d:
@@ -68,7 +72,11 @@ const JapanSVG = [
     name: "Okayama",
     kanji: "岡山",
     image: Okayama,
-    description: "",
+    region: "Chūgoku (San'yō)",
+    area: "789.92 km2",
+    population: "720,841 (February 1st 2017)",
+    averageHigh: "31°C",
+    averageLow: "8°C"
   },
   {
     d:
@@ -77,7 +85,11 @@ const JapanSVG = [
     name: "Shimane",
     kanji: "島根",
     image: Shimane,
-    description: "",
+    region: "Chūgoku (San'in)",
+    area: "6,708.24 km2",
+    population: "689,963 (September 1st 2016)",
+    averageHigh: "29°C",
+    averageLow: "7°C"
   },
   {
     d:
@@ -86,7 +98,11 @@ const JapanSVG = [
     name: "Tottori",
     kanji: "鳥取",
     image: Tottori,
-    description: "",
+    region: "Chūgoku (San'in)",
+    area: "3,507.05 km2",
+    population: "570,569 (June 1st 2016)",
+    averageHigh: "28°C",
+    averageLow: "7°C"
   },
   {
     d:
@@ -95,7 +111,11 @@ const JapanSVG = [
     name: "Yamaguchi",
     kanji: "山口",
     image: Yamaguchi,
-    description: "",
+    region: "Chūgoku (San'yō)",
+    area: "6,110.94 km2",
+    population: "1,445,702 (May 1st 2011)",
+    averageHigh: "28°C",
+    averageLow: "8°C"
   },
   {
     d:
@@ -104,7 +124,11 @@ const JapanSVG = [
     name: "Saga",
     kanji: "佐賀",
     image: Saga,
-    description: "",
+    region: "Kyushu",
+    area: "431.84 km2",
+    population: "232,736 (August 1, 2020)",
+    averageHigh: "32°C",
+    averageLow: "10°C"
   },
   {
     d:
@@ -113,7 +137,11 @@ const JapanSVG = [
     name: "Fukuoka",
     kanji: "福岡",
     image: Fukuoka,
-    description: "",
+    region: "Kyushu",
+    area: "4,986.52 km2",
+    population: "1,579,450 (October 1, 2018)",
+    averageHigh: "31°C",
+    averageLow: "9°C"
   },
   {
     d:
@@ -122,7 +150,11 @@ const JapanSVG = [
     name: "Kumamoto",
     kanji: "熊本",
     image: Kumamoto,
-    description: "",
+    region: "Kyushu",
+    area: "390.32 km2",
+    population: "738,907 (June 1, 2019)",
+    averageHigh: "32°C",
+    averageLow: "11°C"
   },
   {
     d:
@@ -131,7 +163,11 @@ const JapanSVG = [
     name: "Miyazaki",
     kanji: "宮崎",
     image: Miyazaki,
-    description: "",
+    region: "Kyushu",
+    area: "7,735.32 km2",
+    population: "1,073,054 (June 1, 2019)",
+    averageHigh: "29°C",
+    averageLow: "11°C"
   },
   {
     d:
@@ -140,7 +176,11 @@ const JapanSVG = [
     name: "Ehime",
     kanji: "愛媛",
     image: Ehime,
-    description: "",
+    region: "Shikoku",
+    area: "5,676.23 km2",
+    population: "1,342,011 (June 1, 2019)",
+    averageHigh: "29°C",
+    averageLow: "8°C"
   },
   {
     d:
@@ -149,7 +189,11 @@ const JapanSVG = [
     name: "Kagawa",
     kanji: "香川",
     image: Kagawa,
-    description: "",
+    region: "Shikoku",
+    area: "1,876.77 km2",
+    population: "957,430 (June 1, 2019)",
+    averageHigh: "31°C",
+    averageLow: "8°C"
   },
   {
     d:
@@ -158,7 +202,11 @@ const JapanSVG = [
     name: "Kōchi",
     kanji: "高知",
     image: Kochi,
-    description: "",
+    region: "Shikoku",
+    area: "7,103.93 km2",
+    population: "757,914 (December 1, 2011)",
+    averageHigh: "26°C",
+    averageLow: "4°C"
   },
   {
     d:
@@ -167,7 +215,11 @@ const JapanSVG = [
     name: "Ōita",
     kanji: "大分",
     image: Oita,
-    description: "",
+    region: "Kyushu",
+    area: "6,340.73 km2",
+    population: "1,136,245 (June 1, 2019)",
+    averageHigh: "30°C",
+    averageLow: "9°C"
   },
   {
     d:
@@ -176,7 +228,11 @@ const JapanSVG = [
     name: "Tokushima",
     kanji: "徳島",
     image: Tokushima,
-    description: "",
+    region: "Shikoku",
+    area: "4,146.80 km2",
+    population: "728,633 (October 1, 2019)",
+    averageHigh: "30°C",
+    averageLow: "9°C"
   },
   {
     d:
@@ -185,7 +241,11 @@ const JapanSVG = [
     name: "Aichi",
     kanji: "愛知",
     image: Aichi,
-    description: "",
+    region: "Chūbu (Tōkai)",
+    area: "5,172.92 km2",
+    population: "7,552,873 (October 1, 2019)",
+    averageHigh: "34°C",
+    averageLow: "9°C"
   },
   {
     d:
@@ -194,7 +254,11 @@ const JapanSVG = [
     name: "Gifu",
     kanji: "岐阜",
     image: Gifu,
-    description: "",
+    region: "Chūbu (Tōkai)",
+    area: "10,621.29 km2",
+    population: "1,991,390 (June 1, 2019)",
+    averageHigh: "32°C",
+    averageLow: "8°C"
   },
   {
     d:
@@ -203,7 +267,11 @@ const JapanSVG = [
     name: "Ishikawa",
     kanji: "石川",
     image: Ishikawa,
-    description: "",
+    region: "Chūbu (Hokuriku)",
+    area: "4,186.09 km2",
+    population: "1,140,573 (October 31, 2019)",
+    averageHigh: "29°C",
+    averageLow: "6°C"
   },
   {
     d:
@@ -212,7 +280,11 @@ const JapanSVG = [
     name: "Mie",
     kanji: "三重",
     image: Mie,
-    description: "",
+    region: "Kansai (Tōkai)",
+    area: "5,774.41 km2",
+    population: "1,781,948 (June 1, 2019)",
+    averageHigh: "30°C",
+    averageLow: "9°C"
   },
   {
     d:
@@ -221,7 +293,11 @@ const JapanSVG = [
     name: "Nagano",
     kanji: "長野",
     image: Nagano,
-    description: "",
+    region: "Chūbu (Kōshin'etsu)",
+    area: "13,561.56 km2",
+    population: "2,052,493 (June 1, 2019)",
+    averageHigh: "29°C",
+    averageLow: "10°C"
   },
   {
     d:
@@ -230,7 +306,11 @@ const JapanSVG = [
     name: "Shizuoka",
     kanji: "静岡",
     image: Shizuoka,
-    description: "",
+    region: "Chūbu (Tōkai)",
+    area: "7,777.42 km2",
+    population: "3,637,998 (December 1, 2019)",
+    averageHigh: "30°C",
+    averageLow: "10°C"
   },
   {
     d:
@@ -239,7 +319,11 @@ const JapanSVG = [
     name: "Toyama",
     kanji: "富山",
     image: Toyama,
-    description: "",
+    region: "Chūbu (Hokuriku)",
+    area: "4,247.61 km2",
+    population: "1,044,588 (June 1, 2019)",
+    averageHigh: "30°C",
+    averageLow: "7°C"
   },
   {
     d:
@@ -248,7 +332,11 @@ const JapanSVG = [
     name: "Hokkaido",
     kanji: "北海道",
     image: Hokkaido,
-    description: "",
+    region: "Hokkaido",
+    area: "83,423.84 km2",
+    population: "5,281,297 (May 31, 2019)",
+    averageHigh: "20°C",
+    averageLow: "-6°C"
   },
   {
     d:
@@ -257,7 +345,11 @@ const JapanSVG = [
     name: "Fukui",
     kanji: "福井",
     image: Fukui,
-    description: "",
+    region: "Chūbu (Hokuriku)",
+    area: "4,190.49 km2",
+    population: "778,943 (June 1, 2017)",
+    averageHigh: "29°C",
+    averageLow: "7°C"
   },
   {
     d:
@@ -266,7 +358,11 @@ const JapanSVG = [
     name: "Hyōgo",
     kanji: "兵庫",
     image: Hyogo,
-    description: "",
+    region: "Kansai",
+    area: "8,400.94 km2",
+    population: "5,469,762 (June 1, 2019)",
+    averageHigh: "28°C",
+    averageLow: "1°C"
   },
   {
     d:
@@ -275,7 +371,11 @@ const JapanSVG = [
     name: "Kyoto",
     kanji: "京都",
     image: Kyoto,
-    description: "",
+    region: "Kansai",
+    area: "4,612.19 km2",
+    population: "2,610,353 (October 1, 2015)",
+    averageHigh: "32°C",
+    averageLow: "7°C"
   },
   {
     d:
@@ -284,7 +384,11 @@ const JapanSVG = [
     name: "Nara",
     kanji: "奈良",
     image: Nara,
-    description: "",
+    region: "Kansai",
+    area: "3,691.09 km2",
+    population: "1,348,930 (September 1, 2017)",
+    averageHigh: "33°C",
+    averageLow: "8°C"
   },
   {
     d:
@@ -293,7 +397,11 @@ const JapanSVG = [
     name: "Ōsaka",
     kanji: "大阪",
     image: Osaka,
-    description: "",
+    region: "Kansai",
+    area: "1,905.14 km2",
+    population: "8,823,358 (July 1, 2019)",
+    averageHigh: "25°C",
+    averageLow: "-1°C"
   },
   {
     d:
@@ -302,7 +410,11 @@ const JapanSVG = [
     name: "Shiga",
     kanji: "滋賀",
     image: Shiga,
-    description: "",
+    region: "Kansai",
+    area: "4,017.38 km2",
+    population: "1,412,916 (October 1, 2015)",
+    averageHigh: "25°C",
+    averageLow: "-1°C"
   },
   {
     d:
@@ -311,7 +423,11 @@ const JapanSVG = [
     name: "Wakayama",
     kanji: "和歌山",
     image: Wakayama,
-    description: "",
+    region: "Kansai",
+    area: "4,724.69 km2",
+    population: "944,320 (October 1, 2017)",
+    averageHigh: "30°C",
+    averageLow: "9°C"
   },
   {
     d:
@@ -320,7 +436,11 @@ const JapanSVG = [
     name: "Chiba",
     kanji: "千葉",
     image: Chiba,
-    description: "",
+    region: "Kantō",
+    area: "5,157.61 km2",
+    population: "6,278,060 (June 1, 2019)",
+    averageHigh: "31°C",
+    averageLow: "9°C"
   },
   {
     d:
@@ -329,7 +449,11 @@ const JapanSVG = [
     name: "Ibaraki",
     kanji: "茨城",
     image: Ibaraki,
-    description: "",
+    region: "Kantō",
+    area: "6,097.19 km2",
+    population: "2,871,199 (June 1, 2019)",
+    averageHigh: "33°C",
+    averageLow: "8°C"
   },
   {
     d:
@@ -338,7 +462,11 @@ const JapanSVG = [
     name: "Kanagawa",
     kanji: "神奈川",
     image: Kanagawa,
-    description: "",
+    region: "Kantō",
+    area: "2,415.83 km2",
+    population: "9,058,094 (October 1, 2015)",
+    averageHigh: "30°C",
+    averageLow: "9°C"
   },
   {
     d:
@@ -347,7 +475,11 @@ const JapanSVG = [
     name: "Saitama",
     kanji: "埼玉",
     image: Saitama,
-    description: "",
+    region: "Kantō",
+    area: "3,797.75 km2",
+    population: "7,338,536 (January 1, 2020)",
+    averageHigh: "33°C",
+    averageLow: "9°C"
   },
   {
     d:
@@ -356,7 +488,11 @@ const JapanSVG = [
     name: "Tochigi",
     kanji: "栃木",
     image: Tochigi,
-    description: "",
+    region: "Kantō",
+    area: "6,408.09 km2",
+    population: "1,943,886 (January 1, 2020)",
+    averageHigh: "33°C",
+    averageLow: "8°C"
   },
   {
     d:
@@ -365,7 +501,11 @@ const JapanSVG = [
     name: "Tokyo",
     kanji: "東京",
     image: Tokyo,
-    description: "",
+    region: "Kantō",
+    area: "2,194.07 km2",
+    population: "13,929,280 (2019)",
+    averageHigh: "32°C",
+    averageLow: "9°C"
   },
   {
     d:
@@ -374,7 +514,11 @@ const JapanSVG = [
     name: "Yamanashi",
     kanji: "山梨",
     image: Yamanashi,
-    description: "",
+    region: "Chūbu (Kōshin'etsu) (Tōkai)",
+    area: "4,465.27 km2",
+    population: "817,192 (January 1, 2019)",
+    averageHigh: "32°C",
+    averageLow: "10°C"
   },
   {
     d:
@@ -383,7 +527,11 @@ const JapanSVG = [
     name: "Akita",
     kanji: "秋田",
     image: Akita,
-    description: "",
+    region: "Tōhoku",
+    area: "11,637.52 km2",
+    population: "966,000 (October 1, 2019)",
+    averageHigh: "26°C",
+    averageLow: "3°C"
   },
   {
     d:
@@ -392,7 +540,11 @@ const JapanSVG = [
     name: "Aomori",
     kanji: "青森",
     image: Aomori,
-    description: "",
+    region: "Tōhoku",
+    area: "9,645.64 km2",
+    population: "1,249,314 (June 1, 2019)",
+    averageHigh: "25°C",
+    averageLow: "1°C"
   },
   {
     d:
@@ -401,7 +553,11 @@ const JapanSVG = [
     name: "Fukushima",
     kanji: "福島",
     image: Fukushima,
-    description: "",
+    region: "Tōhoku",
+    area: "13,783.90 km2",
+    population: "1,848,257 (June 1, 2019)",
+    averageHigh: "25°C",
+    averageLow: "-1°C"
   },
   {
     d:
@@ -410,7 +566,11 @@ const JapanSVG = [
     name: "Iwate",
     kanji: "岩手",
     image: Iwate,
-    description: "",
+    region: "Tōhoku",
+    area: "15,275.01 km2",
+    population: "1,229,432 (June 1, 2019)",
+    averageHigh: "25°C",
+    averageLow: "1°C"
   },
   {
     d:
@@ -419,7 +579,11 @@ const JapanSVG = [
     name: "Miyagi",
     kanji: "宮城",
     image: Miyagi,
-    description: "",
+    region: "Tōhoku",
+    area: "7,282.22 km2",
+    population: "2,305,596 (June 1, 2019)",
+    averageHigh: "27°C",
+    averageLow: "4°C"
   },
   {
     d:
@@ -428,7 +592,11 @@ const JapanSVG = [
     name: "Nīgata",
     kanji: "新潟",
     image: Niigata,
-    description: "",
+    region: "Chūbu (Kōshinetsu) (Hokuriku)",
+    area: "12,584.18 km2",
+    population: "2,227,496 (June 1, 2019)",
+    averageHigh: "28°C",
+    averageLow: "6°C"
   },
   {
     d:
@@ -437,7 +605,11 @@ const JapanSVG = [
     name: "Yamagata",
     kanji: "山形",
     image: Yamagata,
-    description: "",
+    region: "Tōhoku",
+    area: "9,325.15 km2",
+    population: "1,079,950 (June 1, 2019)",
+    averageHigh: "24°C",
+    averageLow: "-1°C"
   },
   {
     d:
@@ -446,7 +618,11 @@ const JapanSVG = [
     name: "Nagasaki",
     kanji: "長崎",
     image: Nagasaki,
-    description: "",
+    region: "Kyushu",
+    area: "4,130.88 km2",
+    population: "1,314,078 (June 1, 2020)",
+    averageHigh: "29°C",
+    averageLow: "10°C"
   },
   {
     d:
@@ -455,7 +631,11 @@ const JapanSVG = [
     name: "Kagoshima",
     kanji: "鹿児島",
     image: Kagoshima,
-    description: "",
+    region: "Kyushu",
+    area: "9,187.01 km2",
+    population: "1,599,779 (January 1, 2020)",
+    averageHigh: "29°C",
+    averageLow: "11°C"
   },
   {
     d:
@@ -464,7 +644,11 @@ const JapanSVG = [
     name: "Okinawa",
     kanji: "沖縄",
     image: Okinawa,
-    description: "",
+    region: "Kyushu",
+    area: "2,280.98 km2",
+    population: "1,457,162 (February 2, 2020)",
+    averageHigh: "29°C",
+    averageLow: "18°C"
   },
   {
     d:
@@ -473,7 +657,11 @@ const JapanSVG = [
     name: "Gunma",
     kanji: "群馬",
     image: Gunma,
-    description: "",
+    region: "Kantō",
+    area: "6,362.28 km2",
+    population: "1,937,626 (October 1, 2019)",
+    averageHigh: "32°C",
+    averageLow: "6°C"
   },
 ];
 
