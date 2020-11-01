@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
 import Title from "../components/global/title";
 import JapanSVG from "../components/map/japan-svg";
 import japan from "../components/map/prefectures/japan.png";
+
 const SVG = styled.div`
   margin-left: 0;
   display: flex;
@@ -18,7 +19,7 @@ const SVG = styled.div`
         fill: ${(props) => props.theme.globalText};
       }
     }
-    .activeCity {
+    .activePrefecture {
       stroke-width: 3;
       stroke: ${(props) => props.theme.invertedText}10;
       fill: ${(props) => props.theme.globalText};
@@ -114,7 +115,7 @@ const InfoWindow = styled.div`
   }
 `;
 
-const CityList = styled.div`
+const PrefectureList = styled.div`
   position: relative;
   margin-top: 15px;
   right: 94px;
@@ -166,22 +167,21 @@ const CityList = styled.div`
       color: ${(props) => props.theme.globalText};
     }
   }
-  .selectedCity {
+  .selectedprefecture {
     color: ${(props) => props.theme.globalText};
   }
 `;
 
 export default function JapanMap() {
-  const [cityName, setCityName] = useState();
-  const [cityKanji, setCityKanji] = useState();
-  const [cityImage, setCityImage] = useState();
-  const [cityRegion, setCityRegion] = useState();
-  const [cityArea, setCityArea] = useState();
-  const [cityPopulation, setCityPopulation] = useState();
-  const [cityAverageHigh, setCityAverageHigh] = useState();
-  const [cityAverageLow, setCityAverageLow] = useState();
-  const [activeCity, setActiveCity] = useState();
-
+  const [prefectureName, setPrefectureName] = useState();
+  const [prefectureKanji, setPrefectureKanji] = useState();
+  const [prefectureImage, setPrefectureImage] = useState();
+  const [prefectureRegion, setPrefectureRegion] = useState();
+  const [prefectureArea, setPrefectureArea] = useState();
+  const [prefecturePopulation, setPrefecturePopulation] = useState();
+  const [prefectureAverageHigh, setPrefectureAverageHigh] = useState();
+  const [prefectureAverageLow, setPrefectureAverageLow] = useState();
+  const [activePrefecture, setActivePrefecture] = useState();
   return (
     <>
       <Title />
@@ -199,51 +199,52 @@ export default function JapanMap() {
           maxwidth="500"
           xmlns="http://www.w3.org/2000/svg"
         >
-          {JapanSVG.map((city, index) => {
+          {JapanSVG.map((prefecture, index) => {
             return (
               <svg key={index}>
                 <path
-                  d={city.d}
+                  d={prefecture.d}
                   onMouseDown={() => {
-                    setActiveCity(city.d)
-                    setCityKanji(city.kanji)
-                    setCityName(city.name)
-                    setCityImage(city.image)
-                    setCityRegion(city.region)
-                    setCityArea(city.area)
-                    setCityPopulation(city.population)
-                    setCityAverageHigh(city.averageHigh)
-                    setCityAverageLow(city.averageLow)
+                    setActivePrefecture(prefecture.d)
+                    setPrefectureKanji(prefecture.kanji)
+                    setPrefectureName(prefecture.name)
+                    setPrefectureImage(prefecture.image)
+                    setPrefectureRegion(prefecture.region)
+                    setPrefectureArea(prefecture.area)
+                    setPrefecturePopulation(prefecture.population)
+                    setPrefectureAverageHigh(prefecture.averageHigh)
+                    setPrefectureAverageLow(prefecture.averageLow)
                   }}
                 />
-                <path className="activeCity" d={activeCity} />
+                <path className="activePrefecture" d={activePrefecture} />
+                
               </svg>
             );
           })}
         </svg>
 
-        <CityList>
-          {JapanSVG.map((city, index) => {
+        <PrefectureList>
+          {JapanSVG.map((prefecture, index) => {
             return (
               <div key={index}>
-                {city.name ? (
+                {prefecture.name ? (
                   <button
-                    className={activeCity === city.d ? "selectedCity" : ""}
+                    className={activePrefecture === prefecture.d ? "selectedprefecture" : ""}
                     onMouseOver={() => {
-                      setActiveCity(city.d)
+                      setActivePrefecture(prefecture.d)
                     }}
                     onMouseDown={() => {
-                      setCityKanji(city.kanji)
-                      setCityName(city.name)
-                      setCityImage(city.image)
-                      setCityRegion(city.region)
-                      setCityArea(city.area)
-                      setCityPopulation(city.population)
-                      setCityAverageHigh(city.averageHigh)
-                      setCityAverageLow(city.averageLow)
+                      setPrefectureKanji(prefecture.kanji)
+                      setPrefectureName(prefecture.name)
+                      setPrefectureImage(prefecture.image)
+                      setPrefectureRegion(prefecture.region)
+                      setPrefectureArea(prefecture.area)
+                      setPrefecturePopulation(prefecture.population)
+                      setPrefectureAverageHigh(prefecture.averageHigh)
+                      setPrefectureAverageLow(prefecture.averageLow)
                     }}
                   >
-                    {city.name}
+                    {prefecture.name}
                   </button>
                 ) : (
                   ""
@@ -251,20 +252,20 @@ export default function JapanMap() {
               </div>
             );
           })}
-        </CityList>
+        </PrefectureList>
 
         <InfoWindow>
-          <h2>{cityKanji ? cityKanji : "都市を選択"}</h2>
-          <p>{cityName ? cityName : "Select a city"}</p>
+          <h2>{prefectureKanji ? prefectureKanji : "都市を選択"}</h2>
+          <p>{prefectureName ? prefectureName : "Select a prefecture"}</p>
           <div className="image">
-            <img src={cityImage ? cityImage : japan} alt={cityName} />
+            <img src={prefectureImage ? prefectureImage : japan} alt={prefectureName} />
           </div>
           <div className="description">
-            <p className="normalCase">Region: <span>{cityRegion}</span></p>
-            <p className="normalCase area">Area: <span>{cityArea}</span></p>
-            <p className="normalCase">Population: <span>{cityPopulation}</span></p>
-            <p className="normalCase">Average high: <span>{cityAverageHigh}</span></p>
-            <p className="normalCase">Average low: <span>{cityAverageLow}</span></p>
+            <p className="normalCase">Region: <span>{prefectureRegion}</span></p>
+            <p className="normalCase area">Area: <span>{prefectureArea}</span></p>
+            <p className="normalCase">Population: <span>{prefecturePopulation}</span></p>
+            <p className="normalCase">Average high: <span>{prefectureAverageHigh}</span></p>
+            <p className="normalCase">Average low: <span>{prefectureAverageLow}</span></p>
           </div>
         </InfoWindow>
       </SVG>
